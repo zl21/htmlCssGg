@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 继续table的使用 
+	1.属性cellpadding:补白，是指单元格内文字与边框的距离; 
+	2.属性align:排列，用于设置tr,td标签中的排列方式;
+	3.标签<th>:设置表格头，即表格中的标题部分，体现为字体被加粗并居中了;
+	4.属性colspan:(column/'ka/+span/an/“跨列”)属性规定单元格可横跨的列数;
+	5.属性rowspan:同上;
+	6.标签<colgroup>：用于对表格中的列进行组合，以便对其进行格式化。
+	7.标签<tbody>:不写，浏览器会自动生成。是table三部分（表格的页眉</thead>、主体</tbody>、页脚</tfooter>）中的一个。
+	
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Personal Resume</title>
+	</head>
+	<body>
+		<table border="1px" cellspacing="0" cellpadding="">
+			<!-- <col width="100px">
+			<col width="100px">
+			<col width="100px">
+			<col width="100px">
+			<col width="100px">
+			<col width="100px"> -->
+			<colgroup span="6" width="100px"></colgroup>
+			<col width="200px">
+			<tr height="40px">
+				<th colspan="7">个人简历</th>
+			</tr>
+			<tr height="40px" align="center">
+				<td>姓名</td>
+				<td></td>
+				<td>性别</td>
+				<td></td>
+				<td>年龄</td>
+				<td></td>
+				<td rowspan="4">照片</td>
+			</tr>
+			<tr height="40px" align="center">
+				<td>学历</td>
+				<td></td>
+				<td>籍贯</td>
+				<td colspan="3"></td>
+			</tr>
+			<tr height="40px" align="center">
+				<td>电话</td>
+				<td></td>
+				<td>政治面貌</td>
+				<td colspan="3"></td>
+			</tr>
+			<tr height="40px" align="center">
+				<td>毕业院校</td>
+				<td colspan="5"></td>
+			</tr>
+			<tr height="40px" align="center">
+				<td>求职意向</td>
+				<td colspan="6"></td>
+		</table>
+		
+	</body>
+</html>
