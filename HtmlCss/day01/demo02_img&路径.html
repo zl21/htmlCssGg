@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--相对路径，相对与于当前资源（页面）所在的目录。
+			绝对路径，写死的/完整的路径。
+		-->
+		<img src="01.jpeg"/>
+		<img src="img/02.jpeg"/>
+		<!--返回上一级目录用一个../,返回两级就用两个../../
+			例1：从当前.html返回day01所在目录，即03.jpeg所在的目录
+			<img src="../03.jpeg"/>
+			例2：从当前.html返回day01所在目录，并显示day00/003imgUsing/images下的iis-8.png
+			<img src="../day00/003imgUsing/images/iis-8.png"/>
+		-->
+		<img src="../03.jpeg"/>
+		<img src="../day00/003imgUsing/images/iis-8.png"/>
+		
+		<!--
+			图片格式：
+			jpeg（jpg）：颜色丰富的图片，不支持透明
+			gif：颜色单一，简单透明，动态图
+			png：颜色丰富，复杂，透明的图片
+			选择原则：效果一致用小的；效果不一用效果好的。
+		-->
+	</body>
+</html>
