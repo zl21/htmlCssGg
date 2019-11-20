@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			/* 1、否定伪类选择器：
+				 * 	-作用：指定不选某些元素(从已选中的元素中剔除某些元素)
+				 * 	-语法：
+				 * 		：not(选择器)
+			 * */
+			p:not(#p4){
+				background-color: yellow;
+			}
+			
+			/* 2、兄弟元素选择器：
+				 * -语法1：前一个 + 后一个{}
+				 * 		-作用：选取后一个兄弟元素。
+				 * -语法2：前一个 ~ 后面所有A元素 或者后面所有子元素*{}
+				 * 		-作用：选取后面所有的兄弟元素。
+			 * */
+			p + span{
+				color: red;
+			}
+			#p5 ~ *{
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是一个P标签。</p>
+		<span>一个P</span><br />
+		<p>我是一个P标签。</p>
+		<p>我是一个P标签。</p>
+		<p id="p4">我是一个P标签。</p>
+		<p id="p5">我是一个P标签。</p>
+		<span>一个P</span><br />
+		<span>一个P</span><br />
+		<span>一个P</span><br />
+		<span>一个P</span>
+		<h6>我是一个h6标签。</h6>
+	</body>
+</html>

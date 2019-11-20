@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*
+			 * 1、子元素的伪类选择器：			 * 
+				 * :first-child 选中第一个子标签
+				 * :last-child  最后一个
+				 * :nth-child(n、even、odd) 选中第n个、偶数位、奇数位 的子标签 
+				 * 
+				 * :first-of-type 指定类型的第一个
+				 * :last-of-type 指定类型的最后一个
+				 * :nth-of-type(n、even、odd) 指定类型的某个
+			 *  */
+			
+			/*给第一个P元素一个字体（在子元素中位列第一 且是指定元素(本例中指定是P元素)）
+			 * （包括body中的第一个P、div中第一个P 以及任意一个父元素中的第一个P）*/
+			p:first-child{
+				color:orange;
+			}
+			div > p:nth-child(3){
+				color:red;
+			}
+			
+			/*选中第一个span类型（在子元素中 位列于 指定类型的 第一位(本例中选中的是两个span元素)）*/
+			span:first-of-type{
+				font-size:30px;
+				background-color: mediumpurple;
+			}
+			div > span:nth-of-type(even){
+				font-size:25px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是一个段落。</p>
+		<span>44444</span><br />
+		<p>我是一个段落。</p>
+		<p>我是一个段落。</p><br />
+		<div id="">
+			<p>我是一个段落。</p>
+			<p>我是一个段落。</p>
+			<p>我是一个段落。</p>
+			<p>我是一个段落。</p>
+			<span>11111</span><br />
+			<span>22222</span><br />
+			<span>33333</span><br />
+			<span>44444</span>
+		</div>
+	</body>
+</html>

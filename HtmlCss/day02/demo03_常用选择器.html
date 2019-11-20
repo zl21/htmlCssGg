@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*练习在百度搜：css diner
+			 * 例：将页面中所有P元素中的字体颜色置为red。
+			
+			 * 1、元素选择器
+				 * 	-作用：可以选中指定的所有元素。
+				 * 	-语法：元素/标签名{声明块}
+				 * p{
+						color: purple;
+					}
+			 * 2、id选择器
+				 * 	-作用：通过元素ID选中唯一的一个元素。
+				 * 	-语法：#ID属性值{声明块}
+				 * #p3{
+						font-size: 20px;
+					}
+			 * 3、类选择器
+				 * 	-作用：通过元素的class属性对多个元素设置表现。一个元素可以设置多个class属性值，值之间使用空格隔开。
+				 * 	-语法：.class属性值{声明块}
+				 * .p4{
+						color: green;
+					}
+					.h1{
+						color: green;
+					}
+					.title{
+						font: 30px;
+					}
+			 * 4、分组选择器(并集选择器)：例1
+				 * 	-作用：可以同时选中多个选择器对应的元素。
+				 * 	-语法：选择器1，选择器2，选择器n{声明块}
+				 * 
+			 * 5、复合选择器(交集选择器)：例2
+				 * 	-作用：选中同时满足多个选择器的元素。不建议id选择器使用复合选择器（因为一个页面中元素的id属性值必须是唯一的，所以直接使用id选择器就够够的了）。
+				 * 	-语法：选择器1选择器2选择器n{声明块}
+				 * 
+			 * 6、通配选择器
+				 * 	-作用：选中页面中的所有元素。
+				 * 	-语法：*{声明块}
+				 * 
+			 * 7、后代元素选择器：例3
+				 * 	-作用：选中 指定元素的 指定后代元素。
+				 * 	-语法：祖先元素/标签名/id值/class值  后代元素名{声明块}
+				 * 
+			 * 8、子元素选择器：(IE6及以下浏览器不支持子元素选择器)例4
+				 * 	-作用：选中 指定元素的 指定子元素。
+				 * 	-语法：父元素名  > 子元素名{声明块}
+			*/
+			
+			/*例1：将id=p1的元素,class=p2的元素，以及h1元素 三个元素的背景颜色设为yellow。*/
+			#p1,.p2,h1{
+				background-color: yellow;
+			}
+			/*例2：为拥有class p3 的<span>元素设置一个背景颜色为paleviolet red*/
+			span.p3{
+				background-color: palevioletred;
+			}
+			/*例3：为div中的span设置一个颜色*/
+			div span{
+				color: greenyellow;
+			}
+			#div1 span{
+				color: greenyellow;
+			}
+			/*例4：为div1中的 p中的 span设置一个字体大小*/
+			#div1 > p > span{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			元素之间的关系：
+				父元素：直接包含子元素的元素；
+				子元素：直接被父元素包含的元素；
+				祖先元素：直接or间接包含后代元素的元素，父元素也是祖先元素；
+				后代元素：直接or间接被祖先元素包含……
+				兄弟元素：拥有相同父元素的元素。
+		-->
+		<h1 class="h1 title"><cite>《登鹳雀楼》</cite></h1>
+		<p id="p1">白日依山尽</p>
+		<p>白日依山尽</p>
+		<p id="p3">白日依山尽</p>
+		<p class="p4 p2">白日依山尽</p>
+		<p class="p4">白日依山尽</p>
+		<p class="p3">白日依山尽</p>
+		<span class="p3">黄河入海流</span>
+		
+		<div id="div1">
+			<span id="sp1">我是div1中的span元素</span>
+			<p><span id="sp2">我是div1中的 p中的 span元素</span></p>
+		</div>
+		
+		<div id="div2">
+			<span>
+				1、在coast边上，有几个人在一边boast（吹牛，自夸），一边吃着toast（吐司面包），一边roast（烧烤）。
+				2、trouser n.a.裤子
+				3、commend v.推荐，举荐，赞扬
+				   command
+				   commence v.着手，开始
+				   commerce n.商业，贸易=trade
+		   </span>
+		</div>
+	</body>
+</html>

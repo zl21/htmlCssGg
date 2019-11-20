@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*
+			 伪类&伪元素：用来表示元素的一种特殊状态，或一个特殊的位置
+			 	例：1、已访问过的超链接颜色被改变
+			 		2、字符处于第一个位置，或是文字处于第一行时 给一个特别的表现
+			 */
+			a:link{
+				/*:link 普通的链接
+				  :visited 已访问过的(只能设置字体颜色)（通过浏览器的历史访问记录来判断某链接是否已访问）
+				  :hover 鼠标置上时(其它元素也可设置hover（IE6中仅支持对a元素），如p)
+				  :active 正在被点击时(其它元素也可设置active（IE6中仅支持对a元素），如p)
+				  一般优先级为：link,vidited,hover,active
+				  :focus 一般用于文本框获取焦点(光标)时
+				  ::selection 被选中时(火狐中::-moz-selection)
+				  
+				  :first-letter 表示第一个字符
+				  :first-line 表示文字的第一行
+				  :before 选中元素的最前边(右尖括号到第一个字之间叫最前边)
+				  :after 选中元素的最后边
+				  :*/
+				color: blue;
+			}
+			p:first-letter{
+				color: #008000;
+				font-size: 25px;
+			}
+			p:before{
+				/*因为元素的最前边什么都没有，就是一空格；所以before和after一般要结合content样式一起使用，通过content可以在最前或是最后添加一些内容。*/
+				content: "我会出现在整个p标签/段落的最前边。";
+				color: red;
+			}
+			p:after{
+				content: "我会出现在最后面。";
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="a" href="http://www.baidu.com">访问过的链接</a>
+		<br />
+		<a class="b" href="http://www.baidu.com">未访问的链接</a>
+		<p>为当前元素中的第一个字符设置一个特殊的样式。</p>
+	</body>
+</html>
