@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+        	作者：AlanhieZhou@gmail.com
+        	时间：2019-11-22
+        	描述：盒子/框模型的学习
+        -->
+        <!--
+        	盒子：内容区content，内边距padding(content与border之间的距离)，边框border，外边距margin(与周围元素的距离)。
+        		 内容区content、内边距padding和边框border共同决定盒子的大小。
+        		 盒子可见宽的宽度 = 左边框的宽+左内边距+内容区宽度width+右padding+右border的宽度。
+        -->
+        <style type="text/css">
+        	.box1{
+        		/**一、设置内容区的宽、高：(会影响盒子的大小)(默认为auto，此时盒子的宽=父元素的100%，且会随时自动调整content区的宽度使得盒子的宽度一直是父元素的100%；高=内容撑开)*/
+        		width: 100px;
+        		height: 100px;
+        		/**二、设置背景颜色：*/
+        		background-color: #bfa;
+        		/**三、设置边框的宽、颜色、样式(三者缺一不可)：
+        		 * 	-关于border-width：(会影响盒子的大小)
+        		 * 		1、border-width: 上px 右px 下px 左px
+        		 * 		2、border-width：上px 右左px 下px
+        		 * 		3、border-width：上下px 右左px
+        		 * 		4、border-width：上下左右px
+        		 * 		或使用：border-top/right/bottom/left-width：来分别设置content上右下左的宽度。
+        		 * 	-关于border-color：与border-width一样
+        		 * 	-关于border-style：与border-width一样
+        		 * 		可选值：none，dotted点线，dashed虚线，solid实线，double双实线，groove槽线，ridge脊线，inset凹边，outset凸边等。
+        		 * 	-边框的简写：
+        		 * 		border：宽度 颜色 样式（不同属性用空格隔开即可，没有顺序要求）
+        		 * 		border-xxx：颜色 宽度 样式（不同属性用空格隔开即可，没有顺序要求）
+        		 * */
+        		border-width: 3px;
+        		border-color: yellowgreen lime aqua teal;
+        		border-style: solid;
+        	}
+        	.box2{
+        		width: 100px;
+        		height: 100px;
+        		background-color: fuchsia;
+        		border: 3px aqua dashed;
+        	}
+        	/**四、设置内边距：(会影响盒子的大小)
+        	 * 		padding：上px 右px 下px 左px
+        	 * 		padding：上px 右下px 左px
+        	 * 		padding：上下px 右左px
+        	 * 		padding：上右下左px
+        	 * 		padding-xxx: 几px
+        	 * */
+        	.box3{
+        		width: 100%;
+        		height: 100%;
+        		background-color: teal;
+        	}
+        	.box2{
+        		padding: 10px;
+        	}
+        	/**五、设置外边距：(不会影响盒子的大小，是盒子与周围元素的距离)
+        	 * 		-用法与padding相同。
+        	 * 		-注：当右左设置为auto时=右左边距相等=水平居中(margin：0 auto)
+        	 * 		-单独设置为auto=100%(例：margin-left：auto;等于盒子向页面的右边对齐)、
+        	 * 		-垂直外边距的重叠：相邻 兄弟元素之间的  垂直外边距 会取最大值而不是求和。子元素的外边距margin会传递给父元素。
+        	 * 			若不想重叠，方法有2：
+ * 								1、让俩元素不相邻。(元素之间写点东西)
+ * 									1.1、使用1px的上/下边框border-top/bottom隔开。(此时content的height要相应的减少1px，除非height为auto)
+ * 									1.2、使用1px的上/下内边距隔开topping-top/bottom隔开。
+ * 								2、使用大px的上下内边距padding改变垂直相邻的元素的位置。
+        	 * */
+        	.box2{
+        		margin: 10px auto;
+        	}
+        	
+        	.a{
+        		width: 100px;
+        		height: 100px;
+        		background-color: orange;
+        		margin-bottom:100px ;
+        	}
+        	.b{
+        		width: 100px;
+        		height: 100px;
+        		background-color: red;
+        		/*垂直相邻外边距的重叠*/
+        		margin-top: 100px;
+        	}
+        	
+        	.father{
+        		width: 200px;
+        		height: auto;
+        		background-color: yellow;
+        		
+        		/*border-top: 1px red solid;*//*办法二(要结合子元素设置margin-top使用)*/
+        		padding-top: 100px;/*办法三(单独使用即可见效果)*/
+        	}
+        	.son{
+        		width: 100px;
+        		height: 100px;
+        		background-color: yellowgreen;
+        		/**为子元素设置一个上边距，使子元素的位置下移。*/
+        		
+        		/*margin-top: 100px;*//*只这样做的话父元素也会跟着下移，因为子元素的外边距margin会传递给父元素，属于垂直外边距的重叠。
+        		办法一：此时可以在父元素里写点东西，使得与子元素上外边距相邻的东西变成我们所写的东西。这样就达到了子元素下移的目的。
+        		办法二：此时为父(或子)元素设置一个上边框border，使得父子元素的上外边距margin不再相邻。(相应地要减少父元素的高度，除非height为auto)
+        		办法三：仅用父元素的上内边距padding-top来填充父元素的一部分，从而子元素就会下移。(此时父元素的高度为padding-top + height，所以要相应地要减少父元素的高度，除非height为auto)*/
+        		
+        	}
+        </style>
+	</head>
+	<body>
+		<div class="box1">content</div>
+		<br />
+		<div class="box2">
+			<div class="box3">content</div>
+		</div>
+		<hr />
+		
+		<div class="a"></div>
+		<div class="b"></div>
+		<hr />
+		
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</body>
+</html>

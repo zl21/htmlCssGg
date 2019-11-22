@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				background-color: #bfa;
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			.s1{
+				/*内联元素的内容区是随内容改变的，不能设置width和height，设置了也没用。*/
+				width: 100px;
+				height: 100px;
+				
+				/*设置水平方向内边距：可以设置，会影响水平方向的布局。*/
+				padding-left: 100px;
+				padding-right: 100px;
+				
+				/*设置垂直方向内边距：可以设置，但不会影响页面的布局(不会令某元素的位置发生改变)。*/
+				padding-top: 100px;
+				padding-bottom: 10px;
+				
+				/*设置边框：可以设置，不会影响垂直方向的布局。但边框的宽度会影响水平方向的布局。*/
+				border: 1px green solid;
+				
+				/*设置水平方向外边框：可以设置，不会与水平方向上相邻的元素重叠，而是求和。*/
+				margin-left: 100px;
+				margin-right: 100px;
+				
+				/*设置垂直方向外边框，内联元素不能设置垂直方向的margin，设置了也没用。*/
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="s1">我是一个span</span>
+		<span>我是一个span</span>
+		<span>我是一个span</span>
+		
+		<div class="box1"></div>
+	</body>
+</html>

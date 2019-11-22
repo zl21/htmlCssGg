@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**理论上来说子元素的最大可以等于父元素内容区的大小，如果子元素的大小超过了父元素的内容区，超出的部分会在父元素以外的位置显示，我们称这些部分为溢出。使用overflow来规定当内容溢出元素框时发生的事情(即如何处理溢出内容)。
+			 * 		可选值：
+			 * 				visible：默认值，不对溢出做处理，正常显示在父元素外。
+			 * 				hidden：隐藏超出盒子的内容(对超出的部分进行剪除)。
+			 * 				scroll：添加滚动条(该属性无论是否发生溢出，都会添加水平和垂直双方向的滚动条)。
+			 * 				auto：会根据需求自动添加滚动条，需要水平就添加水平，要垂直就添加垂直，不要就不添加。
+			 * 				*/
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: #bfa;
+				overflow: auto;
+			}
+			.box2{
+				width: 50px;
+				height: 500px;
+				background-color: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

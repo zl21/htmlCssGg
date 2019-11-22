@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				background-color: #bfa;
+				
+				/**为<a>设置一个宽和高，但是width和height对内联元素又没用，那应该怎么办嘞？
+				 * 此时就需要display样式了，该样式主要用来修改元素的类型。
+				 * 		可选值：
+				 * 				none=消失：不显示元素，且元素不会再在页面中占有位置。
+				 * 				inline：作为内联元素显示。
+				 * 				block：作为块元素显示。
+				 * 				inline-block：将一个元素转换为行内块元素(既有行内元素又有块元素的特点(如<img>标签)，即既可以设置宽高又不会独占一行)。*/
+				display: inline-block;
+				width: 300px;
+				height: 20px;
+			}
+			
+			/**visibility：用于设置元素的隐藏和显示状态(即是否可见)。
+			 * 		可选值：
+			 * 				visible：默认值，元素可见。
+			 * 				hidden=隐身：元素不可见，但依然占据着位置。
+			 * */
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: #bfc;
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<a href="#">是一个大大的超链接！哈哈哈~</a>
+	</body>
+</html>
