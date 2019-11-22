@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**
+			 * 1、字体系列：font-family
+			 * 		-color 设置字体颜色。
+			 * 		-font-size 设置字体大小，浏览器一般默认字体大小是16px,font-size设置的并不是文字本身的大小，而是框住字的无形的一个个小框框的宽高。
+			 * 		-font-family 设置字体样式，一般只有用户计算机中安装了我们指定的样式时才会显示指定字体，否则该设置无意义(此时显示用户计算机里默认的字体)。可以同时指定多个字体，按顺序选择，没有则顺位。当把字体设置为以下5种大类时，浏览器会自动选择该类中的一种使用。
+			 * 			分类： serif（衬线字体(横有一勾的那种字体)，如宋体
+			 * 				  sans-serif（非衬线字体(一笔到底，横即横)，如微软雅黑
+			 * 				  monospace（等宽字体
+			 * 				  cursive（草书字体
+			 * 				  fantasy（虚幻字体
+			 * */
+			.p1{
+				color: black;
+				font-size: 36px;
+				font-family: serif;
+			}
+			/**
+			 * 2、字体样式：font-style
+			 * 		-可选值：
+			 * 			normol，默认值，文字正常显示
+			 * 			italic，以斜体显示
+			 * 			oblique，以倾斜的效果显示
+			 * 			inherit，继承父元素的
+			 * 		-注：大部分浏览器不会区分italic和oblique，我们一般常用italic。
+			 * */
+			.p1{
+				font-style: italic;
+			}
+			/**
+			 * 3、字体粗细：font-weight
+			 * 		-可选值：
+			 * 			normol或400，默认值，文字正常显示
+			 * 			bold或700，加粗显示
+			 * 			bolder，比bold更粗
+			 * 			lighter，比normol更细
+			 * 			100-900，9个数字表示不同粗细程度，一般用不上，因为一般计算机中都没有9种粗细级别的字体。
+			 * 			inherit，继承父元素的
+			 * 		-注：我们一般常用bold。
+			 * */
+			.p1{
+				font-weight: bold;
+			}
+			/**
+			 * 4、小型大写字母：font-variant
+			 * 		-可选值：
+			 * 			normol
+			 * 			small-caps
+			 * 			inherit
+			 * */
+			.p1{
+				font-variant: small-caps;
+			}
+			
+			.p5{
+				font-size: 40px;
+				font-family: "华文彩云";
+				font-style: italic;
+				font-weight: bold;
+				font-variant: small-caps;
+			}
+			.p6{
+				/**
+				 * 在css中可以用font来同时设置字体相关的所有样式，用空格隔开：
+				 * font：italic small-caps bold 40px "宋体"
+				 * 	 注：-前面3个(italic（style） small-caps（variant） bold（weight）)可以任意交换位置,或者写不写无所谓。
+				 * 		-后2个(40px "宋体")必须写，且size必须位于倒数第二，family必须位于最后一位。
+				 * */
+				
+				 * font：italic small-caps bold 40px "宋体"
+			}
+		</style>
+	</head>
+	<body>
+		<p class="p1">衬线字体。我是p1.ABCDEFGHIJKLMNjvzxvbdbv。</p>
+		<p style="font-size: 36px; font-family: sans-serif;">非衬线字体。我是p2.ABCDEFGHIJKLMN。</p>
+		<p style="font-size: 36px; font-family: monospace;">monospace。有时候没区别是浏览器的问题。ABCD</p>
+		<p style="font-size: 36px; font-family: cursive;">cursive。比如现在衬线和非衬线用IE才能看出区别。ABCD</p>
+		<p style="font-size: 36px; font-family: fantasy;">fantasy。ABCDEFGHIJKLMN。</p>
+		
+		<p class="p5">来设置一些fond吧。</p>
+		<p class="p6">来设置一些fond吧。我是p6。</p>
+	</body>
+</html>

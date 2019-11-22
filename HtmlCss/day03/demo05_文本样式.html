@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**
+			 * 1、行间距：在css中没有直接设置行间距的方式，可以通过设置行高来改变行间距。
+			 * 	-语法：line-height：n（整数、百分数、小数或多少px皆可）
+			 * 	-行间距 = 行高 - 字体大小
+			 * 	-整数、百分数、小数是根据字体大小来计算比例的
+			 * 	-也可将行高写在font中：font：40px/1.5 "微软雅黑";
+			 * */
+			.p1{
+				line-height: 40px;
+			}
+			/**
+			 * 2、大小写转换：text-transform
+			 * 		-可选值：
+			 * 			none
+			 * 			capitalize：单词首字母大写，通过空格来判断。
+			 * 			uppercase：所有都大写。
+			 * 			lowercase：所有都小写。
+			 * */
+			.p2{
+				text-transform: capitalize;
+			}
+			/**
+			 * 3、文本的修饰(给文本添加线)：text-decoration
+			 * 		-可选值：
+			 * 			none：可用于去除超链接默认的下划线。
+			 * 			underline：下加一线。
+			 * 			overline：上加一线。
+			 * 			line-through：中间线=删除线。
+			 * */
+			.p3{
+				text-decoration: underline;
+			}
+			/**
+			 * 4、字符间距：
+			 * 		-字母间距(letter-spacing)，也可设置汉字间距。
+			 * 		-单词间距(word-spacing)，也可改变中文文章中的空格间距。
+			 * */
+			/**
+			 * 5、对齐方式：text-align：
+			 * 		-可选值：
+			 * 			left
+			 * 			right
+			 * 			center
+			 * 			justify，两端对齐
+			 * */
+			/**
+			 * 5、首行缩进：text-intent：
+			 * 		-可选值：几px,几em,由于缩进距离也与字体大小有关，所以常用em为单位设置缩进度。
+			 * 			正值：向右移
+			 * 			负值：向左移（可以隐藏一些不想给用户看但是浏览器可以看的字
+			 * */
+		</style>
+	</head>
+	<body>
+		<p calss="p1">
+			<cite>《从前慢》</cite>记得早先少年时,大家诚诚恳恳,说一句是一句,清早上火车站,长街黑暗无行人,卖豆浆的小店冒着热气,从前的日色变得慢。车，马，邮件都慢,一生只够爱一个人,从前的锁也好看,钥匙精美有样子,你锁了，人家就懂了。
+		</p>
+		<p class="p2">
+			奥登写给他的（同性恋+年龄落差极大的）情人Chester Kallman的诗。同样是爱情诗，和叶芝的《当你老了》比，绝不逊色。<cite>《Funeral Blues》</cite>      Stop all the clocks, cut off the telephone, Prevent the dog from barking with a juicy bone, Silence the pianos and with muffled drum Bring out the coffin, let the mourners come. Let aeroplanes circle moaning overhead Scribbling on the sky the message He Is Dead. Put crepe bows round the white necks of public doves, Let the traffic policemen wear black cotton gloves. He was my North, my South, my East and West. My working week and my Sunday rest, My noon, my midnight, my talk, my song; I thought that love would last forever; I was wrong. The stars are not wanted now: put out every one; Pack up the moon and dismantle the sun; Pour away the ocean and sweep up the wood; For nothing now can ever come to any good.                                                                                               -- W. H. Auden
+		</p>
+		<p class="p3">
+			<cite>《葬礼蓝调》</cite>停止所有的时钟，切断电话，给狗一块浓汁的骨头，让他别叫，黯哑了钢琴，随着低沉的鼓，抬出灵柩，让哀悼者前来。让直升机在头顶悲旋，在天空狂草着信息他已逝去，把黑纱系在信鸽的白颈，让交通员戴上黑色的手套。他曾经是我的东，我的西，我的南，我的北，我的工作天，我的休息日，我的正午，我的夜半，我的话语，我的歌吟，我以为爱可以不朽，我错了。不再需要星星，把每一颗都摘掉，把月亮包起，拆除太阳，倾泻大海，扫除森林,因为什么也不会，再有意味。
+		</p>
+	</body>
+</html>

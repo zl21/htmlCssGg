@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*去掉/设置项目样式的方法：list-style: none*/
+			ul{
+				list-style: disc;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			1、无序列表:<ul type="disc实心圆/circle空心圆=环/square实心方块"></ul>
+			2、有序列表:<ol type="1阿拉伯/A大写字母/a/I大罗马/i"></ol>
+			3、定义列表:<dl><dt></dt>词语<dd></dd>解释说明</dl>（用来对一些词汇进行定义或解释说明
+			
+			注：1、默认的项目符号我们一般不使用，因为不同浏览器效果不一。
+				     如需设置项目符号，一般采用：1、CSS样式重写项目符样式。
+									   	    2、用小图片做项目样式。
+				2、ul、ol、dl、li、dt(title)、dd(detail)都是块元素。
+				3、列表间可以互相嵌套。
+		-->
+		<p>菜谱</p>
+		<ul type="disc">
+			<li>荤菜类</li>
+			<ol>
+				<li>宫保鸡丁</li>
+				<li>糖醋鲤鱼</li>
+				<li>红烧排骨</li>
+			</ol>
+			<li>素菜类</li>
+			<ol>
+				<li>炒尖椒</li>
+				<li>炒土豆</li>
+				<li>素白菜</li>
+			</ol>
+		</ul>
+		<dl>
+			<dt>电脑</dt>
+			<dd>是一种计算机。</dd>
+			<dd>一般用于办公，游戏等。</dd>
+			<dt>鼠标</dt>
+			<dd>是一种计算机外接设备，用于界面操控。</dd>
+		</dl>
+	</body>
+</html>
