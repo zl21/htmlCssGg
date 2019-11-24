@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**方法1：把会坍塌的父元素的高度写死。
+			 * 
+			 * 方法2：开启父元素的BFC或hasLayout隐藏属性。
+			 *   --BFC：Block Formatting Context(块级格式化环境)，该属性是元素的隐含属性，默认处于关闭状态。
+			 * 		开启的方法：  1、通过设置元素浮动；
+			 * 						-副作用：父元素宽度会丢失。下边的元素会上移。
+			 * 					2、通过设置元素的类型为inline-block；
+			 * 						-副作用：父元素宽度丢失。
+			 * 					3、通过设置overflow为一个非默认值visible(一般使用overflow：hidden来隐藏溢出的部分从而开启BFC)。
+			 * 						-副作用较小。
+			 * 					4、设置元素绝对定位；(day06学)
+			 * 		开启后元素的特性：1、父、子元素的垂直外边距margin将不会再重叠。
+			 * 						2、开启BFC的元素不会被浮动元素所覆盖。
+			 * 						3、开启BFC的元素可以包含浮动的子元素。
+			 *   --hasLayout：IE6以下的浏览器不支持BFC，但是支持这个跟BFC功能相当的hasLayout(IE6日常作死！)。
+			 * 		开启的方法：  方法也挺多，但是记住副作用最小的一个即可；
+			 * 				1、直接将坍塌元素的zoom属性设置为1即可。zoom表放大的意思，后边的值表示将元素放大几倍；zoom：1;表示不放大元素。
+			 * 				2、为父元素指定宽度width。
+			 * */
+			.box1{
+				border: 5px red solid;
+				/*以下两个最好都写上。*/
+				overflow: hidden;
+				zoom: 1;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				float: left;
+			}
+			.box3{
+				height:100px ;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2">a</div>
+		</div>
+		<div class="box3"></div>
+	</body>
+</html>

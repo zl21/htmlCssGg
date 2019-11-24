@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				border: 1px solid red;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				float: left;
+			}
+			/**方法4：用一个伪类选择器来将父元素的最后那个空格设置为inline-block类型。此时的after = content = "空格" = div的最后。
+			 * 	-该方法与方法3原理一样，但是不会在页面中添加多于的结构，是目前最好的办法。
+			 * 	-该方法可以封装在.css文件中，在需要避免坍塌的div的class属性里添加一个值clearfix，并在title标签下<link rel="stylesheet" type="text/css" href="xxx.css">引入该文件中的伪类选择器。*/
+			.clearfix:after{
+				content: "";
+				display: block;/*将content:" ";转换为块元素。*/
+				clear: both;
+			}
+			/**IE6中不支持after伪类选择器，所以在IE6中还是使用方法2(开启隐藏属性hasLayout)。*/
+		</style>
+	</head>
+	<body>
+		<div class="box1 clearfix">
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

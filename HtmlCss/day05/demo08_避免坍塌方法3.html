@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				border: 1px solid red;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				float: left;
+			}
+			/**方法3：用一个空白的div撑开父元素(其实也不能说是撑开，应该是该div设置clear之后就不会被他的 浮动的兄弟元素 影响原来的位置，原来应该在兄弟元素的最下面，所以看起来空白div撑开了父元素)，在高度塌陷的父元素的最后添加一个不浮动的div并对其设置清除浮动。
+			 * 该方法基本没有副作用。且一切浏览器都兼容。但是页面被添加了多于的结构。*/
+			.box3{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+			<div class="box3"></div>
+		</div>
+	</body>
+</html>

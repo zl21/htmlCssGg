@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**如果希望块元素在页面中水平排列，可以使用float使得块元素脱离文档流。
+			 * float：用来使元素浮动。
+			 * 		可选值：
+			 * 				none：默认值，元素还在文档流中。
+			 * 				left：向左浮动；
+			 * 				right：向右浮动；
+			 * 当为一个元素设置浮动以后，元素会立即脱离文档流，元素下边的元素会立即向上占位，直到顶到父元素的边框或其它的浮动元素。浮动元素会在文档流元素之上(盖住底下文档流中的部分元素(比底下大就完全盖住，比底下小就盖住一点点，反正飘在文档流之上了))。
+			 * 若一行里不足以容下当前浮动的元素，则元素会自动换行并浮动。
+			 * 浮动的元素不会超过它的哥哥元素(hhh~即不会超过它左边的元素)。
+			 * */
+			.box1{
+				width: 100px;
+				height: 200px;
+				background-color: red;
+				float: left;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				
+				/*float: right;*/ /*如图1，仅这样设置的话，box2并不是移到box1的右边，而是移到box2所在的第二行的最右边！因为没有设置浮动的块元素就像一面墙，浮动的不会超过那些不浮动的。(在IE6中内联元素与块元素一样仿佛一堵墙)*/
+				
+				float: left; /*如图2，仅这样设置的话，box2会浮起来,浮在box3之上，但是也超不过box1那堵墙，且box3会向上占据box2的位置。*/
+			}
+			.box3{
+				width: 300px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">1111</div>
+		<div class="box2">2222</div>
+		<div class="box3">3333</div>
+		
+		<br /><br /><hr style="margin-top: 200px;" />
+		
+		<img src="img/1.png" alt="情况1仅box2右浮。" style="width: 300px;"/>
+		<img src="img/2.png" alt="情况2仅box2左浮。" style="width: 300px;"/>
+		<img src="img/3.png" alt="情况3:box1、box2右浮。" style="width: 300px;"/>
+	</body>
+</html>

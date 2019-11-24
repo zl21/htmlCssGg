@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导航条</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.nav{
+				list-style: none;/*去掉无序列表的项目符。*/
+				background-color: #6495ed;
+				/*在IE6中，指定元素宽度 = 开启hasLayout。*/
+				width: 90%;
+				margin: 50px auto;/*元素居中。*/
+				overflow: hidden;/*开启BFC，避免子元素li都浮动之后没有东西撑开父元素而导致父元素的高度变为0。*/
+				/*zoom: 1;*/
+			}
+			.nav li{
+				float: left;
+				width: 25%;
+			}
+			.nav li a{
+				display: block;/*修改元素类型为块元素。方可为其设置宽。*/
+				width: 100%;
+				text-align: center;/*文本内容居中。*/
+				padding: 5px 0;
+				text-decoration: none;/*文本的修饰：去掉下划线。*/
+				color: white;
+				font: normal normal bold 16px "宋体";/*用font不能设置颜色，只能设置style  variant小大字   weight  size  family。*/
+			}
+			/*设置鼠标置上时的颜色：*/
+			.nav li a:hover{
+				background-color: #c00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<ul class="nav">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">联系</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</body>
+</html>
