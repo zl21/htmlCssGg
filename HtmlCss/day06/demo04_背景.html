@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" style="text/css" href="style/background.css" />
+		<style type="text/css">
+			.box1{
+				width: 500px;
+				height: 500px;
+				background-color: #bfa;
+				background-image: url(img/15.jpg);/*或用<link/>引入。*/
+				/**
+				 * 	-背景图片大于元素，默认显示元素的大小。
+				 * 	-如果一样大则全部显示。
+				 * 	-如果图片大小小于元素，则会默认将图片平铺以充满元素(重复n张直到充满)。
+				 * 		-background-repeat：用于设置背景图片的重复方式。
+				 * 			-可选值：
+				 * 				repeat：默认值，双方向重复=平铺。
+				 * 				no-repeat：不平铺。
+				 * 				repeat-x：x轴方向平铺。
+				 * 				repeat-y：y轴方向平铺。
+				 * 注：背景颜色和图片可以同时设置，颜色会作为图片的底色显示，一般情况下设置图片时都会指定一个背景颜色。(以防图片一下子没加载出来时给客户带来不好的体验)
+				 * */
+				background-repeat: repeat-x;
+			}
+			.box2{
+				width: 500px;
+				height: 500px;
+				background-color: #bfa;
+				background-image: url(img/3.png);
+				background-repeat: no-repeat;
+				/**
+				 * 	-背景图片默认贴着元素的左上角显示。
+				 * 		-background-position：用于设置背景图像的起始位置。
+				 * 			-语法：background-position：x% y%;(横纵坐标)
+				 * 			-可选值：
+				 * 				0% 0%：默认值，左上角，坐标原点。
+				 * 				x% y%：若只规定一个值，则另一个默认50%=centre。
+				 * 				position(top=x0、right=x100、bottom=y100、left=x0、center=x/y50)与%：可混合使用。
+				 * 				或使用确定的偏移量(ipx,jpx)。i,j可以为负值，使用得较多。
+				 * */
+				background-position: left 100%;/*坐标为(0,100)*/
+				}
+				body{
+					background-image: url(img/2.jpg);
+					background-repeat: no-repeat;
+					background-position: center;
+					/**
+					 * -background-attachment：设置背景图片是否固定或者随着页面的其余部分滚动。
+					 * 			-可选值：
+					 * 				scroll：默认值，背景图像会随着页面其余部分的滚动而移动。
+					 * 				fixed：当页面的其余部分滚动时，背景图像不会移动。
+					 * 					-设置为fixed之后，背景图片的定位变成了固定定位，会永远相对于浏览器窗口定位，也就是说你不关闭当前窗口的话不管你怎么滚动页面你都会一直看到背景图。一般设置给body，而不设置给其它元素。
+					 * 				inherit。
+					 * */
+					background-attachment: fixed;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<hr />
+		<div class="box2"></div>
+		<hr />
+		<p>1、在平常的日子里，修建自己精神的粮仓，储蓄应付巨变的粮草。一旦精神的灾难不以人的意志为转移而降临时，女人才不会崩溃。
+		<p>2、困难的本质是一种停顿状态。因了某种阻遏，停止在中途。只要你向前走，也许“难”还在，但“困”就已经解除了。</p>
+		<p>3、时间的掸子轻轻扫去女人脸上的红颜，但它是有教养的，还女人一件永恒的化妆品－－气质。可惜有的女人很傻，把气质随手丢掉了。</p>
+		<p>4、素面朝天并不是美丽女人的专利，而是所有女人都可以选择的一种生存方式。</p>
+		<p>5、尴尬其实是人生经常遭遇到的一种状态，它有个小小的规律，你越是害怕它，它就越张牙舞爪，让你不知所措。如果你坦然处之，心想人非完人，谁都有出糗的时刻，它也就泄了气。</p>
+		<p>6、化妆以醒目的色彩强调以至强迫人们注意的部位，却往往是最软弱的所在。</p>
+		<p>7、佛说，前世的500次回眸，才换来今生的擦肩而过。顿生气馁，这辈子是没的指望了，和谁路遇和谁接踵，和谁相亲和谁反目，都是命定，挣扎不出。</p>
+		<p>8、我不相信手掌的纹路，但我相信手掌加上手指的力量。</p>
+		<p>9、孝，是稍纵即逝的眷念；孝，是无法重现的幸福；孝，是一失足成千古恨的往事；孝，是生命与生命交接处的链条。一旦断裂，永无连接。</p>
+		<p>10、人生的重大决定，是由心规划的，像一道预先计算好的框架，等待着你的星座运行。如期待改变我们的命运，请首先改变心的轨迹。</p>
+	</body>
+</html>

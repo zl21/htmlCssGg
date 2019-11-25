@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: static;
+				opacity: 0.6;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: orange;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				opacity: 0.5;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				opacity: 0.5;/**设置元素的透明度，取值为0全透~1全不透。*/
+				/**
+				 -IE6中不支持opacity，需要使用alpha属性代替。
+					语法：filter：alpha(opacity=0-100之间的一个值)
+					0：全透；
+					50：半透；
+					100：完全不透。
+				*/
+				filter: alpha(opacity=50);(IE6及以下版本浏览器中设置透明的方法)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

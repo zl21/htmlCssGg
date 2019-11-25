@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**
+			 * 完成动态按钮后，发现第一次切换图片时(触发hover)会有一个非常快的闪烁，体验不佳。
+			 * - 产生原因：图片是以外部资源的形式加载进网页的，浏览器每一张图片的加载都需要单独发一次请求，因为只有当需要用到某资源时才去加载资源。此练习中开始状态并没有用到hover和active状态的资源，所以鼠标置上触发hover时加载需要的瞬时会导致出现一瞬间空白=闪烁。
+			 * -解决方法：将三个状态的图片水平放在一张图片btn.png中，一开始就将图片加载出来，触发hover时用(background-position：center)显示图片的center，触发active时用(background-position：right)显示图片的right。这种技术叫做图片整合技术（CSS-Sprite）雪碧图/精灵图，优点如下：
+			 * 		-浏览器只需发一次请求，快，提高用户体验。
+			 * 		-缩小了图片的总大小，快。
+			 * */
+			.btn{
+				display: block;/*不然内联元素是不能设置宽高的。*/
+				width: 93px;
+				height: 29px;
+				/*background-image: url(img/btn/link.png);*/
+				background-image: url(img/btn/btn.png);
+				background-position: left;/*不设置效果也一样，因为框的大小只能显示link状态的图片。*/
+				background-repeat: no-repeat;
+			}
+			.btn:hover{
+				/*background-image: url(img/btn/hover.png);*/
+				background-position: center;/*或(-93px 0px)*/
+			}
+			.btn:active{
+				/*background-image: url(img/btn/active.png);*/
+				background-position: right;/*或(-186px 0px)*/
+			}
+		</style>
+	</head>
+	<body>
+		<a class="btn" href="#"></a>
+	</body>
+</html>

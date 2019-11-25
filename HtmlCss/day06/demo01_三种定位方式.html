@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**定位：将元素摆放到指定位置。
+			 * 偏移量：开启position且值非static时，可通过left、right、top、bottom来分别对元素设置 元素相对于其 定位位置的 左/右侧(相当于横坐标x变大/小了而不是向左/右移动，对于水平方向的横坐标:左加右减)、上/下侧的偏移量(向下移动相当于纵坐标y变大了)。
+			 * 	- 定位：position
+			 * 		- 可选值：
+			 * 			1、static：默认值 ，不开启定位。
+			 * 			2、relative：相对定位。(相对于元素原来在文档流中的位置)
+			 * 				- 开启relative而不设置偏移量时，元素的位置不会发生任何变化。
+			 * 				- 相对定位的元素不会脱离文档流。(即不会影响其它元素的位置，不像浮动)
+			 * 				- 相对定位会使元素提升一个层级。(可能盖住其它元素)
+			 * 				- 相对定位不会改变元素的性质。(即块是块，内联是内联，不像浮动)
+			 * 			3、absolute：绝对定位。(相对于离他最近的开启了定位的祖先元素进行定位，如果没有祖先开启定位，则相对浏览器窗口进行定位)
+			 * 				- 开启绝对定位会使元素脱离文档流(像浮动一样)。
+			 * 				- 如果不设置偏移量，元素位置不会发生变化。
+			 * 				- 绝对定位会使元素提升一个层级。(可能盖住其它元素)
+			 * 				- 绝对定位会改变元素的性质。(内联变块，块元素的宽高都被内容撑开)
+			 * 			4、fixed：固定定位(属于绝对定位的一种)。
+			 * 				- 与绝对定位不同的是：1、固定定位永远都会相对于浏览器的窗口进行定位。
+			 * 									2、固定定位会固定在浏览器窗口的某个位置，不会随页面的滚动条滚动而移动。
+			 * 									3、IE6不支持固定定位。
+			 * */
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color:red ;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color:yellow ;
+				/*
+				margin-left:200px ;/*未开启定位前，第一步：2右移200px.*/
+				margin-top: 200px;/*未开启定位前，第二步：2下移200px.*/
+				*/
+				position: relative;/*开启相对定位。*/
+				left: 200px;/*左侧偏移量。= x=200*/
+				top: 200px;/*上侧偏移量。= y=200*/
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color:green ;
+				/*
+				margin-top: -200px;/*未开启定位前，第三步：3上移200px.*/
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--创建div的快捷方式：div.box$*3——>按table键。-->
+		<div class="box1">111</div>
+		<div class="box2">222</div>
+		<div class="box3">333</div>
+		
+		<span class="s1">这是一个span。</span>
+	</body>
+</html>

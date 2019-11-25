@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: orange;
+				position: absolute;/*开启绝对定位*/
+				left: 100px;
+				top: 100px;
+				/**如果定位元素层级一样，那会按照页面布局后面的(后写的)盖住前面的。
+				 * - 可以通过z-index(z轴-索引/指数)属性来设置元素的层级。
+				 * - 取值为正整数，该值会作为当前元素的层级，层级越高，越优先显示。
+				 * - 该属性对于没有开启定位的元素无效。
+				 * - 父元素的层级再高，也不会盖住子元素。
+				 * */
+				z-index: 3;/*将box2的层级设置为最高，不然会被3盖住。*/
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>
