@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			-表单的作用：提交用户信息到服务器(主要用来提交数据)。
+			-属性action="rul"对应的地址就是提交地址。
+			-表单项=内容。
+			-要提交的信息所在的标签必须要有name属性，name=信息名。
+			-用户填写的信息会附在URL地址的后面以查询字符串的形式发送给服务器。url地址?查询字符串(多个名值对之间用&隔开)
+		-->
+		<form action="target.html">
+			<!--
+				-可以通过label标签来选中想要用css设置格式的文字。如<label>用户名</label>
+					该标签可以指定一个for属性，值为一个表单项的id。设置了该属性后当用户鼠标点击文字时也能选中输入框或for对应的id所在的单选选项等。方便用户 点字也可以了而不是非要点框框。
+			-->
+			<fieldset>
+				<legend>基本信息</legend>
+				<label for="un">用户名：</label>
+				<input id="un" type="text" name="uname" /><br /><br />
+				
+				<label for="up">密&nbsp;码：</label>
+				<input id="up" type="password" name="upwd" /><br /><br />
+			</fieldset>
+			<!--
+				-被选中的单选按钮选提交的是value；(所以这种不需要用户直接填写内容的表单项必须设置value属性)
+				-指定默认选项：在默认选项所在的标签添加checked属性，值为checked。
+			-->
+			<fieldset>
+				<legend>特长爱好</legend>
+				性&nbsp;别：<input type="radio" name="gender" value="male" checked="checked"/>男
+							<input type="radio" name="gender" value="female"/>女
+							<br /><br />
+				爱&nbsp;好：<input type="checkbox" name="hobby" value="zq" checked="checked"/>足球
+							<input type="checkbox" name="hobby" value="lq"/>篮球
+							<input type="checkbox" name="hobby" value="ymq"/>羽毛球
+							<input type="checkbox" name="hobby" value="ppq"/>乒乓球
+							<br /><br />
+			</fieldset>			
+			<!--
+				-下拉列表框：select标签，选项option子标签。
+				-指定默认下拉列表项：在默认选项所在的option标签添加selected属性，值为selected。
+				-多选下拉列表框：添加属性multiple="multiple"
+				-对选项分组：optgroup标签，属性label指定分组名
+			-->
+			爱&nbsp;豆：
+				<select name="star" multiple="multiple">
+					<optgroup label="女明星">
+						<option value="zjl" selected="selected">zjl</option>
+						<option value="ljj">ljj</option>
+						<option value="xhb">xhb</option>
+					</optgroup>
+					<optgroup label="男明星">
+						<option value="zjl">zjl</option>
+						<option value="ljj">ljj</option>
+						<option value="xhb">xhb</option>
+					</optgroup>
+				</select>
+			<br /><br />
+			
+			<!--
+				-多行文本域：textarea;自带滚动条，用户可自行调节大小。
+			-->
+			简&nbsp;介：
+				<textarea name="info"></textarea><br /><br />
+			
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
+			<input type="button" value="可自行第一功能的按钮" />
+			<br /><br />
+			<!--也可以使用button标签来创建按钮，方便把字变成图-->
+			<button type="submit">提交</button>
+			<button type="reset">重置</button>
+			<button type="button">按钮</button>
+			
+			<!--
+				-可以用filedset标签来给表单中的子标签分组。制造简历表类型的表单。
+				-它的子标签<legend>用来设置组名。例如，基本信息，兴趣爱好，获奖情况等分组名。
+			-->
+			<fieldset></fieldset>
+		</form>
+	</body>
+</html>

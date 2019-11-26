@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: #bga;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: #bfa;
+				background-image: url(img/1.png);
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			-在IE6中，对png24的图片格式支持度不高；如果使用得图片格式是png24的话，会导致透明效果无法正常显示。
+			-解决方法：1、使用png8的格式代替掉png24格式的图片。(用PS将png24改成png8格式)(png8清晰度没有png24好)
+					  2、使用JavaScript来解决问题，向页面中引入一个外部封装好的JavaScript文件。然后创建一个新的script标签并调用封装好的文件中的方法。
+		-->
+		<div class="box1"></div>
+		<div class="box2">
+			<img src="img/12.png"/>
+		</div>
+		
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script>
+			DD_belatedPNG.fix("div");
+		</script>
+	</body>
+</html>

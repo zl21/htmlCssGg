@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 300px;
+				height: 300px;
+				background-color: #bfa;
+				/*padding-top:100px ;*/
+			}
+			.clearfix:before{
+				content: "";
+				display: table;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: #757;
+				margin-top:100px ;
+				/**
+				 * 由于父子元素垂直外边距重叠的，所以子元素的外边距会传递给父元素，从而导致仅为子元素设置外边距时父元素也会相应地受到影响。
+				  方法+2：(其余方法见day04/demo01盒子模型.html)
+				  -1、使用空的table标签可以隔离父子元素的外边距，阻断外边距的重叠。-使用空的div不可以。
+				  -2、(完美方法)使用伪类选择器before选中父元素的最前面，然后设置类型display为table。设置为block不管用(因为block效果等同于空的div)
+				 */
+				border-bottom: 1px;
+			}
+			
+			.box3{
+				border: 1px red solid;
+			}
+			.box4{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				float: left;
+			}
+			/*解决 外边距重叠 & 高度坍塌的终极办法：(多功能的clearfix)*/
+			.clearfix:before, .clearfix:after{
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.clearfix{
+				/*IE6中：(见day04/demo04_避免坍塌方法2.html)*/
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box3 clearfix">
+			<div class="box4"></div>
+		</div>
+		<hr />
+		<div class="box1 clearfix">
+			<!--<table></table>-->
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

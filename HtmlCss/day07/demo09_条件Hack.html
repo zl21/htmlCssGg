@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			-某些情况下，一些特殊的代码我们只需要它们在特殊的浏览器中被执行(如用在IE6中解决png24不支持的问题的代码块)，这时就可以使用Css Hack来解决该问题。
+			-Css Hack指的是一段特殊的代码。这段代码只有某些浏览器可以识别，从而达到我们想要的效果。
+		-->
+		<!--
+			-条件Hack：只对指定浏览器有效，其他浏览器会将其视为注释。
+			-语法：
+				<!--[if <!(非。这3个尖括号中的内容可写可不写)> <keywords>? IE <version(小于10的版本才有用)>?]>
+					HTML代码块
+				<![endif]-->
+				浏览器名可以是：IE；IE 6/7/8/9……；lt（less than小于）/gt（greater than）/lte（less than and equal小于等于） IE 6……
+			-可以为IE浏览器写单独的css文件，用条件Hack的方法引入.css文件即可。
+		-->
+		<!--[if IE 6]>
+			<p>请远离日常作死的IE6！(仅在IE6中显示)点击更换浏览器</p>
+		<![endif]-->
+		
+		<div style="width: 200px;height: 200px; background: #bfa url(img/1.png) no-repeat;"></div>
+		<!--仅在IE6中用这种方式处理png24格式的照片，该代码块不会在其他浏览器中被执行。-->
+		<!--[if IE 6]>
+			<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+			<script>DD_belatedPNG.fix("div");</script>
+		<![endif]-->
+		
+	</body>
+</html>
