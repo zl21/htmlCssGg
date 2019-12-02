@@ -1,0 +1,245 @@
+body{
+	background: url(../img/bd-bg.png) repeat-x;
+	/*
+	 * <img src=
+	 * <link href=
+	 * <a href=
+	 * <background url()
+	 */
+	height: 3000px;/*方便滚动查看布局*/
+}
+/*
+ * 固定元素宽度和居中的选择器
+ */
+.w{
+	width: 940px;
+	margin: 0 auto;
+}
+/*
+ *  * * * *  * * * * 设置header部分 * * * *  * * * * 
+ */
+.header{
+	/*background-color: #bfa;*/
+	padding-top: 37px;
+	padding-bottom: 46px;
+}
+.logo{
+	margin-left: 15px;
+}
+.nav{
+	float: right;
+	padding-top: 12px;
+}
+.nav li{
+	float: left;
+	padding: 0 10px 8px 10px;
+	border-left: 1px #d6d6d6 dotted;/*li的左边框 点线dotted*/
+}
+.nav a{
+	color: #666;
+	font: bold 14px Georgia;
+	text-decoration: none;
+}
+/*
+ * 设置导航栏中超链接的hover效果
+ */
+.nav a:hover{
+	color: #a1a1a1;
+	text-decoration: underline;
+}
+/*
+ * 设置导航中的小标题。
+ * 在Chrome浏览器中，字体大小最小支持到12px，所以1-12px都会显示为12px。
+ */
+.nav p{
+	color: #b7b7b7;
+	font: 11px tahoma;
+}
+/*
+ * * * *  * * * * banner部分(旗;旗帜;横幅;口号广告图) * * * *  * * * * 
+ */
+.banner{
+	/*设置阴影：此处用div背景图作为阴影图，所以要设置div比图片高点最下面好放阴影图*/
+	height: 356px;
+	background: url(../img/banner-bg.png) bottom center no-repeat;
+	position: relative;	/*给pointerDiv做坐标原点*/
+}
+.banner .pointerDiv{
+	/*float: left;*/ /*不能给a所在的div设置浮动，会导致没有内容的a挤在一起。虽然设置了a的背景图片，也不知道为什么如果不给a单独设置向左浮动就看不到没有内容的a？？？所以要把(float: left;)这句放到a元素选择器中。*/
+	/*由于pointerDiv被img挤到了下面，所以要为其强制定位到banner中的img上。此处选用绝对定位，因为相对定位 元素相对于当前所在位置移动后还占有着原来的位置，从而会导致其它需要那个位置的元素无法顺利上位。
+	 又 由于绝对定位是相对于当前浏览器窗口的定位，所以要给pointerDiv的父元素开启定位 从而使pointerDiv相对于它的祖先元素banner定位。*/
+	position: absolute;
+	left: 15px; /*以banner所在div的左上角为原点，x=15px。*/
+	top: 314px; /*y=314px。*/
+}	
+.pointerDiv a{
+	float: left;
+	width: 17px;
+	height: 17px;
+	background: url(../img/pointer.png) no-repeat;
+	padding-left: 4px;
+}
+.pointerDiv .active, .pointerDiv a:hover
+{
+	width: 17px;
+	height: 17px;
+	background: url(../img/pointer-active.png) no-repeat;
+}
+/*
+ *  * * * *  * * * * 设置content部分 * * * *  * * * * 
+ */
+.content{
+	/*background-color: red;*/
+	/*border-bottom: #8c8c8c 1px dashed;*/
+	position: relative;/*给break所在的div做坐标原点*/
+}	
+.content h1{
+	text-align: center;
+	font: bold 24px georgia;
+	padding-top: 6px;
+	padding-bottom: 20px;/*撑开下边的阴影图*/
+	background: url(../img/line.png) bottom center no-repeat;
+	margin-bottom: 38px;/*将下面的content里面的三个div往下挤*/
+}
+.content .pl, .content .cs, .content .uc{
+	float: left; /*注意浮动引起的高度坍塌问题*/
+	width: 300px;
+	/*background-color: #bfa;*/
+}
+.content .cs{
+	margin: 0 20px;/*给中间的div添加左右外边距*/
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.content h2{
+	color: #11719e;
+	font: 21px georgia;
+	margin: 0 auto;
+}
+.content .p_up{
+	color: #8c8c8c;
+	font: 12px helvetica;
+}
+.content .imgDiv{
+	width: 299px;
+	height: 190px;
+	background: url(../img/img-bg.png) no-repeat;
+	margin: 16px 0 10px 0;
+	text-align: center;
+	padding-top: 12px;
+}
+.content .p_down{
+	height: 92px;
+	color: #3e3e3e;
+	font: 13px helvetica;
+}
+.content a{
+	display: block;
+	width: 163px;
+	height: 40px;
+	text-decoration: none;
+	color: #016999;
+	font: 12px/40px helvetica;
+	background: url(../img/btn1.png) no-repeat;
+	text-indent: 1em;/*首行缩进1个字的距离*/
+	margin-bottom: 43px;
+}
+.break{
+	width: 929px;
+	height: 8px;
+	background: url(../img/break.png) no-repeat;
+	position: absolute;
+	left: 5px;
+	top: 522px;
+}
+/*content下半部分*/
+.content .h01{
+	display: block;
+	/*background-color: green;*/
+	color: #444444;
+	font: 18px georgia;
+	padding: 35px 0 9px 0;
+	border-bottom: 1px dashed #d3d3d3;
+}
+.content .p01{
+	width: 280px;
+	height: 27px;
+	color: #444444;
+	font: 12px Myriad Pro;
+	padding: 13px 0 7px 0;
+}
+.content .img5{
+	width: 300px;
+	height: 56px;
+	background: url(../img/img5.png) no-repeat;
+	/*margin-bottom:38px ;*/
+}
+.content .h02{
+	display: block;
+	/*background-color: green;*/
+	color: #444444;
+	font: bold 18px georgia;
+	padding: 27px 0 10px 0;
+	border-bottom: #8c8c8c 1px dashed;
+}
+.content .p02{
+	width: 280px;
+	height: 27px;
+	color: #444444;
+	font: 12px Myriad Pro;
+	padding: 13px 0 12px 0;
+}
+.content .leftEmail{
+	width: 296px;
+	height: 33px;
+	background: url(../img/input.png) no-repeat;
+	border: none;
+	/*清除浏览器默认样式*/
+	padding: 0;
+	margin: 0 0 11px 0;
+}
+
+.content .midName{
+	/*width: 200px;
+	height: 200px;
+	background-color: yellow;*/
+	width: 296px;
+	height: 33px;
+	background: url(../img/input.png) no-repeat;
+	border: none;
+	/*清除浏览器默认样式*/
+	padding: 0;
+	margin: 15px 0 17px;
+}
+.content .midEmail{
+	width: 296px;
+	height: 33px;
+	background: url(../img/input.png) no-repeat;
+	border: none;
+	/*清除浏览器默认样式*/
+	padding: 0;
+	margin: 0 0 15px 0;
+}
+.content .area{
+	width: 296px;
+	height: 135px;
+	border: none;
+	overflow: none;
+	resize: none;/*设置文本域不能调整大小*/
+	background: url(../img/textarea.png) no-repeat;
+	/*清除浏览器默认样式*/
+	padding: 0;
+	margin: 0 0 11px 0;
+}
+.content .btn{
+	width: 163px;
+	height: 32px;
+	background: url(../img/btn2.png) no-repeat;
+	border: none;
+	/*清除浏览器默认样式*/
+	padding: 0;
+	margin: 0;
+}
