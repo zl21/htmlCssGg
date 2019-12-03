@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style和link标签的书写位置</title>
+</head>
+<body>
+    <!--
+        style和link标签的书写位置：
+            如果书写在非head区域，可能会引起一些问题。
+
+            1.不便于维护和修改,需要花费时间去寻找位置
+            2.会引起页面的重绘、重排（回流）
+                1）网页的DOM树和样式树构建出 渲染树，浏览器是根据渲染树来绘制页面的
+                2）重排（回流）：当渲染树的一部分或者是全部，因为元素的尺寸、布局、隐藏等等引起页面重新渲染（重新构建渲染树）
+                3）重绘：当渲染树的一些属性有更新，这些属性只会影响到颜色、外观、风格，不会影响页面的布局
+
+            3.页面从上到下解析，假设style标签出现在body关标签之后，这个时候网页的渲染树已经快构建完毕，发现还有style标签，页面就会抛弃之前的CSSOM，重新开始渲染，可能会引起重绘重排甚至 闪烁。
+
+    -->
+
+    <ul>
+        <li></li>
+        <li></li>
+        <style>
+            li{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <style>
+            li{
+                background-color: red;
+            }
+        </style>
+        <li></li>
+    </ul>
+</body>
+</html>

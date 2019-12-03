@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+    <style>
+        .outer{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header{
+            overflow: hidden;
+        }
+        header>div{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        header>div:nth-child(1){
+            background-color: #111;
+        }
+        header>div:nth-child(2){
+            background-color: #222;
+        }
+        header>div:nth-child(3){
+            background-color: #333;
+        }
+        header>div:nth-child(4){
+            background-color: #444;
+        }
+        header>div:nth-child(5){
+            background-color: #555;
+        }
+
+        .con{
+            overflow: hidden;
+        }
+        .con>section{
+            width: 600px;
+            float: left;
+        }
+
+        .con>section>div{
+            float: left;
+        }
+        .con>section>div:nth-child(1),.con>section>div:nth-child(2){
+            width: 300px;
+            height: 300px;
+        }
+        .con>section>div:nth-child(1){
+            background-color: #666;
+        }
+        .con>section>div:nth-child(2){
+            background-color: #777;
+        }
+        .con>section>div:nth-child(3){
+            width: 600px;
+            height: 100px;
+            background-color: #888;
+        }
+
+        .con>aside{
+            width: 400px;
+            float: right;
+        }
+        .con>aside>div:nth-child(1){
+            width: 400px;
+            height: 150px;
+            background-color: #999;
+        }
+        .con>aside>div:nth-child(2){
+            width: 400px;
+            height: 250px;
+            background-color: #aaa;
+        }
+        footer{
+            width: 1000px;
+            height: 100px;
+            background-color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <header>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </header>
+        <div class="con">
+            <section>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+            <aside>
+                <div></div>
+                <div></div>
+            </aside>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

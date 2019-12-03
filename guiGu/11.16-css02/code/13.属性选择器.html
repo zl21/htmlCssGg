@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        .box li[name]{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box li[name=xiaowang]{
+            background-color: hotpink;
+        }
+        .box li[name^=lao]{
+            background-color: grey;
+        }
+        .box li[name$=zhang]{
+            margin: 10px;
+        }
+        .box li[name*=ao]{
+            transform: rotate(30deg);
+        }
+
+
+        .box li[name=xiaowang][on=yes]{
+            width: 200px;
+        }
+        form input[type=text]{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        属性选择器：
+            根据元素的属性 或者属性值来选择元素
+            中括号前是任意选择器（后代 子代 id 等）
+            ELE[attr]：拥有attr属性的元素
+            ELE[attr=val]：拥有attr属性的元素 并且值是val的
+            ELE[attr^=val]：拥有attr属性的元素 并且值是以val为开头的
+            ELE[attr$=val]：拥有attr属性的元素 并且值是以val为结尾的
+            ELE[attr*=val]：拥有attr属性的元素 并且值包含val的
+    -->
+    <div>
+        <ul class="box">
+            <li name="xiaowang" on="yes"></li>
+            <li>11111</li>
+            <li name="laowang"></li>
+            <li name="xiaozhang"></li>
+            <li name="laozhang"></li>
+            <li name="ao"></li>
+            <li name="xiaowang"></li>
+        </ul>
+        <form action="###">
+            密码<input type="password">
+            文本<input type="text">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素背面是否可见</title>
+    <style>
+        .box{
+            border: 1px solid #000;
+            transform-style: preserve-3d;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(121,121,121,.4);
+        }
+        .con{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px;
+            transform: rotateX(30deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--
+    backface-visibility: 控制元素背面是否可见
+        hidden：元素背面不可见
+        visible：默认  元素背面可见
+
+    只和元素的正反面相关
+-->
+    <div class="box">
+        <div class="con">好</div>
+    </div>
+</body>
+</html>

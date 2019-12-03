@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>换行后控制侧轴整体的富余空间</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+            flex-wrap: wrap;
+
+            align-items: flex-end;
+            align-content: flex-end;
+            /*align-content: flex-start;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;*/
+            /*align-content: space-evenly;*/
+
+
+        }
+        .box div:nth-child(1){
+            width: 50%;
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            width: 40%;
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            width: 60%;
+            background-color: yellow;
+        }
+        .box div:nth-child(4){
+            width: 20%;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+align-content:
+    换行后侧轴上整体富余空间分配：
+        flex-start：
+            整体项目靠着侧轴的开始
+        flex-end：
+            整体项目靠着侧轴的结束
+        center：
+            整体项目在侧轴上居中
+        space-around：
+            让多行项目在侧轴上 富余空间包含项目
+        space-between：
+            让多行项目在侧轴上 项目包含
+        space-evenly：
+            让所有的项目间隙都相等
+
+    在项目换行后，align-content的优先级要高于align-items
+
+
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>33</div>
+</div>
+</body>
+</html>

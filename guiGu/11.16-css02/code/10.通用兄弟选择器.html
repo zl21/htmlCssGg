@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通用兄弟选择器</title>
+    <style>
+        .outer>.box~li{
+            background-color: red;
+        }
+        .outer>.box~.show{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        通用兄弟选择器：
+            使用 ~ 间隔开
+            A ~ B  选择A元素 后边 所有兄弟元素中 符合B条件的
+
+
+    -->
+
+    <ul class="outer">
+        <li></li>
+        <li class="box"></li>
+        <li></li>
+        <li class="show"></li>
+        <li></li>
+        <li class="show"></li>
+    </ul>
+</body>
+</html>

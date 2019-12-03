@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负margin的基础用法</title>
+    <style>
+        .outer div{
+            float: left;
+        }
+        .con1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left:0px;
+        }
+        .con2{
+            width: 180px;
+            height: 180px;
+            background-color: #0ee69c;
+        }
+    </style>
+</head>
+<body>
+<!--
+    负margin的基础用法:
+        margin-left为负：
+            元素向左移动，覆盖前边的元素，但是不会占用他人空间。
+            自身腾出的位置不再保留。
+
+        margin-top为负：
+            元素向上移动，覆盖前边的元素，但是不会占用他人空间。
+            自身腾出的位置不再保留。
+
+        margin-right为负：
+            元素不动，本身的大小也不会发生改变
+            但是，元素所占用的空间大小变小，后边的元素会覆盖上来
+
+        margin-bottom为负：
+            元素不动，本身的大小也不会发生改变
+            但是，元素所占用的空间大小变小，下边的元素会覆盖上来
+
+
+-->
+<div class="outer">
+    <div class="con1"></div>
+    <div class="con2"></div>
+</div>
+</body>
+</html>

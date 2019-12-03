@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变换基点</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        ul{
+            width: 1100px;
+            margin: 30px auto;
+        }
+        ul>li{
+            width: 200px;
+            float: left;
+            margin: 10px;
+            transform-style: preserve-3d;
+            perspective: 300px;
+            background-color: rgba(200,200,200,.4);
+        }
+        ul>li>div{
+            width: 200px;
+            height: 250px;
+            transition: all .3s linear;
+        }
+        ul>li:nth-child(1) div{
+            background-color: red;
+            /*transform-origin: center top;*/
+            transform-origin: center bottom;
+            transform-origin: center 30px;
+        }
+        ul>li:nth-child(1):hover div{
+            transform: rotateX(30deg);
+        }
+        ul>li:nth-child(2) div{
+            background-color: #49c1ff;
+            transform-origin: left top;
+            transform-origin: left 50px;
+        }
+        ul>li:nth-child(2):hover div{
+            transform: rotate(30deg);
+        }
+        ul>li:nth-child(3) div{
+            background-color: #ff5042;
+            transform-origin: center bottom;
+        }
+        ul>li:nth-child(3):hover div{
+            transform: skewX(30deg);
+        }
+
+        ul>li:nth-child(4) div{
+            background-color: #64ff28;
+            transform-origin: 20px center;
+        }
+        ul>li:nth-child(4):hover div{
+            transform: scaleX(1.2);
+        }
+
+        ul>li:nth-child(5) div{
+            background-color: #ff5ab7;
+            /*translate位置相对自身原来的位置*/
+            transform-origin: 20px 20px;
+        }
+        ul>li:nth-child(5):hover div{
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+<body>
+<!--
+    变换基点：
+        transform-origin
+            控制元素的变形的变换基点
+            x轴上  可以是单位  百分比   left  right  center
+            y轴上  可以是单位  百分比   top  bottom  center
+-->
+<ul>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+</ul>
+</body>
+</html>

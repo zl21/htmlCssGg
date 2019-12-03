@@ -63,10 +63,11 @@
 			
 			<!--
 				-多行文本域：textarea;自带滚动条，用户可自行调节大小。
+				-可通过cols和rows来规定textarea的尺寸。
 			-->
 			简&nbsp;介：
 				<textarea name="info"></textarea><br /><br />
-			
+
 			<input type="submit" value="提交" />
 			<input type="reset" value="重置" />
 			<input type="button" value="可自行第一功能的按钮" />
@@ -80,7 +81,9 @@
 				-可以用filedset标签来给表单中的子标签分组。制造简历表类型的表单。
 				-它的子标签<legend>用来设置组名。例如，基本信息，兴趣爱好，获奖情况等分组名。
 			-->
-			<fieldset></fieldset>
+			<fieldset>
+				<legend>legend标签给分组命名如：基本信息，兴趣爱好，获奖情况等组名</legend>
+			</fieldset>
 		</form>
 	</body>
 </html>

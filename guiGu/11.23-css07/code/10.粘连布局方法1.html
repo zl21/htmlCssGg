@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘连布局方法1-怪异盒子模型解决方案</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            height: 100%;
+        }
+        .outer{
+            height: 100%;
+        }
+        .con{
+            background-color: red;
+            min-height: 100%;
+            font-size: 30px;
+            padding-bottom: 80px;
+            box-sizing: border-box;
+        }
+        .footer{
+            height: 80px;
+            background-color: #009ff2;
+            margin-top: -80px;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="con">
+        <p id="aT">被跳转的P标签。</p>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        顶一下 <br>
+        <br>
+        <a href="#aT">跳转至标签</a>
+    </div>
+    <footer class="footer"></footer>
+</div>
+</body>
+</html>

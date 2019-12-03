@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置宽度和高度的坑</title>
+    <style>
+        header{
+            /*当一个元素的整体所占宽度等于父级的时候，需要考虑盒模型其他情况再设置width属性*/
+
+            width: 100%;
+            /*设置宽度100%的时候，内容就和父级一样，如果再设置padding等，就会超出父级*/
+            /*解决方案：不设置宽度，或者是宽度设置为auto*/
+            width:auto;
+            /*内容宽度自动，整体盒子模型加起来撑满父级*/
+            background-color: red;
+            margin: 0 50px;
+            height: 100px;
+        }
+        input{
+            /*测量input的总宽度是180，当设置padding等属性时，需要把width的值减一下*/
+            width: 160px;
+            height: 40px;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <header></header>
+        <input type="text">
+    </div>
+</body>
+</html>

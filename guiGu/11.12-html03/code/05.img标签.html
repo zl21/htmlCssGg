@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img标签</title>
+</head>
+<body>
+    <!--
+        图片的格式：
+            jpg：当图片不是透明或动图的时候，尽量使用jpg，占用大小略小
+
+            png：透明图
+
+            gif：动态图
+
+
+        img标签：
+            引入图片，代表的是文档中的一个图像
+            单标签，属于替换元素
+
+            src属性：图片的路径，可以书写相对路径，也可以书写网络上的路径
+
+            alt属性：
+                1、定义图片的替代文本
+                2、当网络等原因，图片加载不出来的时候，对图片的解释
+                3、alt属性和SEO密切相关，爬虫到当前页面以后，并不能读取图片内容，而是通过alt属性来分辨图片内容
+
+            title属性：
+                1.当鼠标悬浮在图片上的时候，对图片的解释
+
+            width/height属性:
+                1、img标签除了通过css设置宽高，还可以通过自身的width、height属性设置宽高(不用加单位)
+                2、如果只设置宽高中的其中一个，那个另一个会自适应按比例缩放
+                3、当宽高一起设置的时候，图片可能会变形
+                4、当width和height属性与css设置的宽高冲突的时候，css的优先级高
+
+
+        img标签是行内块属性：
+            1、行内显示
+            2、可以设置宽高
+
+    -->
+    <img src="../images/06.png" alt="">
+    <img src="../images/07.gif" alt="我想和你一起看星星">
+    <img src="../images/05.jpg" alt="" title="别解释，快上车">
+
+    <img src="../images/dong.jpg" height="300"  width="300"  style="width: 100px;height: 100px;" alt="">
+</body>
+</html>

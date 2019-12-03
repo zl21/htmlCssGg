@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群组选择器</title>
+    <style>
+        .box1{
+            width: 200px;
+            background-color: red;
+        }
+        .box2{
+            background-color: yellowgreen;
+        }
+        .box3{
+            background-color: purple;
+        }
+        .box1,.box2,.box3{
+            width: 100px;
+            height: 100px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    群组选择器：
+        将多个选择器使用 ，间隔开，就可以对多个选择器设置样式了
+        群组选择器只是一种合写，不要合并去计算优先级
+
+    如果对个选择器有重复的样式，我们设置的方法有两种：
+        1.群组选择器
+        2.给他们另外一个相同的类名
+-->
+<ul>
+    <li class="box1 box"></li>
+    <li></li>
+    <li class="box2 box"></li>
+    <li></li>
+    <li class="box3 box"></li>
+    <li></li>
+</ul>
+</body>
+</html>

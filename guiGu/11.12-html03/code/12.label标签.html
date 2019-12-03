@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>label标签</title>
+</head>
+<body>
+    <!--
+        label标签：
+            为表单元素定义标注（点击标注的信息的时候，让表单元素获取焦点）
+
+            两种使用方法：
+                一、label标签包含住标注的文本
+                    让label元素的for属性的值 =  相对应表单的id属性的值
+
+                二、label包含住整个标注和表单
+                    注意 此时label不允许再有for属性
+    -->
+
+    <form action="###">
+        <label for="user">请输入用户名：</label>
+        <input type="text" name="user" id="user">
+
+        <label>
+            请输入密码
+            <input type="text" name="pass">
+        </label>
+    </form>
+</body>
+</html>

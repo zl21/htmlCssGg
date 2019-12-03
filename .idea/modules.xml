@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/htmlCss_h5Css3.iml" filepath="$PROJECT_DIR$/.idea/htmlCss_h5Css3.iml" />
       <module fileurl="file://$PROJECT_DIR$/..//htmlCss_h5Css3/../../H5/.idea/htmlCss_h5Css3.iml" filepath="$PROJECT_DIR$/..//htmlCss_h5Css3/../../H5/.idea/htmlCss_h5Css3.iml" />
     </modules>
   </component>

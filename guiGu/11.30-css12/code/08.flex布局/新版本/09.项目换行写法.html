@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目换行写法</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+
+            justify-content: center;
+            align-items: flex-end;
+
+        }
+        .box div:nth-child(1){
+            width: 50%;
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            width: 40%;
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            width: 60%;
+            background-color: yellow;
+        }
+        .box div:nth-child(4){
+            width: 20%;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--
+    flex-wrap：
+        控制项目超出容器后换行
+        换行以后，容器被平分成了两半，每一半占一边
+        换行以后每一行不影响，主轴和侧轴都出现了单行的富余空间
+         align-items: center; 只能控制这一行在自己的行中居中  不能控制在整体容器中的侧轴富余空间分配
+
+        wrap：项目超出换行
+        nowrap：项目不换行
+        wrap-reverse：项目换行并且调换侧轴的 方向
+
+
+
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>33</div>
+</div>
+</body>
+</html>

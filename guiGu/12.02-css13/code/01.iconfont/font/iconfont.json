@@ -1,0 +1,44 @@
+{
+  "id": "1539877",
+  "name": "1108",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1017",
+      "name": "棒球",
+      "font_class": "bangqiu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "778010",
+      "name": "脚印1",
+      "font_class": "jiaoyin1",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "3779680",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "4933191",
+      "name": "心",
+      "font_class": "xin",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "8351878",
+      "name": "手",
+      "font_class": "shou",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    }
+  ]
+}

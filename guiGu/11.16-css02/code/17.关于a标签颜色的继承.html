@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签颜色的继承</title>
+    <style>
+        .box{
+            color: hotpink;
+        }
+        .box>a{
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        因为a标签拥有默认的颜色，所以继承的颜色控制不了a标签
+        如果需要改变a标签的颜色，请直接控制到a标签
+        这个时候只能控制的是a标签默认的颜色(a标签其他状态的颜色需要伪类控制)
+    -->
+    <div class="box">
+        鸡儿
+        <a href="###">哈哈哈</a>
+    </div>
+</body>
+</html>

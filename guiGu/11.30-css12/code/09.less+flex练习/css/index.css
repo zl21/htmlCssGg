@@ -1,0 +1,112 @@
+@import "reset.css";
+html,
+body {
+  height: 100%;
+}
+html .outer,
+body .outer {
+  height: 100%;
+  background: url("../images/bg2.jpg") 0 0 no-repeat;
+  background-size: cover;
+  position: relative;
+}
+html .outer header,
+body .outer header {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+html .outer header > img,
+body .outer header > img {
+  margin-left: 10px;
+}
+html .outer header .head_list,
+body .outer header .head_list {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .outer header .head_list > li,
+body .outer header .head_list > li {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-left: 15px;
+  color: #fff;
+}
+html .outer section,
+body .outer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+html .outer section > .con,
+body .outer section > .con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .outer section > .con > li,
+body .outer section > .con > li {
+  width: 150px;
+  height: 220px;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+html .outer section > .con > li:nth-child(1),
+body .outer section > .con > li:nth-child(1) {
+  background-color: red;
+}
+html .outer section > .con > li:nth-child(2),
+body .outer section > .con > li:nth-child(2) {
+  background-color: #ffcc97;
+}
+html .outer section > .con > li:nth-child(3),
+body .outer section > .con > li:nth-child(3) {
+  background-color: #89fffa;
+}
+html .outer section > .con > li:nth-child(4),
+body .outer section > .con > li:nth-child(4) {
+  background-color: #e689ff;
+}
+html .outer section > .con > li:nth-child(5),
+body .outer section > .con > li:nth-child(5) {
+  background-color: #ff3fc6;
+}
+html .outer section > .con > li:nth-child(6),
+body .outer section > .con > li:nth-child(6) {
+  background-color: #a1ff65;
+}

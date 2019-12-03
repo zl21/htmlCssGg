@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+//变量o
+@zero:0;
+//居中的混合  定义混合使用 .name(){}
+.center(@wid,@hei,@bgc){
+  width: @wid;
+  height: @hei;
+  background-color: @bgc;
+  position: absolute;
+  left: @zero;
+  top: @zero;
+  right: @zero;
+  bottom: @zero;
+  margin: auto;
+}
+
+.outer{
+  width: 700px;
+  height: 600px;
+  background-color: pink;
+  margin: 0 auto;
+  position: relative;
+  .inner{
+    //使用混合  .name();
+    .center(600px,400px,red);
+    .clearFix();
+    .box{
+      .center(300px,200px,yellow);
+      .con{
+        .center(100px,100px,green);
+      }
+    }
+  }
+}
+
+
+.clearFix(){
+  *zoom:1;
+  &:after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}

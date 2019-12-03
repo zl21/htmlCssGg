@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        table{
+            width: 600px;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px solid;
+        }
+        td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+    </tr>
+    <tr>
+        <td>Alanhie</td>
+        <td>female</td>
+        <td>21</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Alanhie</td>
+<!--        <td>female</td>-->
+        <td colspan="2">未知</td>
+    </tr>
+    <tr>
+<!--        <td>Alanhie</td>-->
+        <td>female</td>
+        <td>21</td>
+    </tr>
+    <tr>
+        <td>header</td>
+        <td rowspan="6">块元素</td>
+        <td>头部标签，可在同一页面不同区域使用。不可嵌套。</td>
+    </tr>
+    <tr>
+        <td>nav</td>
+<!--        <td>块元素</td>-->
+        <td>导航栏标签，可在同一页面不同区域使用。不可嵌套。静态/动态导航(在nav标签中嵌套列表使用，通过滚动ul/ol来实现动态导航)</td>
+    </tr>
+    <tr>
+        <td>section</td>
+<!--        <td>块元素</td>-->
+        <td>内容区域标签，可在同一页面不同区域使用。强调分块。</td>
+    </tr>
+    <tr>
+        <td>article</td>
+<!--        <td>块元素</td>-->
+        <td>内容区域标签，可在同一页面不同区域使用。强调独立(指可以独立封装出来重用的模块，如：评论模块，各种插件模块等)</td>
+    </tr>
+    <tr>
+        <td>aside</td>
+<!--        <td>块元素</td>-->
+        <td>侧边栏标签，通常使用在内容区。</td>
+    </tr>
+    <tr>
+        <td>figure</td>
+<!--        <td>块元素</td>-->
+        <td>独立的引用单元。子标签figcaption用来设置媒体的标题。</td>
+    </tr>
+    <tr>
+        <td>mark</td>
+        <td rowspan="2">内联元素</td>
+        <td>搜索关键词后 用显眼的样式 显示 搜索结果中的关键词。强调与上下文的关联性。默认字体颜色为yellow。</td>
+    </tr>
+    <tr>
+        <td>time</td>
+<!--        <td>内联元素</td>-->
+        <td>日期加时间标签。可直接包含标准格式的时间，或用属性datetime包含非标准格式的时间。如：<time datetime="2019-05-13 00:00:00">端午节</time></td>
+    </tr>
+    <tr>
+        <td>datalist</td>
+        <td rowspan="2">块元素</td>
+        <td>可供查询筛选的下拉列表框。option子标签设置可选值。与input配套使用，设置input的list属性为datalist标签的id。</td>
+    </tr>
+    <tr>
+        <td>progress</td>
+<!--        <td>块元素</td>-->
+        <td>进度条标签。属性max表示总任务量，value表示已完成的任务量。</td>
+    </tr>
+    <tr>
+        <td>ruby</td>
+        <td>内联元素</td>
+        <td>给文字注音。拼音写在子标签rt中。</td>
+    </tr>
+</table>
+
+</body>
+</html>

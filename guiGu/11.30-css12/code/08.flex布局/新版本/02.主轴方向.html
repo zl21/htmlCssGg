@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义容器</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+
+
+        }
+        .box div:nth-child(1){
+            width: 100px;
+            /*width: 50%;*/
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            /*width: 40%;*/
+            width: 120px;
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            /*width: 60%;*/
+            width: 140px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        flex-direction: 改变主轴的位置
+            row：默认值  主轴从左至右
+            row-reverse：主轴从右至左
+            column：主轴从上至下  （项目没有设置宽度的时候，在横向的侧轴依然默认填充满，在主轴上内容撑开）
+            column-reverse：主轴从下至上
+    -->
+    <div class="box">
+        <div>11</div>
+        <div>22</div>
+        <div>33</div>
+    </div>
+</body>
+</html>

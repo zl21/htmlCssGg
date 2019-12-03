@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目单独在侧轴的位置</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+            align-items: flex-start;
+
+
+
+        }
+        .box div:nth-child(1){
+            width: 50%;
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            width: 40%;
+            background-color: green;
+            align-self: flex-end;
+        }
+        .box div:nth-child(3) {
+            width: 60%;
+            background-color: yellow;
+            align-self: center;
+        }
+        .box div:nth-child(4){
+            width: 20%;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    项目单独在侧轴的位置：
+        在项目上书写
+        align-self:
+            flex-start
+            flex-end
+            center
+
+        当align-self和其他的控制容器的属性冲突的时候，align-self优先级高
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+</div>
+</body>
+</html>

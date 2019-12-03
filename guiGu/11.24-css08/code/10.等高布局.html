@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>等高布局</title>
+    <style>
+        .outer{
+            overflow: hidden;
+        }
+        .left{
+            width: 100px;
+            background-color: red;
+            float: left;
+
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+        .right{
+            width: 100px;
+            background-color: pink;
+            float: right;
+
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+        .center{
+            background-color: #009ff2;
+            margin: 0 100px;
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        等高布局：
+            将元素padding-bottom设置很大一个值，
+            然后给父级设置overflow：hidden
+            给元素设置margin-bottom-很大的值，当小到一定程度，父级就是由其他元素撑开
+    -->
+    <div class="outer">
+        <div class="left">
+            left <br>
+            left <br>
+            left <br>
+            left <br>
+            left <br>
+            left <br>
+            left <br>
+        </div>
+        <div class="right">
+            right <br>
+        </div>
+        <div class="center">
+            center <br>
+            center <br>
+            center <br>
+        </div>
+    </div>
+</body>
+</html>

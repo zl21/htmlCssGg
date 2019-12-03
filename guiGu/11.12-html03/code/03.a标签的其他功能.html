@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的其他功能</title>
+</head>
+<body>
+<!--
+    a标签的其他功能:
+        a标签的下载功能：
+            1.a标签正常链接的时候：当a标签链接的文件，可以用浏览器打开，那么浏览器打开，否则下载
+
+            2.可以给a标签一个download属性，书写路径可以直接下载
+
+            3.切记 a标签必须拥有href属性  否则一切功能无效
+
+
+        a标签对电话电信email的支持：
+            1.a标签打电话是在href中书写：  格式是  tel:15701665563
+            2.a标签发短信是在href中书写：  格式是  sms:15701665563
+            3.a标签发邮件是在href中书写：  格式是  mailto:15701665563
+-->
+
+<div>
+    <a href="../images/01.png">点击我查看图片</a>
+    <a href="../video/02.a标签的锚链接及补充.wmv">点击我下载视频</a>
+    <a download="../images/01.png">点击我下载图片</a>
+</div>
+
+<div>
+    <a href="tel:15701665563">厕所小广告 你有我都要</a>
+    <a href="sms:15701665563">清投票 短信</a>
+    <a href="mailto:lipeihua@atguigu.com">发邮件问候</a>
+</div>
+</body>
+</html>

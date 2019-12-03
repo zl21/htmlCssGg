@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        .box{
+            width: 1000px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            /*height: 200px;*/
+            /*float: left;*/
+            /*overflow: hidden;*/
+        }
+        .con1{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        .con2{
+            width: 650px;
+            height: 200px;
+            background-color: #1b6f9b;
+            float: right;
+        }
+
+        .box:after{
+            /*想要让伪元素生效，必须书写content属性*/
+            content: "\200B";
+            /*\200B代表空字符*/
+            height: 0px;
+
+            display: block;
+
+            clear: both;
+        }
+
+
+        .clearFix:after{
+            content: "\200B";
+            height: 0px;
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        清除浮动：
+            清除浮动是清除浮动元素对父元素的影响
+
+            1.给父级设置高度（不推荐使用）
+                缺点：很多情况下高度是不确定的，所以不适用
+
+            2.以浮制浮 ，给浮动元素的父级设置浮动（开启BFC）
+                不主动使用，而是因为父元素也需要浮动布局的时候，顺便子元素的浮动就已经给清掉了，不用刻意再去清子元素的浮动
+
+            3.overflow:hidden  设置给浮动元素的父级（开启了BFC）
+
+            4.br标签清浮动 在最后一个浮动元素的后边 书写一个br ，br中书写clear属性，值为both
+                不常用（不推荐）
+
+            5.空标签的clear属性清浮动（常用）
+                在浮动的元素后边书写一个 空标签（块元素）
+                给空标签书写css样式  clear属性为 both
+
+            6.伪元素清浮动
+                常见两种： after  before
+
+
+    -->
+    <div class="box">
+
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <!--<br clear="both">-->
+        <!--<div style="clear: both;"></div>-->
+
+
+
+
+    </div>
+
+</body>
+</html>

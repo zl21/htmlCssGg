@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC清浮动</title>
+    <style>
+        /*.box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }*/
+        .outer{
+            /*overflow: auto;
+            overflow: hidden;
+            overflow: scroll;*/
+
+            /*display: inline-block;*/
+
+            /*position: absolute;*/
+            /*position: fixed;*/
+
+            float: left;
+        }
+        .con{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!--根元素默认清浮动-->
+    <!--<div class="box"></div>-->
+
+    <div class="outer">
+        <div class="con"></div>
+    </div>
+
+</body>
+</html>

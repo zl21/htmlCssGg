@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动解决块元素一行的问题</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+            display: inline-block;
+        }
+        .box2{
+            width: 120px;
+            height: 120px;
+            background: purple;
+            float: left;
+            display: inline-block;
+        }
+        .box3{
+            width: 130px;
+            height: 130px;
+            background: #0ee69c;
+            float: right;
+        }
+        .box4{
+            width: 140px;
+            height: 140px;
+            background: #1b6f9b;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

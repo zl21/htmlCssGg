@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线性渐变</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 300px;
+
+            /*直接书写两个颜色，默认从上至下  颜色渐变*/
+            background: linear-gradient(red,pink);
+
+            /*直接书写三个颜色，默认从上至下  颜色渐变*/
+            background: linear-gradient(red,pink,deeppink);
+
+            /*可以在颜色前书写角度，0deg朝上，顺时针旋转*/
+            background: linear-gradient(0deg,red,pink,deeppink);
+            background: linear-gradient(90deg,red,pink,deeppink);
+
+            /*可以以 to  left  right  top  bottom等确定方向*/
+            /*top right 不一定是45deg*/
+            background: linear-gradient(to top,red,pink,deeppink);
+            background: linear-gradient(to top right,red,pink,deeppink);
+            background: linear-gradient(45deg,red,pink,deeppink);
+            /*background: -webkit-linear-gradient(top,red,pink,deeppink);*/
+
+            /*在每一个颜色值的后边都可以添加百分比百分百就是元素的宽度，或者是你限制的background-size*/
+            background: linear-gradient(90deg,red 40%,pink 50%,deeppink 60%) 0 0 no-repeat;
+            background: linear-gradient(90deg,red 10px,pink 20px,deeppink 30px) 0 0 no-repeat;
+
+            background-size: 100px 100px;
+
+
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    线性渐变：
+        渐变的本质就是绘制一张图片，所以渐变要放在background属性值中
+
+        线性渐变：linear-gradient()  是一个函数
+            第一个参数是角度或方向  可以省略
+            第二个参数是渐变节点
+                渐变颜色改变的位置和颜色的值
+                没有书写位置，渐变节点会平分
+-->
+    <div class="box"></div>
+</body>
+</html>

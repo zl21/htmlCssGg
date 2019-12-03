@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景类设置</title>
+    <style>
+        .box{
+            width: 800px;
+            height: 500px;
+            /*background-color: red;
+            background-image: url("../images/05.jpg");
+            !*background-position-x: 0px;*!
+            background-position: center 0 ;
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;*/
+            background: red url("../images/05.jpg") center center no-repeat;
+            background: url("../images/05.jpg") center center no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--
+    背景类设置：
+        背景颜色的设置：background-color: 颜色值和color一样
+
+        背景图的设置：
+            background-image：url（路径）
+            图片默认在x和y轴平铺
+            前端中 x轴朝右为正  y轴朝下为正
+
+
+            background-position:背景图定位
+                以元素的左上角为0 0 的起始位置
+                background-position-x 控制x轴位置：可以是数值+单位  / left  right  center  百分比
+                    百分比参照的是 元素的宽度-图片的宽度 得到的值
+                    50%  图片居中
+                    0%  图片靠左
+                    100% 图片靠右
+                background-position-y 控制y轴位置 可以是数值+单位  / top  right  bottom    百分比
+                background-position ：合写  x和y使用空格隔开
+
+
+            background-repeat:图片平铺
+                repeat：平铺
+                no-repeat：不平铺
+                repeat-x：只在x平铺
+                repeat-y：在y平铺
+
+
+
+        background合写：(推荐)
+            color image position-x position-y repeat
+
+-->
+<div class="box">
+    hello word 天气
+</div>
+</body>
+</html>

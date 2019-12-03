@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.outer {
+  width: 700px;
+  height: 600px;
+  background-color: pink;
+  margin: 0 auto;
+  position: relative;
+}
+.outer .inner {
+  width: 600px;
+  height: 400px;
+  background-color: #ff0000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  *zoom: 1;
+}
+.outer .inner:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+}
+.outer .inner .box {
+  width: 300px;
+  height: 200px;
+  background-color: #ffff00;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.outer .inner .box .con {
+  width: 100px;
+  height: 100px;
+  background-color: #008000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

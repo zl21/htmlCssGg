@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的4个伪类</title>
+    <style>
+        /*.a1{
+            color: red;
+        }*/
+
+        a:link{
+            color: pink;
+        }
+        a:visited{
+            color: mediumvioletred;
+        }
+        a:hover{
+            color: #009ff2;
+        }
+        a:active{
+            color: #179837;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    直接控制a标签设置颜色，a标签所有默认其他状态都是这个颜色
+    a标签没有href属性，不再具有任何功能，不再具有任何样式
+
+    a标签的4个伪类：
+        控制a标签的4个状态
+        link：当a标签拥有链接属性的时候
+        visited:当链接被访问过以后
+        hover:鼠标悬停在链接上的样式
+        active:当链接在激活状态的时候
+
+    拥有顺序，爱恨法则： love hate     ---》 l  v   h   a
+        
+-->
+    <div>
+        <a href="######" class="a1">百度一下 你也不知道</a>
+
+        <a class="a2">百度一下 你也不知道 a2</a>
+    </div>
+</body>
+</html>

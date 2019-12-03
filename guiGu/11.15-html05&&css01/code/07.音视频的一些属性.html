@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音视频的一些属性</title>
+</head>
+<body>
+<!--
+    音视频的一些属性：
+        controls:显示播放控件  样式根据浏览器的不同而改变的。将来我们也可以通过js自己书写
+        autoplay：自动播放，浏览器默认阻止自动播放，当视频刚开始就静音的时候，自动播放才生效
+        muted：静音
+        loop：是否循环播放视频
+        poster：一个海报帧的url，用户用户播放前进行展示
+        preload:告诉浏览器作者认为应该达到的最佳用户体验方式是什么(预播放)
+            none:作者认为用户不会看这个视频，服务器也要最小化访问，浏览器不需要任何视频资料
+            metadata：尽管我们认为用户不需要看这个视频，但是还是抓取了视频的元数据
+            auto：网站优先播放视频，哪怕用户不需要，也是优先加载
+         
+-->
+<video src="../images/source/test.mp4" controls  loop poster="../images/05.jpg" preload="auto"></video>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>包含块</title>
+</head>
+<body>
+<!--
+    包含块：
+        绝对定位的元素，相对于其包含块进行定位
+        判断一个元素是不是包含块，要看他的position属性
+
+        1.如果一个元素自身是position：relative 或者是 static，那么它的包含块就是它的父级
+
+        2.如果一个元素是position：absolute，他的包含块就是离它最近的定位（static除外）元素
+
+        3.如果一个元素是position：fixed，他的包含快是 viewport(视口)
+
+        4.如果一个元素是position：absolute，出现以下几种情况的时候，包含块会改变
+            1.找的过程中碰到了transform属性，或者perspective属性的时候，并且值不为none。也可以成为包含块
+            2.找的过程中碰到了filter属性的时候，也会成为包含块
+
+        5.当由里之外一直找不到包含块的情况下，html就是初始包含块
+-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font-weight</title>
+    <style>
+        div{
+            font-weight: normal;
+        }
+        strong{
+            /*font-weight: normal;*/
+        }
+        span{
+            font-weight: bold;
+        }
+        a{
+            font-weight: bolder;
+        }
+
+        p{
+            font-weight: lighter;
+        }
+        p>span{
+            font-weight: bolder;
+            font-weight: bold;
+        }
+        h1{
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+<!--
+    font-weight：（可以继承）
+        用来定义文字的粗细，其实目前浏览器只支持  细 正常  粗
+        1.normal：正常  一般用来把strong h 等默认加粗的元素给变成正常
+        2.bold  加粗
+        3.bolder 更粗  是一个相对的值，相对父级来说的，比父级高一个档次
+        4.lighter：相对父级来说，更细
+        5.100-900:整除100 的整数
+            因为浏览器只支持 3个档次，所以
+                100-300：细
+                400-500：正常
+                600-900：粗
+-->
+    <div>
+        div
+        <strong>strong 变粗变细</strong>
+        <span>span  粗</span>
+        <a href="###">a标签</a>
+        <p> p标签 <span>span</span></p>
+        <h1>h11111</h1>
+    </div>
+</body>
+</html>

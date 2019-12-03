@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        .outer{
+
+        }
+        .con1{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+
+            position: relative;
+            left:0%;
+            right: 10px;
+
+            /*float: left;*/
+
+            margin: 10px;
+        }
+        .con2{
+            width: 180px;
+            height: 180px;
+            background-color: #0ee69c;
+        }
+        .outer span{
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    相对定位：
+        position：relative
+        相对自身原来位置进行定位
+        1.原来位置保留
+        2.不影响其他元素
+        3.没有脱离页面流，只是创建了一个新的层叠上下文
+        4.浮动仍然可以使用
+        5.块和行的盒子模型正常按照之前的支持性使用
+
+    left：元素的左边距离 原来位置左边的距离   + 向右移动
+    right：元素的右边距离 原来位置右边的距离   + 向左移动
+    top：元素的上边距离 原来位置上边的距离   + 向下移动
+    bottom：元素的下边距离 原来位置下边的距离   + 向上移动
+
+    当left和right冲突、top和bottom冲突的时候，left和top的优先级高
+
+    相对定位中：left的百分比是相对父元素的宽
+                top的百分比是相对于父元素的高（但是父级高度一定要设置出来才生效）
+-->
+    <div class="outer">
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <span>span</span>
+    </div>
+</body>
+</html>

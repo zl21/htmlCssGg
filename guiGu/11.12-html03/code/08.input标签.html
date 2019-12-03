@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input标签</title>
+</head>
+<body>
+<!--
+    input标签：
+        有一个type属性，type属性的值不一样，input的表现不一样
+            可以是：文本域、密码域、单选框、多选框、3类按钮、隐藏域、文件域。。。
+            
+        type类型：
+            text：文本域，单行文本输入框
+
+            password：密码域
+                在其中输入的内容全部都变成小黑点显示
+                
+            radio：单选框
+                一定书写name和value属性
+                相同name属性的单选框之间  可以进行单选
+
+            checkbox：多选框
+
+            file：文件域
+                点击可以上传文件，真正把文件上传上去需要js支持
+
+            hidden：隐藏域
+                提交隐藏内容
+                在表单提交的过程中，不需要用户修改或者知道的信息，直接可以使用隐藏域提交。表单不在页面显示，但是可以正常提交
+
+            submit:
+                提交表单：提交当前按钮所在的form表单
+                只有当前按钮在form中的时候，提交才起作用
+                表单和表单提交按钮是相辅相成
+
+            button：
+                单纯的按钮形状，没有任何功能。
+                我们一般用在给其绑定js效果
+
+            reset:
+                重置按钮
+                当按钮被点击以后，当前按钮所在的form表单中所有的表单元素，全部被重置，还原默认的值
+
+            当type类型输入有误，或者不支持的时候，自动解析为text 类型
+
+
+        name属性：
+            给表单起一个名字（可以自己命名，但是大多数是后台提供）
+            让数据形成了一个键值对儿  比如  user=老王
+
+        value属性：
+            表单默认值
+            提交的时候键值对er 就是   name=value
+            value在 text和password的时候可以省略，如果不写就默认为空
+-->
+
+<form action="http://www.baidu.com" id="form">
+    请输入您的账号名：
+    <input type="text" name="username" value=""> <br>
+
+    请输入您的密码：
+    <input type="password" name="pass"> <br>
+    
+    请选择您的性别：
+    男 <input type="radio" name="sex" value="男">
+    女 <input type="radio" name="sex" value="女">
+    未知 <input type="radio"name="sex" value="未知"> <br>
+
+    请选择你喜欢的城市：
+    深圳：<input type="checkbox"  name="city" value="深圳">
+    上海：<input type="checkbox"  name="city" value="上海">
+    草围：<input type="checkbox"  name="city" value="草围">
+    天津：<input type="checkbox"  name="city" value="天津">
+    广州：<input type="checkbox"  name="city" value="广州"> <br>
+
+    请上传您的头像：
+    <input type="file"> <br>
+
+    <input type="hidden" name="ID" value="NO.1">
+
+    <input type="button" value="点我一下下吧" id="btn"> <br>
+
+    <input type="reset" value="重置我 你白干"> <br>
+
+
+    <input type="submit" value="点击我提交">
+</form>
+
+
+<script>
+    var oBtn = document.querySelector("#btn");
+    var oForm = document.querySelector("#form");
+    oBtn.onclick=function () {
+        alert("啊 今天天气真好");
+        oForm.style.backgroundColor="red";
+    }
+</script>
+</body>
+</html>

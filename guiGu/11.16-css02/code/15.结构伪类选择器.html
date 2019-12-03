@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+    <style>
+        /*ul li:first-child{
+            background-color: red;
+        }
+
+        ul li:last-child{
+            background-color: green;
+        }
+
+        .inner>div:first-of-type{
+            background-color: red;
+        }
+
+        .inner>div:last-of-type{
+            background-color: green;
+        }*/
+
+
+
+        /*ul li:nth-child(-n+2){
+            background-color: red;
+        }*/
+        /*ul li:nth-last-child(2n+1){
+            background-color: red;
+        }
+
+        .inner>div:nth-of-type(1){
+            background-color: red;
+        }
+        .inner>div:nth-last-of-type(1){
+            background-color: red;
+        }*/
+        /*ul li:only-child{
+            background-color: pink;
+        }
+        .inner>span:only-of-type{
+            background-color: red;
+        }
+        ul li:empty{
+            background-color: black
+        }
+
+        ul:not(.box){
+            background-color: #0ee69c;
+        }*/
+
+    </style>
+</head>
+<body>
+<!--
+    结构伪类选择器：
+        :first-child  选取一组元素中是其父元素第一个子节点的元素
+        :first-of-type 一组元素中，是它父级中第一个同类型的子元素  就会被选中
+
+        :last-child  选取一组元素中是其父元素最后子节点的元素
+        :last-of-type 一组元素中，是它父级中最后一个同类型的子元素  就会被选中
+
+        :nth-child(an+b):  在前边选择的所有元素中，选取是其父元素中第  几个（小括号里的限制） 的元素
+            可以直接是数字（非0的正整数）  从1开始
+            2n+1 奇数
+            2n  偶数
+            odd 奇数
+            event 偶数
+            -n+2 前两个
+
+        :nth-last-child(an+b) 在所有选中的元素中，选取是其父元素中倒数第几个的子元素
+
+        :nth-of-type(an+b) 在所有选中的元素中，选取是其父元素中第几个的同类型的元素
+        :nth-last-of-type(an+b) 在所有选中的元素中，选取是其父元素中倒数第几个的同类型的元素
+
+        :only-child 匹配没有任何兄弟元素的 元素
+        :only-of-type 匹配没有任何一个同类元素的兄弟元素
+        :empty 选取没有子元素的元素 不能包含任何的文本和子元素（空格和回车都属于）
+        :not(X) X是一个选择器   匹配所有元素中 不符合X这个选择器 的元素
+-->
+
+    <ul class="box">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="con">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>
+
+        </li>
+    </ul>
+    <div class="inner">
+        <p>pppp</p>
+        <div>divdivdiv</div>
+        <p>pppp2222</p>
+        <span>span</span>
+        <div>divdivdiv</div>
+        <div>divdivdiv</div>
+        <div>divdivdiv</div>
+    </div>
+</body>
+</html>

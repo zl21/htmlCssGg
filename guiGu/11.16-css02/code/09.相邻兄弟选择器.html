@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相邻兄弟选择器</title>
+    <style>
+        .box+.show{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        相邻兄弟选择器：
+            相邻兄弟选择器使用+来间隔开
+            （A + B）  选择A 下边 紧紧贴着A元素的元素，并且符合选择器是B
+    -->
+
+    <ul>
+        <li></li>
+        <li class="box"></li>
+        <li></li>
+        <li class="box"></li>
+        <li class="show"></li>
+        <li></li>
+    </ul>
+</body>
+</html>

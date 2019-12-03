@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本修饰</title>
+    <style>
+        .box a{
+            text-decoration: none;
+        }
+        .box p{
+            /*text-decoration: underline;*/
+            /*text-decoration: overline;*/
+            /*text-decoration: line-through;*/
+
+            /*text-decoration-line: overline;
+            text-decoration-color: mediumvioletred;
+            text-decoration-style: wavy;*/
+
+            text-decoration: overline mediumvioletred wavy;
+        }
+        .box p span{
+            /*text-decoration: underline;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    文本修饰text-decoration：（不继承）
+        none：去除下划线  a  u
+        underline:下划线
+        overline：上划线
+        line-through:删除线
+
+    text-decoration其实是一个简写
+        text-decoration-line:上划线  下划线 删除线
+        text-decoration-color：颜色
+        text-decoration-style：线的类型 实线：solid  虚线dashed  点线：dotted  波浪线 wavy
+
+-->
+    <div class="box">
+        <a href="###">我是a</a>
+        <p>我是p标签 <span>span标签</span></p>
+    </div>
+</body>
+</html>

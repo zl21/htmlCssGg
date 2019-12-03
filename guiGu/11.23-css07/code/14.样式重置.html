@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式重置</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        什么是样式重置（css reset）：
+            1.将html的默认样式全部去掉，需要的时候再自行添加
+            2.很多样式会多余，并且浏览器兼容性有问题，重置以后统一风格
+
+        为什么不使用*{margin:0;padding:0}?
+            1.样式重置简单不够完整，一些demo可以使用，在项目中尽量不要使用
+            2.*表示通配符，匹配所有的标签，影响范围大，效率低下
+
+        normalize.css是什么玩意儿
+            默认样式存在即合理，保留了应该有的默认样式，并且统一了各个默认样式在浏览器中的呈现效果
+
+        normalize和reset的对比：
+            1、normalize保存了有用的默认样式，不想reset一次性全部去掉
+            2、normalize统一了默认样式，保证了默认样式在浏览器中的一致性
+            3、拥有详细的文档
+            4、模块化
+
+    -->
+</body>
+</html>

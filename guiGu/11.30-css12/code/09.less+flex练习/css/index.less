@@ -1,0 +1,73 @@
+@import "reset.css";
+html,body{
+  height: 100%;
+  .outer{
+    height: 100%;
+    background: url("../images/bg2.jpg") 0 0 no-repeat;
+    background-size: cover;
+    position: relative;
+    header{
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0,0,0,.4);
+      >img{
+        margin-left: 10px;
+      }
+      .head_list{
+        margin-right: 10px;
+        display: flex;
+        >li{
+          height: 40px;
+          line-height: 40px;
+          padding: 0 10px;
+          border: 1px solid #fff;
+          border-radius: 10px;
+          margin-left: 15px;
+          color: #fff;
+        }
+      }
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      >.con{
+        display: flex;
+        >li{
+          width: 150px;
+          height: 220px;
+          margin: 0 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          &:nth-child(1){
+            background-color: red;
+          }
+          &:nth-child(2){
+            background-color: #ffcc97;
+          }
+          &:nth-child(3){
+            background-color: #89fffa;
+          }
+          &:nth-child(4){
+            background-color: #e689ff;
+          }
+          &:nth-child(5){
+            background-color: #ff3fc6;
+          }
+          &:nth-child(6){
+            background-color: #a1ff65;
+          }
+        }
+      }
+    }
+  }
+}

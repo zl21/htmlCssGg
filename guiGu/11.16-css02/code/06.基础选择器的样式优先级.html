@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础选择器的样式优先级</title>
+</head>
+<body>
+<!--
+    基础选择器的样式优先级：
+        1.样式来源：
+            id
+            class
+            标签名
+            *（通配符）：直接匹配所有的元素
+            继承
+            默认样式
+            行内书写
+            !important (单独控制某一条样式，写在样式值的最后，分号之前)
+
+       2.优先级排列
+
+            !important > style行内 > id > class >  标签名 > *  > 默认  >  继承
+
+
+-->
+    <style>
+        *{
+            margin: 0;
+            /*   *>默认  */
+        }
+
+        div{
+            font-style: normal;
+            /*默认>继承*/
+        }
+        #box{
+            background-color: red;
+            /*id > class > 标签名*/
+        }
+        .con{
+            background-color: pink;
+        }
+        p{
+            background-color: yellowgreen !important;
+        }
+        i{
+            color: blue;
+            /*     标签名> *    */
+        }
+        *{
+            color: green;
+        }
+    </style>
+    <div>
+        我是div
+        <p id="box" class="con" style="background-color: purple">我是一个p标签</p>
+        <i>hello</i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳动的心</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: url("../images/heart-sprite.png") 0 0 no-repeat;
+
+            /*animation: heart 1s steps(29) infinite;*/
+            /*animation-fill-mode:forwards;*/
+
+        }
+        @keyframes heart {
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: -2900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--
+
+    -->
+<div class="box">
+
+</div>
+    <script>
+        var oBox = document.querySelector(".box");
+        oBox.onclick=function () {
+            oBox.style.animation="heart 1s steps(29)";
+            // oBox.style.animationFillMode="forwards";
+        }
+    </script>
+</body>
+</html>

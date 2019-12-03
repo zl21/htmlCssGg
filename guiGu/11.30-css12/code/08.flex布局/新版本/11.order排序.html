@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order排序</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+
+
+        }
+        .box div:nth-child(1){
+            width: 50%;
+            background-color: red;
+            order: 3;
+        }
+        .box div:nth-child(2){
+            width: 40%;
+            background-color: green;
+            order: 1;
+        }
+        .box div:nth-child(3){
+            width: 60%;
+            background-color: yellow;
+            order: 0;
+        }
+        .box div:nth-child(4){
+            width: 20%;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    order设置给项目，决定项目显示的顺序
+
+        顺序是：
+            -order > 没有书写order 、order为0 > order为正
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+</div>
+</body>
+</html>

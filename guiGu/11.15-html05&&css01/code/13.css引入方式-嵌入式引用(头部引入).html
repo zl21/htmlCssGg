@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css引入方式-嵌入式引用(头部引入)</title>
+    <style>
+        li{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        css引入方式：嵌入式引用（头部引入）
+            1.使用css选择器选择你要控制的元素，然后控制样式
+            2.把样式和选择器写在style标签中
+            3.style标签放在head标签中
+
+            样式书写格式：
+                选择器{
+                    样式属性名：样式属性值；
+                    样式属性名：样式属性值；
+                    样式属性名：样式属性值；
+                    样式属性名：样式属性值；
+                }
+
+            嵌入式引入的特点：
+                1、css统一放置在style标签中，然后通过选择器，将规定样式和选择器选择的元素建立联系，方便维护和修改
+                2、css样式处理的时候，不用翻阅html，也不用单独的针对html的某个标签去控制，达到了页面结构和相识相分离
+                3、代码量少
+                4、对于整个网站来说，有冗余代码
+    -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

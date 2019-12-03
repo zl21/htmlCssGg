@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html+css面试题</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--
+
+        01、前端由那三部分构成？分别是什么？作用是什么？
+            --》     html  结构层
+                     css   样式层
+                     js    行为层
+
+        02、b标签和strong标签的区别是什么？
+            --》b标签没有语义
+                strong标签有语义
+
+        03、css中让文字在水平和垂直方向上重叠应该使用什么属性？
+            --》水平：letter-spacing
+                垂直：line-height
+
+        04、li和li之间有看不见的空白间隙是什么？有什么解决方法
+            --》受到书写结构时，回车键等空白键引起的间隙 占据空间，所以会出现间隔
+                解决方法：
+                    1、字号大小为0
+                    2、float
+                    3、li书写在一行
+                    4、给父级设置letter-spacing  子元素覆盖即可
+
+        05、rgba和opacity的区别
+            --》rgba和opacity都能够实现透明效果
+                opacity作用于元素 以及 元素内所有内容的透明度（也不继承）
+                rgba只作用于 元素的 颜色或者是背景颜色（并且不继承）
+
+
+        06、外边距重叠是什么？重叠的结果怎么运算
+            --》外边距折叠（margin-collapse）
+                在css中，相邻的两个盒子外边距可以结合  形成一个外边距，这种合并外边距的情况称作为外边距重叠
+                规则：
+                    1、两个相邻的外边距都是正值： 取最大值
+                    2、两个相邻的外边距都是负数：对比两个值的绝对值，取绝对值最大值  仍然为负数
+                    3、两个相邻的外边距一个为正一个为负：外边距是两者相加的和
+
+
+        07、position和display和margin collapse 和overflow 和float属性叠加后会怎么样？
+            --》可拆分两个问题
+                1、position和display 和 float的关系
+                    display为none的时候：position和float失效
+                    position是absolute和fixed：浮动失效  inline元素display变为block，其他元素的类型保持
+                    float不为none的时候：inline元素display变为block，其他元素的类型保持
+
+                2、position和display和overflow、float四个情况下  margin collapse的影响
+                    普通文档流，外边距折叠
+                    浮动元素、inline-block元素、绝对定位元素  margin垂直方向不会折叠
+                    开启BFC，外边距都不会折叠
+                    元素自身的margin-bottom和margin-top也会折叠(当元素自身没有高度的时候)
+
+
+        08.Doctype作用?严格模式和混杂模式怎么触发，区别他们有什么意义？
+            --》
+                1、Doctype位于文档的第一行，告知浏览器用什么样的文档类型或规范来解析本文档
+                2、严格模式：按照浏览器支持的最高标准执行
+                3、混杂模式：页面以宽松的方法向后兼容的方式显示，模拟老浏览器的行为，防止站点无法工作
+                4、Doctype不存在或者书写错误，会导致文档以混杂模式解析
+
+        09、网页制作用到哪些图片格式
+            --》png、jpeg、gif、svg 、WebP
+            WebP格式：谷歌开发的旨在加快图片加载速度的图片格式
+                图片的压缩体积是同类图片jpeg格式的2/3，节省了大量的带宽和数据空间
+
+        10、src和href的区别
+            --》src是替换当前的元素
+                href是用于在当前的文档和引用资源之间确认联系
+
+            src是source的缩写：指向外部资源的位置，指向的内容会嵌入到当前元素所在位置
+                在请求的时候，会把src引用的资源直接下载文档中，当浏览器解析下载到该元素或者该资源的时候，
+                会暂停其他资源的下载和解析。src的元素有很多比如  img  iframe  script
+
+            href是hypertext reference的缩写：指向网络资源所在的位置，建立当前元素和资源的链接，
+                如果在文档中添加，浏览器识别改文件，就会并行的下载资源，不会停止对其他文档的处理
+
+
+        11、描述一下渐进增强和优雅降级
+            --》渐进增强：针对低版本浏览器进行构建页面，保证最基本的功能执行。
+                        然后再针对高版本浏览器的效果或交互改进和追加功能，以达到最佳的用户体验
+                优雅降级：一开始就构建完整的页面，然后再针对低版本进行兼容
+
+
+        12、html5提供了哪些新的特征？如何区分html5和其他版本？如何处理html5新标签的兼容
+            --》
+                新特性：
+                    1、语义化标签
+                    2、音频和视频
+                    3、拖拽api
+                    4、本地存储
+                    5、画布
+                    6、表单的控件 和 新属性
+                    7、地理定位
+                    8、其他（多线程、本地缓存）
+
+                如何区分html5？
+                     看版本声明
+
+                 如何处理html5的新标签的兼容
+                    1、使用ie条件注释引入以下文件，可以处理新标签在旧浏览器中的兼容
+                    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+                    2、使用js的 document.createElement 来把新元素创建出来
+
+        13、对网站的文件和资源如何进行优化
+            --》文件合并
+                文件压缩
+                使用CDN进行托管
+                缓存的使用
+
+        14、什么是FOUC？如何避免FOUC？
+            FOUC（浏览器样式闪烁或者无样式内存闪烁）
+            由于css 使用 @import引入css 可以引起，因为@import是最后下载css  可能会重新生成样式
+                或者多个style标签引入css  并且style没有写在头部，也会引入闪烁
+
+            如何避免：
+                使用link  并写在head中
+
+        15、网页中使用奇数字号还是偶数字号？
+            --》使用偶数
+                偶数的字号容易和web的设计构成比例关系
+
+                windows自带的点阵字体，从vista版本开始 只提供 12  14  16等点阵，13  15  17用的是小一号的点
+                文字所占用的空间大了1px  但是点阵没有发生变化，所以略显稀疏
+
+        16、display：none和visibility：hidden的区别
+            display：none  隐藏不占用空间  不继承，所有内部元素都隐藏（回流+重绘）
+            visibility：hidden 隐藏占用空间  继承   内部元素是因为继承而隐藏（重绘）
+            ！！！！回流必将引=起重绘
+
+
+        17、请写出隐藏元素的方法：
+            display：none
+            visibility：hidden
+            opacity：0
+            定位在页面之外
+            scale（0）
+            rotatX或Y   90deg的倍数
+            height：0
+            fliter：blur（0）、 opacity（）
+
+        18、介绍一下你使用的css 预处理器
+            --》基本思想：为css增加了编程的特性 （变量  函数  逻辑运算等等）
+                开发人员使用预处理器来编写样式，然后再转换成css 使用
+                使用css 预处理器，可以使书写css 更加简洁、适应性强、可读性强、不需要考虑兼容等优点
+                常用的预处理器：less   sass   stylus
+
+
+        19、什么是响应式设计？基本原理是什么？如何处理低版本兼容
+            --》响应式设计：是一个网站能够兼容多个终端，而不是针对一个终端特定做出来的网站
+                原理：通过媒体查询检测不同屏幕的特性来做样式处理
+                兼容：
+                    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+
+
+        20、浏览器是怎么解析css 选择器的？
+            --》css 选择器的解析是从右向左进行解析的
+                如果从左向右解析，碰到不符合规则，则需要退回去重塑，会损失很多的性能
+
+        21、css优化和性能提升：
+            --》1、合并css、减少了http的请求
+                2、将css文件放在最上边
+                3、不要书写空的样式
+                4、避免使用css 表达式
+                5、避免过深的层级嵌套
+                6、利用继承减少代码量
+                7、抽取公众样式，减少代码量
+                8、属性为0的时候不加单位
+                9、小于1的小数  前省略0
+                10、多实用字体图标或 雪碧图
+
+
+
+        22、使用css书写：一个矩形的内容，有阴影  有圆角  hover的时候慢慢变透明
+        23、如何让一个浮动的元素水平、、
+
+        24、全屏的品字怎么书写
+        25、一个div中，里边有两个div，一个高度是100px，希望另一个元素撑满剩下的区域
+
+
+    -->
+
+
+
+
+<!--    li和li之间有看不见的空白间隙是什么？有什么解决方法-->
+    <style>
+        ul{
+            /*font-size: 0;*/
+            letter-spacing: 0px;
+        }
+        ul li{
+            font-size: 16px;
+            display: inline-block;
+            /*float: left;*/
+        }
+    </style>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+
+
+<!--    外边距重叠是什么？重叠的结果怎么运算-->
+    <style>
+        .con1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: -20px;
+        }
+        .con2{
+            width: 120px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 30px;
+        }
+        .con3{
+            margin-top: 100px;
+            margin-bottom: 120px;
+        }
+
+    </style>
+    <div class="outer">
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <div class="con3"></div>
+    </div>
+
+
+</body>
+</html>

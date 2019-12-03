@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子阴影</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .outer{
+            margin-left: 100px;
+        }
+        .outer>li{
+            width: 400px;
+            height: 200px;
+            border-radius: 50%/70px;
+            background-color: mediumpurple;
+            margin: 50px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+
+
+        }
+        ul>li:nth-child(1){
+            box-shadow: 19px -30px 6px 7px mediumvioletred;
+        }
+        ul>li:nth-child(2){
+            box-shadow: 1px -1px 0px 0px rgba(43,113,219,1),
+                        2px -2px 0px 0px rgba(43,113,219,.9),
+                        3px -3px 0px 0px rgba(43,113,219,.8),
+                        5px -5px 0px 0px rgba(43,113,219,.7),
+                        7px -7px 0px 0px rgba(43,113,219,.5),
+                        9px -9px 0px 0px rgba(43,113,219,.4),
+                        10px -10px 0px 0px rgba(43,113,219,.2),
+                        11px -11px 0px 0px rgba(43,113,219,.1),
+                        12px -12px 0px 0px rgba(43,113,219,.1);
+        }
+        ul>li:nth-child(3){
+            box-shadow: 0px 0px 4px 7px rgba(43,113,219,1);
+        }
+        ul>li:nth-child(4){
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            /*border: 1px solid #000;*/
+            box-shadow: inset 20px 15px 50px 11px #000;
+        }
+    </style>
+</head>
+<body>
+<!--
+    盒子阴影：
+        box-shadow:
+            0:设置内阴影inset
+            1：水平偏移值
+            2：垂直偏移值
+            3.模糊值
+            4.阴影外延值（可以为负）
+            5.颜色
+-->
+    <ul class="outer">
+        <li>today is fun day</li>
+        <li>today is fun day</li>
+        <li>today is fun day</li>
+        <li>today is fun day</li>
+        <li>today is fun day</li>
+    </ul>
+</body>
+</html>

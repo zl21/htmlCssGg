@@ -1,0 +1,18 @@
+.box {
+  color: #ff0000;
+  width: 1366px;
+  border: 1px solid #cccccc;
+}
+.box {
+  width: 300px;
+}
+#outer {
+  height: 400px;
+}
+.box {
+  background: red;
+}
+.box {
+  background: url("https://pics5.baidu.com/feed/a9d3fd1f4134970a2bfa2389574503cda6865d1b.png?token=0be5d1558b52dbfb3a2f3d690d6c2c2d&s=45D23CC55DEA0F2C3209A09B0300C093");
+  background: url("https://pics5.baidu.com/feed/a9d3fd1f4134970a2bfa2389574503cda6865d1b.png?token=0be5d1558b52dbfb3a2f3d690d6c2c2d&s=45D23CC55DEA0F2C3209A09B0300C093") 0 0 no-repeat;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scale练习</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .clearFix{
+            *zoom:1;
+        }
+        .clearFix:after{
+            content:"\200B";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+        ul{
+            width: 880px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        ul>li{
+            width: 200px;
+            margin: 10px;
+            float: left;
+            overflow: hidden;
+        }
+        ul>li>img{
+            width: 200px;
+            height: 250px;
+            display: block;
+            transition: all .4s linear;
+        }
+        ul>li:hover>img{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearFix">
+        <li>
+            <img src="../images/01.jpg" alt="">
+        </li>
+        <li>
+            <img src="../images/01.jpg" alt="">
+        </li>
+        <li>
+            <img src="../images/01.jpg" alt="">
+        </li>
+        <li>
+            <img src="../images/01.jpg" alt="">
+        </li>
+    </ul>
+</body>
+</html>

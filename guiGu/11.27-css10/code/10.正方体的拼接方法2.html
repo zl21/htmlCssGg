@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体拼接</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 200px auto;
+            transform: rotate3d(1,1,0,60deg);
+
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .box>li{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            left: 0;
+            top: 0;
+            backface-visibility: hidden;
+        }
+
+        .box>li:nth-child(1){
+            background-color: rgba(211,45,67,.7);
+            transition: all .5s linear 0s;
+        }
+        .box:hover>li:nth-child(1){
+            transform: translateZ(100px);
+        }
+        .box>li:nth-child(2){
+            background-color: rgba(211, 49, 176, 0.7);
+            transition: all .5s linear .5s;
+        }
+        .box:hover>li:nth-child(2){
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        .box>li:nth-child(3){
+            background-color: rgba(92, 143, 211, 0.7);
+            transition: all .5s linear 1s;
+        }
+        .box:hover>li:nth-child(3){
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box>li:nth-child(4){
+            background-color: rgba(100, 211, 162, 0.7);
+            transition: all .5s linear 1.5s;
+        }
+        .box:hover>li:nth-child(4){
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box>li:nth-child(5){
+            background-color: rgba(50, 211, 42, 0.7);
+            transition: all .5s linear 2s;
+        }
+        .box:hover>li:nth-child(5){
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box>li:nth-child(6){
+            background-color: rgba(211, 161, 63, 0.7);
+            transition: all .5s linear 2.5s;
+        }
+        .box:hover>li:nth-child(6){
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</div>
+</body>
+</html>

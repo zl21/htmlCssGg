@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡动画触发条件</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+
+        .box:hover{
+            animation: change 1s linear 4;
+        }
+
+        @keyframes change {
+            from{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            to{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">变！！！</button>
+    <div class="box"></div>
+    <script>
+        var oBox = document.querySelector(".box");
+        var oBtn = document.querySelector("#btn");
+
+        oBtn.onclick = function () {
+            oBox.style.animation="change 1s linear 4"
+        }
+
+
+    </script>
+</body>
+</html>

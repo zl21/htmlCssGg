@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骰子</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            margin: 100px auto;
+
+            display: flex;
+            justify-content: space-around;
+        }
+        .box>div{
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+
+        }
+        .box>div:nth-child(1){
+            align-self: flex-end;
+            margin-bottom: 6.7px;
+        }
+        .box>div:nth-child(2){
+            align-self: center;
+        }
+        .box>div:nth-child(3){
+            align-self: flex-start;
+            margin-top: 6.7px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

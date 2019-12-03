@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>径向渐变</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            background: radial-gradient(orangered,greenyellow);
+            background: radial-gradient(circle,orangered,greenyellow);
+
+            /*background: -webkit-radial-gradient(800px 100px, farthest-side,orangered,greenyellow);*/
+
+            background: radial-gradient(at left top,orangered,greenyellow);
+            /*background: radial-gradient(at center center,orangered,greenyellow);*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    径向渐变：
+        radial-gradient()
+
+        第一个参数：圆的类型
+            ellipse：椭圆(默认)
+            circle：圆形
+
+        第二个参数：执行径向渐变的大小
+             farthest-corner:圆心到最远角
+             closest-side：圆心到最近的边
+             closest-corner：圆心到最近的角
+             farthest-side：圆心到最远的边
+
+         第三个参数：圆心的位置
+         第四个参数：渐变的颜色点
+-->
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+</head>
+<body>
+    <!--
+        后代选择器：
+            使用空格隔开 每两个基础选择器 （ A B： 在选择器为A选择的元素 的后代中（后代不仅仅是儿子，只要属于A都在范围内） 去 寻找 选择器B控制的元素）
+    -->
+    <style>
+        .outer .con .inner span{
+            color: yellow;
+        }
+        #box span{
+            color: purple;
+        }
+        .outer span{
+            color: red;
+        }
+        .con span{
+            color: green;
+        }
+    </style>
+    <div class="outer" id="box">
+        <div class="con">
+            <p class="inner">
+                <span>我是span</span>
+                <span class="con"></span>
+            </p>
+            <span>我是span3</span>
+        </div>
+        <span>我是span2</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font-size</title>
+    <style>
+        .box{
+            font-size: 30.3px;
+            /*font-size: 30cm;
+            font-size: 30in;*/
+            width: 2em;
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        font-size（继承）
+            1.设置字号大小
+            2.单位常见的是  px em  rem，不常见的有ex  cm  in vh  vw
+            3.em是相对单位，假设2em的大小就是   2*当前元素的font-size
+            4.rem也是相对单位，但是仅仅相对于html元素的字号大小  2rem=2*html标签的字号大小
+
+
+            注意：！！！
+                1.可以设置小数（ie低版本不支持）
+                2.字号最好不要设置为奇数
+                3.浏览器的默认字号大小  谷歌是16px  在开发时，不要依赖16，而是统一设置一个字号大小
+                4.每一个浏览器支持的最小字号大小是不一样的。
+                    谷歌浏览器： 12px
+                5.字号可以设置为0，但是设置为0以后，文字消失
+                6.文字默认高度其实就是字号大小，但是一般占用的高度会大一点，根据字体而定
+                7.所有的字符都填写在四线格中，所有难免有上下空隙之类的误差，
+                    四线格（顶线  中线  基线 底线）
+
+    -->
+    <div class="box">字号大小的设置</div>
+</body>
+</html>

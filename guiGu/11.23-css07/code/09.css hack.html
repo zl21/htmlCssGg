@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css hack</title>
+    <style>
+        .clearFix{
+            *zoom:1;
+
+            color\0\9:yellow;
+        }
+        *html .clearFix{
+            width: 1000px;
+        }
+        .clearFix:after{
+            content: "\200B";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+    </style>
+    <!--[if IE]>
+        <style>
+            .clearFix{
+                background-color: pink;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+    <style>
+        .clearFix{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+<!--
+    css hack：
+        由于不同厂商的浏览器，或者是同一个浏览器的不同版本（ie 6 7 8 9.。。），他们对css的解析并不完全一样
+        可能会导致不同浏览器显示的效果不同
+        那么我们需要针对某个特定的浏览器，去写不同的样式，让代码兼容所有浏览器
+
+        比如：
+            after伪元素 清浮动，只有ie8以上支持
+            所以我们要针对ie 6 7 开启haslayout
+            所以书写方式如下：
+                .clearFix{
+                    *zoom:1;
+                }
+                .clearFix:after{
+                    content: "\200B";
+                    height: 0;
+                    display: block;
+                    clear: both;
+                }
+
+        为什么要使用css hack：
+            1.让我们css兼容所有浏览器
+            2.为不同的浏览器去定制不同的样式
+
+        css hack3种书写形式：
+            1.IE条件注释法
+                主要针对IE
+                    gt 大于
+                    lt 小于
+                    gte 大于等于
+                    lte 小于等于
+                    ！：非。。
+                    支持IE9以下的浏览器  其他浏览器不支持
+
+            2.css属性前缀法
+                *color ：ie 5 6 7
+                -color ：ie 5 6
+                color\0 ：ie 9 10 11
+                color\9 ：ie 6 7 8 9 10
+                color\9\0 ：ie 8 9 10 11
+
+            3.选择器前缀法
+                将前缀写在选择器的前边，控制选择器是否在当前浏览器生效
+                *html ie  5  6
+                *+html ie7
+                :root ie 9 10 11
+
+
+
+
+-->
+
+<div class="clearFix">
+    今天天气真好
+</div>
+</body>
+</html>

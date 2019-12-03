@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幽灵按钮</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 300px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            background-color: #009ff2;
+            color: #eee;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 100px auto;
+            position: relative;
+            transition: all 1s linear;
+            /*overflow: hidden;*/
+        }
+        .box>.left{
+            width: 300px;
+            height: 10px;
+            background-color: #009ff2;
+            opacity: 1;
+            position: absolute;
+            left: -300px;
+            top: 0px;
+            transition: all 1s linear;
+        }
+        .box>.right{
+            width: 300px;
+            height: 10px;
+            background-color: #009ff2;
+            opacity: 1;
+            position: absolute;
+            right: -300px;
+            bottom: 0px;
+            transition: all 1s linear;
+        }
+        .box:hover{
+            background-color: #eee;
+            color: #009ff2;
+        }
+        .box:hover .left{
+            left: 0;
+            opacity: 1;
+        }
+        .box:hover .right{
+            right: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        HTML5
+        <p class="left"></p>
+        <p class="right"></p>
+    </div>
+</body>
+</html>

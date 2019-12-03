@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .box:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        .box{
+            width: 1150px;
+            /*overflow: hidden;*/
+            border: 1px solid #000;
+            margin: 30px auto;
+            background-color: rgba(200,200,200,.5);
+            /*迫使子元素在同一平面出现，也就是 overflow: hidden在这样的情况下是transform-style：flat*/
+            /*overflow: hidden;*/
+            transform-style: preserve-3d;
+            /*开启景深：实现一个近大远小的效果*/
+            /*perspective:300px;*/
+            /*perspective-origin: 120px 140px;*/
+
+        }
+        .box>li{
+            width: 200px;
+            height: 250px;
+            line-height: 250px;
+            font-size: 28px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px;
+            float: left;
+            transition: all .5s linear;
+        }
+        .box>li:nth-child(1){
+            background-color: red;
+        }
+        .box>li:nth-child(1):hover{
+            transform:perspective(300px) rotateX(30deg);
+        }
+        .box>li:nth-child(2){
+            background-color: red;
+        }
+        .box>li:nth-child(2):hover{
+            transform:perspective(300px) rotateY(30deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+    给子元素开启景深
+        在子元素的transform属性的第一个值 书写 perspective（）属性
+        单独给当前元素开启景深
+
+
+        在不设置景深中心点的时候
+            如果一个父元素中只有一个子元素在中间，无论在哪开启景深都一样
+            但是如果元素不再父级正中间的时候，子元素开启景深是在子元素中心点看
+            父元素开启是在父元素中心点看
+
+        给父元素设置景深，所有子元素就全部开启了。
+
+
+-->
+    <ul class="box">
+        <li>
+            沿着x旋转
+        </li>
+        <li>
+            沿着y旋转
+        </li>
+        <li>
+            沿着中心点旋转
+        </li>
+        <li>
+            合写
+        </li>
+        <li>
+            合写2
+        </li>
+        <li>
+            x扭一下
+        </li>
+        <li>
+            y扭一下
+        </li>
+        <li>
+            合写
+        </li>
+        <li>
+            x轴缩放
+        </li>
+        <li>
+            y轴缩放
+        </li>
+        <li>
+            合写缩放
+        </li>
+        <li>
+            x移动
+        </li>
+        <li>
+            y移动
+        </li>
+        <li>
+            合写 移动
+        </li>
+        <li>
+            Z轴的移动
+
+        </li>
+        <li></li>
+    </ul>
+</body>
+</html>

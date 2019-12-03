@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兔斯基动画</title>
+    <style>
+        .box{
+            width: 48px;
+            height: 48px;
+            background: url("../images/tusiji.png") 0 0 no-repeat;
+
+            /*逐帧动画  的动画类型是steps（） 里边书写步数*/
+            animation: tusiji 12.5s steps(12) infinite;
+        }
+        @keyframes tusiji {
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: -576px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

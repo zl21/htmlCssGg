@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>line-height的继承</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 1000px;
+            border: 1px solid #000;
+        }
+        .nav>li{
+            width: 198px;
+            height: 70px;
+            background-color: #ccc;
+            border-left: 1px solid green;
+            border-right: 1px solid green;
+            float: left;
+            list-style: none;
+
+            line-height: 70px;
+            text-align: center;
+        }
+        .hover{
+            height: 100px;
+            background-color: red;
+            overflow: hidden;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+       <li>
+           <h2>新闻</h2>
+           <ul class="hover">
+               <li>今天的新闻</li>
+               <li>明天的新闻</li>
+               <li>后天的新闻</li>
+           </ul>
+       </li>
+       <li>新闻</li>
+       <li>新闻</li>
+       <li>新闻</li>
+       <li>新闻</li>
+    </ul>
+</body>
+</html>

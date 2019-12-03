@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回到顶部</title>
+</head>
+<body>
+    <!--
+        a标签回到顶部效果：
+            当a标签只书写一个#号的时候，浏览器把a标签当做一个锚链接
+            但是#号后没有书写任何字符，浏览接收不到指令，就会执行回到顶部操作=刷新页面
+
+
+        ！！！补充：
+            1、当a标签做跳转，我们暂时不知道地址的时候，可以先用 两个以上的#号 来替代
+
+            2、当a标签基本不会再做跳转的时候，可以在href里边书写  javascript:;
+    -->
+    <div style="height: 2000px;background-color: grey;">
+
+    </div>
+    <a href="#">回到顶部</a>
+
+    <!--a标签的补充-->
+    <a href="###">hello</a>
+    <a href="javascript:;">点我</a>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法4应用</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        .outer{
+            width: 100%;
+            height: 100%;
+        }
+        .outer>header{
+            height: 100px;
+            background-color: #009ff2;
+            line-height: 100px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            position: relative;
+        }
+        .outer>section{
+            /*width: 100%;*/
+            background-color: #0ee69c;
+
+            /*当绝对定位元素没有设置宽高的时候，我们设置了left和right  或者同时设置了top和bottom*/
+            /*那么元素就会自适应的把自身的宽高撑开，来达到相应的要求*/
+            position: absolute;
+            top: 100px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            /*因为4周不需要margin*/
+            /*margin: auto;*/
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <header>
+        header
+    </header>
+    <section></section>
+</div>
+</body>
+</html>

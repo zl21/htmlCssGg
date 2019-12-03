@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调用相册和摄像头</title>
+</head>
+<body>
+    <!--
+        调用相册和摄像头：
+            input的type类型是 file
+            <input type="file" accept="image/*" capture="camera">
+            <input type="file" accept="image/*" capture="photo">
+
+            accept="image/*"  代表可以支持所有的图片类型
+            capture="camera"代表打开相机
+            capture="photo" 代表打开相册
+    -->
+    开启摄像头拍照上传
+    <input type="file" accept="image/*" capture="camera">
+
+    打开相册选择
+    <input type="file" accept="image/*" capture="photo">
+</body>
+</html>

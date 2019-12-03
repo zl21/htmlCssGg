@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变观察者位置</title>
+    <style>
+        .box{
+            border: 1px solid #000;
+            transform-style: preserve-3d;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(121,121,121,.4);
+            perspective: 300px;
+            perspective-origin: left top;
+        }
+        .con{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px;
+            transform: rotateX(30deg);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        改变观察者视角：
+            开启3d并且开启景深后生效
+                perspective-origin
+                    第一个值是x轴的位置
+                    第二个值是y轴的位置
+                    百分比相对于自身的宽高
+    -->
+    <div class="box">
+        <div class="con">好</div>
+    </div>
+</body>
+</html>

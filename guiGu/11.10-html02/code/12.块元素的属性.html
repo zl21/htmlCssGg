@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块元素的属性</title>
+</head>
+<body>
+<!--
+    块元素的属性：
+        1、独占一行，换行显示
+        2、可以设置宽高
+        3、当没有手动设置宽度的时候，宽度默认是父级宽度（父级宽度的100%）
+        4、块标签可以嵌套块标签和行标签（p标签和h标签只能嵌套行标签）
+-->
+<div>
+    <div style="width: 400px;">
+        <p>hahaa  我是一个p标签</p>
+    </div>
+    <p style="width: 200px;height: 100px;background-color: pink;">pppppp</p>
+    <h1>h111</h1>
+    <ul>
+        <li>li1</li>
+        <li>li1</li>
+    </ul>
+    <ol>
+        <li>li111</li>
+    </ol>
+    <hr>
+    <dl>
+        <dt>22222</dt>
+        <dd>ddddd</dd>
+    </dl>
+</div>
+
+
+<!--以下嵌套错误-->
+<p>
+    <div>p中的div</div>
+</p>
+</body>
+</html>

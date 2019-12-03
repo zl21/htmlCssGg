@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画起始和结束状态</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #009ff2;
+
+            /*动画开始之前，保持默认值
+            动画开始之后，直接跳到第一帧的动画帧
+            动画结束之后，直接跳到默认值*/
+
+            /*animation-fill-mode属性控制动画起始和结束状态*/
+            /*forwards:执行完最后一帧后，样式停留在最后一帧上*/
+            /*backwards：无论是动画刚刚开始，还是开始前，动画始终停留在第一帧上*/
+            /*both：动画开始和结束后，分别在第一帧和最后一帧保持*/
+
+            animation: change 2s 1s;
+            animation-fill-mode:forwards;
+            animation-fill-mode:backwards;
+            animation-fill-mode:both;
+            animation-fill-mode:none;
+        }
+        @keyframes change{
+            from{
+                width: 300px;
+                height: 300px;
+                background-color: #9b55ff;
+            }
+            to{
+                width: 400px;
+                height: 400px;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+    动画起始和结束状态：
+
+-->
+    <div class="box"></div>
+</body>
+</html>

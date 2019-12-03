@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hover的应用</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outer{
+            width: 1000px;
+            margin: 0 auto;
+            /*overflow: hidden;*/
+        }
+        .outer:after{
+            content: "\200B";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+        .con{
+            width: 200px;
+            float: left;
+            position: relative;
+        }
+        .con>h2{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ccc;
+        }
+        .con>ul{
+            width: 250px;
+            height: 200px;
+            background-color: #eee;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            display: none;
+        }
+
+        /*.con h2:hover+ul{
+            display: block;
+        }
+        .con ul:hover{
+            display: block;
+        }*/
+        .con:hover>ul{
+            display: block;
+        }
+        .con:hover h2{
+            background-color: #ff5646;
+        }
+        .con ul li:hover{
+            background-color: #179837;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="con">
+            <h2>新闻</h2>
+            <ul>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h2>新闻</h2>
+            <ul>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h2>新闻</h2>
+            <ul>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h2>新闻</h2>
+            <ul>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h2>新闻</h2>
+            <ul>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+                <li>今天小狗吃屎了</li>
+                <li>今天小猫尿我洗碗池了</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

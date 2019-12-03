@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin垂直方向叠加</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 50px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        因为之前很多元素拥有默认的margin，避免两个都拥有默认margin的元素间隙过大，所以设计出了垂直方向兄弟margin叠加
+        叠加以后，取两者最大值作为中间的间隙
+    -->
+    <div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

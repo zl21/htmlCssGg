@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin对各个标签的影响和支持性</title>
+    <style>
+        .span1{
+            margin: 100px;
+        }
+        .span2{
+            margin: 100px;
+        }
+        img{
+            margin: 40px;
+        }
+        div{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+    对块元素来说：
+        对4个方向都是支持的
+        垂直方向会叠加
+        父级塌陷
+
+    对行元素：
+        垂直方向不支持margin
+        水平方向支持，不叠加
+
+    对行内块元素：
+        四个方向都支持
+        没有叠加效果
+        如果直接写在父级中，没有塌陷
+        
+
+
+-->
+<div>
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+    <img src="../images/05.jpg" width="200" alt="">
+</div>
+</body>
+</html>

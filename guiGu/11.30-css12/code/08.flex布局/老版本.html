@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老版本</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: -webkit-box;
+            /*高度默认盛满父级，宽度再不超出容器的时候，保持自身的宽度。*/
+            /*项目宽度超出容器的时候，会压缩项目*/
+            /*没有设置宽度的时候，内容撑开宽度*/
+        }
+        .box div:nth-child(1){
+            width: 100px;
+            /*width: 50%;*/
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            width: 100px;
+            /*width: 40%;*/
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            width: 100px;
+            /*width: 60%;*/
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+</div>
+</body>
+</html>

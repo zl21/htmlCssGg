@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.三列布局-全浮动方法</title>
+    <style>
+        .outer{
+
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            float: right;
+        }
+        .center{
+            height: 200px;
+            background-color: #009ff2;
+            margin: 0 100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    方法二：left和right浮动，center不设置宽度
+
+        center必须写在最后，center不是优先加载
+-->
+    <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center"></div>
+    </div>
+</body>
+</html>

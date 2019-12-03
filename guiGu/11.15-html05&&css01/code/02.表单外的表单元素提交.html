@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单外的表单元素提交</title>
+</head>
+<body>
+    <!--
+        表单外的表单元素提交
+
+            form：  如果input出现form属性，表示当前的表单元素隶属于某一个form表单
+                此时 form表单的id值  应该和  表单元素的form属性相等
+                无论表单元素写在哪里，都能被form提交
+    -->
+
+    <form action="###" id="form1">
+        用户名：
+        <input type="text" name="user">
+
+        <button>提交</button>
+    </form>
+
+    密码：
+    <input form="form1" type="password" name="pass">
+</body>
+</html>

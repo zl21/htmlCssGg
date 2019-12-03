@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>link和@import引入的对比</title>
+</head>
+<body>
+<!--
+        link和@import引入的对比：
+            1.使用的范围
+                @import是在css中使用（css文件中，style标签中）
+                link书写在head标签中，直接引用
+            2.功能范围不同
+                link是属于html的标签
+                @import是css提供的引入其他css文件的功能
+            3.加载的顺序不同
+                页面在加载的时候，link标签引入的css会被同时加载
+                @import引入的css，只有等页面全部加载完成才能去下载，可能会导致闪烁
+            4.兼容性
+                link全兼容
+                @import低版本的ie不支持
+            5.使用js控制样式
+                js能够控制link标签
+                js不能控制@import
+-->
+</body>
+</html>

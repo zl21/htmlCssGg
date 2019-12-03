@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒影</title>
+    <style>
+        img{
+            margin: 200px;
+            /*-webkit-box-reflect: right 10px linear-gradient(to left,rgba(100,100,100,1),rgba(100,100,100,0),rgba(100,100,100,0));*/
+            -webkit-box-reflect: right 10px linear-gradient(to left,rgba(100,100,100,.8),transparent,transparent);
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    倒影：
+        box-reflect:3个值
+            1.定义方向  above below  left  right
+            2.反射偏移的位置是多少  可以是单位  可以是百分比 可以是负值
+            3.遮罩图像  (一般使用渐变 ，显示效果只和透明度相关)
+-->
+
+<img src="../images/b.jpg" alt="">
+</body>
+</html>

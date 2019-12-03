@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试题汇总</title>
+</head>
+<body>
+<!--
+    1.介绍css预处理器
+        1）为css提供编程的特性（变量  函数  运算）
+        2）使用预处理器编写css  然后最终转换成css
+        3）可读性强  更加简洁
+        4）常用预处理器 less  sass  stylus
+
+    2.元素隐藏的方法：
+        dispaly
+        visibility
+        rotate 90deg
+        定位在页面的外边
+        height 0
+        opacity
+        filter  blur（0）  opacity 0
+
+    3.浏览器怎么解析css选择器的
+        浏览器的解析是从右向左解析的
+        如果从左向右解析，碰到不符合规则的就会重塑，损失掉的性能更多
+
+    4.什么是响应式，原理是什么
+        一个网站兼容多个终端，而不是针对一个终端做的网页
+        原理：媒体查询检测屏幕特性来做样式处理
+        处理兼容：<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+
+    5.什么是FOUC？如何避免FOUC？
+        FOUC就是闪烁，（浏览器样式闪烁）
+        由于css引入，在后边引入css  或者是使用@import引入css，可能会有新的样式生成
+        使用link写在head中，可以避免FOUC
+
+    6.描述一下渐进增强和优雅降级
+        渐进增强：针对低版本浏览器来构建页面，保证最基本的功能可行
+                    在针对高版本进行构建更好的交互或者是追加功能，已达到更高的用户体验
+        优雅降级：一开始就构建完整的页面，然后再针对低版本兼容
+
+    7.网页常用的图片格式有哪些？
+        png、jpg、gif、svg、WebP
+       WebP是谷歌开发的一种加快图片加载速度的一种图片格式
+       是jpg的2/3的大小
+
+   8.前端的组成部分
+
+    9.b和strong的区别
+        语义化的区别
+
+    10.li和li之间的间隙怎么解决（使用display  inline  或者inline-block）
+        1.fonte-size 0
+        2.float
+        3.margin负值
+        4.li书写一行
+        5.给父级设置letter-spacing
+
+    11.rgba和opacity的区别
+
+    12.外边距重叠是什么？怎么计算
+        都为正：取最大
+        都为负：取绝对值最大的负值
+        一正一负：相加
+
+
+    13.Doctype的作用是什么？严格模式和混杂模式怎么触发？区分它们有什么意义
+        1）Doctype在第一行，告诉浏览器用什么样的文档类型解析本文档
+        2）严格模式：按照浏览器支持的最高标准执行
+        3）混杂模式：以宽松的方法向后兼容，模拟老浏览器的行为，防止站点无法工作
+        4）Doctype不书写  或者是 书写错误  会导致混杂模式的出现
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

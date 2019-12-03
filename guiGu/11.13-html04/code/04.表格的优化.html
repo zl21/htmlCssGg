@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格的优化</title>
+</head>
+<body>
+    <!--
+        表格的优化：
+            thead：表格的头  主要用来盛放标题之类的内容
+            tbody：表格的身体  盛放数据的本体
+            tfoot：表格的底部  盛放表格的脚注之类的内容
+
+        1.table是整体解析加载完才会执行显示，所以我们需要优化
+
+        2.为了让表格在下载的时候可以分段显示，因为在html解析的时候table是按照一个整体来解析的，使用tbody可以优化显示，不用等待全部table下载完成才执行
+
+        3.需要注意的是：
+            当添加 thead tbody  tfoot之后，无论书写顺序怎么变，浏览器都会按照thead tbody  tfoot顺序去加载显示
+
+
+
+
+    -->
+
+    <table>
+        <tfoot>
+            <tr>
+                <td>tfoot</td>
+            </tr>
+            <tr></tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <td>thead</td>
+            </tr>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tbody</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+        <tbody>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+        <tbody>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+        <tbody>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+
+
+    </table>
+</body>
+</html>

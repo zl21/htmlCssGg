@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .box{
+            position: relative;
+            background-color: #ccc;
+            height: 800px;
+        }
+        .box div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+        .box .con1{
+            background-color: red;
+            left: 0;
+            top: 0;
+        }
+        .box .con2{
+            background-color: #b5fff7;
+            left: 80px;
+            top: 80px;
+            /*z-index: 2;*/
+        }
+        .box .con3{
+            background-color: #514aff;
+            left: 170px;
+            top: 170px;
+            /*z-index: 3;*/
+            z-index: -1;
+        }
+        .box .con4{
+            background-color: #fffd37;
+            left: 250px;
+            top: 250px;
+            z-index: 0;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    z-index:
+        1.定义了一个元素 包括其后代元素 的层叠顺序
+        2.只有定位的元素（非static）支持z-index
+        3.z-index没有单位  理论上来说 z-index大的 会覆盖zindex值小的
+        4.默认 z-index是的值是auto
+        5.默认情况下，元素依次按照书写顺序层叠
+
+元素的层叠顺序：
+    z-index为负<background<border<块级元素<浮动元素<行内元素<没有设置z-index的元素<设置了z-index的元素
+-->
+
+    <div class="box">
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <div class="con3"></div>
+        <div class="con4"></div>
+    </div>
+</body>
+</html>

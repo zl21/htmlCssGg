@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡动画触发条件</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            transition: all 1s;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .box:hover{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">变！！！</button>
+    <div class="box"></div>
+    <script>
+        var oBox = document.querySelector(".box");
+        var oBtn = document.querySelector("#btn");
+
+        // 第一种，添加行内样式覆盖原有样式
+        oBtn.onclick = function () {
+            oBox.style.backgroundColor = "pink";
+            oBox.style.width = "200px";
+            oBox.style.height = "200px";
+        }
+
+        //第二种，改变类名来改变样式
+        oBtn.onclick = function () {
+            oBox.classList.add("box2");
+        }
+    </script>
+</body>
+</html>

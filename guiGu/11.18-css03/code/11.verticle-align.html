@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-align</title>
+    <style>
+        em{
+            font-size: 60px;
+        }
+        var{
+            font-size: 30px;
+        }
+        img{
+            vertical-align: middle;
+        }
+        var{
+            /*vertical-align: middle;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    vertical-align:
+        垂直方向的排列
+        baseline:默认的  基于基线对齐
+        top:让元素的顶部 与行框的顶部对齐
+        bottom：靠下边对齐
+        middle：居中
+
+    每一个文字或行元素会构成一个em方框，
+    多个em方框构成了一行，叫做行框
+    在行框中，所有的内容都是基于基线对齐
+
+    vertical-align对内联元素生效  但是对于块元素是无效的
+
+-->
+<div class="box">
+    <img src="../images/05.jpg" alt="" width="200">
+    <em>我是海贼王</em>
+    <var>向左你的女人</var>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收缩因子</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+
+
+        }
+        .box div:nth-child(1){
+            width: 500px;
+            background-color: red;
+            flex-shrink: 2;
+        }
+        .box div:nth-child(2){
+            width: 300px;
+            background-color: green;
+            flex-shrink: 1;
+        }
+        .box div:nth-child(3) {
+            width: 500px;
+            background-color: yellow;
+            flex-shrink: 1;
+        }
+        .box div:nth-child(4){
+            width: 200px;
+            background-color: pink;
+            flex-shrink: 1;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    flex-shrink:
+        控制收缩率，
+        flex的项目超出容器后，会对项目进行收缩，每一个项目收缩的大小都和他自身的 收缩率相关
+        默认收缩率是1
+
+        超出容器的值*（收缩因子*当前项目的宽度/(收缩因子*当前项目的宽度+。。。。。所有的)）
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+</div>
+</body>
+</html>

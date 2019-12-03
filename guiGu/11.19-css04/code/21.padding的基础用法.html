@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>padding的基础用法</title>
+    <style>
+        .box{
+            width: 800px;
+            height: 400px;
+            border:10px dashed #000;
+            padding: 40px;
+            margin: 50px;
+
+            background-color: pink;
+            background: url("../images/05.jpg") 0 0 repeat;
+        }
+
+        span{
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    padding的基础用法：
+        1.和margin的写法一模一样
+        2.padding用来撑开内容和边框之间的距离
+        3.padding中是可以显示背景颜色的
+        4.padding中可以显示背景图片 背景图片的原点 默认是padding的左上角
+
+    padding对行标签的支持性：
+        四个方向都是支持的，但是垂直方向不能撑开和其他元素的距离
+
+    padding不支持auto的值
+    padding没有负值
+-->
+
+<div class="box"></div>
+
+<span>我是span啊</span>
+</body>
+</html>

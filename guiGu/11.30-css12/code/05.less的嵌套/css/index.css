@@ -1,0 +1,37 @@
+@import "reset.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body .box {
+  border: 1px solid #000;
+}
+html body .box > .inner {
+  background-color: green;
+}
+html body .box > .inner > li {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: red;
+}
+html body .box > .inner > li.show {
+  background-color: yellow;
+}
+html body .box > .inner > li:nth-child(2) {
+  background-color: #000;
+}
+.clearFix {
+  *zoom: 1;
+}
+.clearFix:after {
+  height: 0;
+  content: "";
+  display: block;
+  clear: both;
+}

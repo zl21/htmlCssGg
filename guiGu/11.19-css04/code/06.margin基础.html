@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin基础</title>
+    <style>
+        .con1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*margin-left: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-top: 40px;*/
+
+            margin: 10px 20px 30px 40px;
+
+            margin: 20px 30px 40px;
+
+            margin: 30px 40px;
+
+            margin:40px;
+        }
+        .con2{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        margin：设置元素外边距的宽度，理解为当前元素和父级之间，或者时候和兄弟元素之间的距离
+            值可以是单位也可以是百分比
+
+        margin分为4个方向。
+            margin-left、margin-right、margin-top，margin-bottom  每个方向都可以单独设置值
+
+            当值为正的时候：
+                （自身移动）
+                margin-left：是让当前元素向右移动
+                margin-top：让当前元素向下移动
+
+                （自身后边的元素移动）
+                margin-bottom：让当前元素的下边的元素移动
+                margin-right：让当前元素的右边的元素向右移动
+
+            margin的合写：
+                margin后跟4个值
+                    margin:10px 20px 30px 40px;分别代表  上  右   下  左
+
+                margin后跟3个值
+                    margin:20px 30px 40px;分别代表  上  左右   下
+
+                margin后跟2个值
+                    margin:30px 40px;分别代表  上下  左右
+
+                margin后跟1个值
+                    margin:40px;分别代表  上下左右 都为这个值
+    -->
+    <div class="box">
+        <div class="con1"></div>
+        <div class="con2"></div>
+    </div>
+</body>
+</html>

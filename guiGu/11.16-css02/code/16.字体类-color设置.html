@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体类-color设置</title>
+    <style>
+        .show{
+            color: red;
+
+            color: rgb(233,156,110);
+            color: rgba(233,156,110,1);
+
+            color:#0ee69c;
+
+
+            color: hsl(0,0%,0%);
+            color: hsla(0,50%,50%,.9);
+
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+<!--
+    字体类-color设置：
+        设置文字颜色的（可以继承）：
+            1.直接设置为颜色的名字（开发中很少使用，不精确）
+                red green yellow blue pink grey purple yellowgreen greenyellow lightblue lightgreen
+
+            2.三原色
+                所有颜色都是三原色组合而成  分别是 red  green  blue
+                rgb（XXX,XXX,XXX）里边跟3个值，范围都是 0-255 之间
+
+                补充：还有第四个值  设置颜色透明度
+                rgba（XXX,XXX,XXX，a）  a的值是 1-0 可以是小数  0代表完全透明  1代表完全不透明
+
+            3.颜色可以设置为16进制数
+                十进制： 1   2   3   4   5   6   7   8    9    10   11  12   13
+                二进制： 1  10  11  100 101  110  111  1000 1001
+                八进制： 1  2   3    4   5   6   7   10 11  12  13  14 15  16  17  20
+                十六进制：1  2   3  4  5  6  7  8   9  a b c d e f  10
+
+                十六进制的颜色 是 #后跟6个字符组成
+                r的值 对应 前两个字符
+                g的值 对应 中间两个字符
+                b的值 对应 后两个字符
+
+                rgb(255,255,255)-----》#ffffff
+                rgb(255,255,0)-----》#ffff00
+                rgb(254,255,0)-----》#feff00
+
+                当12位  34位  56位相同的时候，可以简写一位
+                    #ffffff----》#fff
+                    #ff0000----》#f00
+                    #aaabbb----》不能简写
+
+            4.HSL颜色表示法
+                H代表 HUE  色调 [0,360]  0和360代表红色  120代表绿色  240代表蓝色
+                S代表 saturation 饱和度  0--100%
+                L代表 lightness 亮度  0--100%
+
+                hsla后边a 代表透明度  1-0
+
+            5.透明色的设置
+                1）  rgba或 hsla  的透明度设置为0
+                2） transparent  代表透明色
+-->
+    <div class="show">
+        哈哈哈
+        <span>笑个鸡啊~</span>
+    </div>
+</body>
+</html>

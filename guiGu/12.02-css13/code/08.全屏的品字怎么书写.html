@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        .outer{
+            height: 100%;
+        }
+        .outer div:nth-child(1){
+            height: 50%;
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .outer div:nth-child(2), .outer div:nth-child(3){
+            height: 50%;
+            width: 50%;
+            float: left;
+            background-color: green;
+        }
+        .outer div:nth-child(2){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

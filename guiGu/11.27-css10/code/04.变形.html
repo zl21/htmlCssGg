@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .box:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        .box{
+            width: 1150px;
+            /*overflow: hidden;*/
+            border: 1px solid #000;
+            margin: 30px auto;
+            background-color: rgba(200,200,200,.5);
+            /*迫使子元素在同一平面出现，也就是 overflow: hidden在这样的情况下是transform-style：flat*/
+            /*overflow: hidden;*/
+            transform-style: preserve-3d;
+            /*开启景深：实现一个近大远小的效果*/
+            perspective:300px;
+            /*perspective-origin: 120px 140px;*/
+
+        }
+        .box>li{
+            width: 200px;
+            height: 250px;
+            line-height: 250px;
+            font-size: 28px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px;
+            float: left;
+            transition: all .5s linear;
+        }
+        .box>li:nth-child(1){
+            background-color: red;
+        }
+        .box>li:nth-child(1):hover{
+            transform: rotateX(30deg);
+            transform: rotateX(-90deg);
+        }
+
+        .box>li:nth-child(2){
+            background-color: #b6ff71;
+        }
+        .box>li:nth-child(2):hover{
+            transform: rotateY(30deg);
+            transform: rotateY(-30deg);
+        }
+
+        .box>li:nth-child(3){
+            background-color: #97ecff;
+        }
+        .box>li:nth-child(3):hover{
+            transform: rotate(360deg);
+            /*transform: rotate(-30deg);*/
+        }
+        .box>li:nth-child(4){
+            background-color: #ffb56d;
+        }
+        .box>li:nth-child(4):hover{
+            transform: rotate3d(1,1,0,30deg);
+            /*transform: rotateY(-30deg);*/
+        }
+
+        .box>li:nth-child(5){
+            background-color: #50d3ff;
+        }
+        .box>li:nth-child(5):hover{
+            transform: rotateX(30deg) rotateY(30deg);
+            /*transform: rotateY(-30deg);*/
+        }
+
+
+        .box>li:nth-child(6){
+            background-color: #a696ff;
+        }
+        .box>li:nth-child(6):hover{
+            transform: skewX(30deg);
+            transform: skewX(-30deg);
+            /*transform: rotateY(-30deg);*/
+        }
+
+        .box>li:nth-child(7){
+            background-color: #e179ff;
+        }
+        .box>li:nth-child(7):hover{
+            transform: skewY(30deg);
+            transform: skewY(-30deg);
+        }
+
+        .box>li:nth-child(8){
+            background-color: #ff88a1;
+        }
+        .box>li:nth-child(8):hover{
+            /*transform: skew(30deg,30deg);*/
+            transform: skew(30deg,30deg);
+        }
+        .box>li:nth-child(9){
+            background-color: #ffd1ff;
+        }
+        .box>li:nth-child(9):hover{
+            transform: scaleX(1.2);
+        }
+        .box>li:nth-child(10){
+            background-color: #a8ff5b;
+        }
+        .box>li:nth-child(10):hover{
+            transform: scaleY(0.8);
+        }
+
+        .box>li:nth-child(11){
+            background-color: #ffde59;
+        }
+        .box>li:nth-child(11):hover{
+            transform: scale(1.2,0.8);
+            transform: scaleX(1.2) scaleY(0.8);
+            transform: scale(1.2);
+        }
+        .box>li:nth-child(12){
+            background-color: #f747ff;
+        }
+        .box>li:nth-child(12):hover{
+            transform: translateX(30px);
+        }
+        .box>li:nth-child(13){
+            background-color: #32ff2d;
+        }
+        .box>li:nth-child(13):hover{
+            transform: translateY(30px);
+        }
+        .box>li:nth-child(14){
+            background-color: #ff5425;
+        }
+        .box>li:nth-child(14):hover{
+            transform: translate(30px,30px);
+            transform: translate(30px);
+        }
+        .box>li:nth-child(15){
+            background-color: #9b55ff;
+        }
+        .box>li:nth-child(15):hover{
+            transform: translateZ(-40px);
+        }
+    </style>
+</head>
+<body>
+<!--
+    transform属性：控制变形
+        rotate：旋转
+            rotateX（）单位是deg  沿着x轴旋转
+                值为正  元素的顶部朝里旋转
+            rotateY（）单位是deg  沿着x轴旋转
+                值为正  元素的左边朝外出来
+            rotate（）单位是deg  沿着元素中心点（x和y的交叉点）
+                值为正  元素顺时针旋转
+            rotate3d（） 4个参数  第1 2 3 个参数是x y z 的开关（要么是1  要么是0）   第4个参数是角度值
+
+            rotate3d（1,1,0 ,30deg）和rotatex(30deg) rotatey(30deg)是不一样的
+                因为分开写的话，是有一个先后顺序的，坐标轴是跟随平面旋转的
+
+        skew()扭曲
+            skewX  沿着x轴扭曲
+            skewY  沿着y轴扭曲
+            skew  x和y合写，第一个值代表x  第二个代表y  如果只书写一个，只代表x
+
+        scale()缩放
+            里边的值是一个数值，没有单位，代表比例，默认是1
+            scaleX  沿着x轴缩放
+            scaleY  沿着y轴缩放
+            scale  两个值 一个x  一个y   如果只写1个值 代表x和y一样
+
+        translate（） 单位
+            里边是一个数值带单位  可以是百分比  相对于自身的宽高
+            translateX() 沿着x轴移动
+            translateY()沿着y轴移动
+            translate() 第一个值是x  第二个值是y  如果只写一个值，代表x
+
+
+-->
+    <ul class="box">
+        <li>
+            沿着x旋转
+        </li>
+        <li>
+            沿着y旋转
+        </li>
+        <li>
+            沿着中心点旋转
+        </li>
+        <li>
+            合写
+        </li>
+        <li>
+            合写2
+        </li>
+        <li>
+            x扭一下
+        </li>
+        <li>
+            y扭一下
+        </li>
+        <li>
+            合写
+        </li>
+        <li>
+            x轴缩放
+        </li>
+        <li>
+            y轴缩放
+        </li>
+        <li>
+            合写缩放
+        </li>
+        <li>
+            x移动
+        </li>
+        <li>
+            y移动
+        </li>
+        <li>
+            合写 移动
+        </li>
+        <li>
+            Z轴的移动
+
+        </li>
+        <li></li>
+    </ul>
+</body>
+</html>

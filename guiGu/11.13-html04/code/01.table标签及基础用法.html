@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table标签的基础用法</title>
+</head>
+<body>
+<!--
+    table标签的基础用法：
+        整体的 表格使用table标签
+        表格的标题使用caption
+        表格的没一行就是一个 tr标签
+        表格的每一列都是一个 th或者td
+            th代表表头单元格  td代表普通单元格
+
+
+     table的属性：
+        border(废弃 但是可以使用)：后跟一个数值，代表表格边框
+            可以使用css来替代,分别给table和th td设置边框
+            然后通过css 的 border-collapse属性 值也是collapse  来把表格的边框合并
+
+        cellspacing(废弃 但是可以使用)：
+            控制两个单元格之间的距离
+            可以使用css替代
+
+        cellpadding(废弃 但是可以使用)：
+            控制单元格和内容之间的距离
+            可以使用css替代
+
+        width属性(废弃 但是可以使用)：
+            控制表格的宽度
+            表格默认内容撑开宽度
+            当设置宽度以后，表格会自适应
+            可以使用css来替代
+-->
+
+    <table style="border:1px solid #000; border-collapse: collapse; width: 700px;" cellspacing="10" cellpadding="10">
+        <caption>1108班就业信息表</caption>
+        <tr>
+            <th style="border:1px solid #000;">姓名</th>
+            <th style="border:1px solid #000;">性别</th>
+            <th style="border:1px solid #000;">薪资</th>
+            <th style="border:1px solid #000;">备注</th>
+        </tr>
+        <tr>
+            <td style="border:1px solid #000;">张三</td>
+            <td style="border:1px solid #000;">男</td>
+            <td style="border:1px solid #000;">100k</td>
+            <td style="border:1px solid #000;"></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #000;">李四</td>
+            <td style="border:1px solid #000;">男</td>
+            <td style="border:1px solid #000;">200k</td>
+            <td style="border:1px solid #000;"></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #000;">王八</td>
+            <td style="border:1px solid #000;">女</td>
+            <td style="border:1px solid #000;">300k</td>
+            <td style="border:1px solid #000;"></td>
+        </tr>
+    </table>
+</body>
+</html>

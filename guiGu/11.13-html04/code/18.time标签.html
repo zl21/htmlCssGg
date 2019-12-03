@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>time标签</title>
+</head>
+<body>
+<!--
+    time标签：
+        1.用来表示24小时制的时间 一个公历的时间
+        2.作用：以机器可读的格式表示时间和日期，安排日程表的时候就可以使用time标签
+        3.通用的时间格式：XXXX-XX-XX XX:XX:XX
+
+    time的两种用法：
+        1、time直接包含标准时间
+        2、time包含的时间不标准的时候，使用datetime属性来书写标准格式
+-->
+
+<!--内容区域-->
+<section>
+    <h2>我这个是评论区域</h2>
+    <article>
+        <h3>评论人：张三</h3>
+        <p>内容：哈哈我是张三，你也叫张三码？</p>
+        <p>评论时间<time>2019-11-13 05:05:00</time></p>
+    </article>
+    <article>
+        <h3>评论人：李四</h3>
+        <p>内容：今天的天气好吗？</p>
+        <p>评论时间 <time datetime="2019-05-13 00:00:00">今年端午节</time></p>
+    </article>
+    <article>
+        <h3>评论人：王五</h3>
+        <p>内容：明天的天气真好</p>
+    </article>
+</section>
+</body>
+</html>

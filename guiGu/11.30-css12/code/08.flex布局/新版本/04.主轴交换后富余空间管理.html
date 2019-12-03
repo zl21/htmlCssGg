@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义容器</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+
+            /*justify-content: flex-start;*/
+            /*justify-content: flex-end;*/
+            /*justify-content: center;*/
+            justify-content: space-around;
+            /*justify-content: space-between;*/
+
+
+
+
+        }
+        .box div:nth-child(1){
+            width: 100px;
+            /*width: 50%;*/
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            /*width: 40%;*/
+            width: 120px;
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            /*width: 60%;*/
+            width: 140px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        justify-content：（不管其他方向，只关心主轴的开始和结束方向）
+            主轴富裕空间管理：
+                flex-start:
+                    项目从主轴开始依次排列
+                flex-end
+                    项目从主轴结束依次排列
+                center：
+                    项目整体居中
+                space-around：
+                    富裕空间包含项目
+                space-between：
+                    项目包含富裕空间
+
+    -->
+    <div class="box">
+        <div>11</div>
+        <div>22</div>
+        <div>33</div>
+    </div>
+</body>
+</html>

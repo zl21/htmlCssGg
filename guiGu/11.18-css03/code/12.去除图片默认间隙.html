@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除图片默认间隙</title>
+    <style>
+        .box{
+            background-color: red;
+            /*font-size: 0;*/
+            /*line-height: 0;*/
+        }
+
+        img{
+            /*display: block;!*让元素转换为块元素*!*/
+            vertical-align: baseline;
+        }
+    </style>
+</head>
+<body>
+<!--
+    因为行框中所有的内容都是基于基线对齐的，而图片没有基线，所以图片的底部和基线对齐，从而引起了图片底部下有一定的间隙
+    如果行框中只有一个图片，间隙仍然存在，因为在行框渲染的时候，一直会出现一个看不见的节点，宽度为0.这个节点被称作为“幽灵空白节点”
+    这个节点还可以被设置 字体字号等等样式
+
+    去除间隙：
+        1.给父级设置字号大小为0
+        2.给父级line-height为0
+        3.给图片设置 display：block
+        4.设置vertical-align不为baseline
+        5.浮动
+-->
+    <div class="box">
+        <img src="../images/05.jpg" alt="" width="200">
+        <img src="../images/05.jpg" alt="" width="200">
+        <span>google</span>
+    </div>
+
+</body>
+</html>

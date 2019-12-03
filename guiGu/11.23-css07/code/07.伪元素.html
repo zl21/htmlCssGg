@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style>
+        .box:after{
+            content:"狗子1"
+        }
+        .box:after{
+            content:"狗子2";
+            display: block;
+        }
+        .box:before{
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url("../images/y_xin.png") 0 0 no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    伪元素：
+        1.可以理解为虚假的元素
+        2.他们会在内容区域的前后插入额外的元素，但是并不会在文档中生成，在文档的源代码中找不到它
+        3.虽然结构上是虚假的元素，但是表现和真实的元素没有差别
+
+        4、伪元素必须拥有content属性
+        5、伪元素是行属性的标签
+        6.每个伪元素在一个标签上只能设置一次 否则会覆盖
+-->
+<div class="box">我家小猫叫晚安</div>
+</body>
+</html>

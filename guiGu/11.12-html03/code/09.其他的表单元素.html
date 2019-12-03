@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>其他的表单元素</title>
+</head>
+<body>
+    <!--
+        其他的表单元素:
+            下拉列表：
+                select&option 组合标签
+                select是下拉列表的最挖层
+                option是下拉列表的每一项列表
+
+                    option标签中书写的内容只是展示给用户看
+                    真正提交的时候option标签的value属性的值
+
+            textarea：多行文本输入框
+                rows代表行
+                cols 代表每行有多少个字符
+                其实rows和cols是控制textarea的宽高的,但是css的优先级更高
+
+                点击textarea的右下角，可以改变输入框的大小，在开发中，一般禁止操作
+
+                textarea的默认值 是书写在textarea的标签内的，不再value属性中
+
+
+            button元素：
+                button代表一个可以点击的按钮，按钮可以通过css改变样式
+                当button元素的type属性的值不同的时候，button的功能是不同的
+
+                type类型：
+                    submit：
+                        提交当前的表单
+                    reset：
+                        重置表单
+                    button：
+                        没有任何默认行为
+
+                button元素默认的type类型是submit
+
+    -->
+    <form action="http://www.baidu.com" method="get">
+        请选择城市：
+        <select name="city">
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+            <option value="北京">北京</option>
+            <option value="深圳">深圳</option>
+        </select>
+        <br>
+
+        请说出你的故事：
+        <textarea name="message" cols="30" rows="10" style="width: 100px;height: 100px;">天气真好</textarea>
+
+        <button type="button">点我没效果</button>
+        <button type="reset">点我重置</button>
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>

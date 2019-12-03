@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负margin的练习2</title>
+    <style>
+        .inner>div{
+            width: 200px;
+            height: 50px;
+            border-right: 1px solid #000;
+            float: left;
+        }
+        .inner{
+            overflow: hidden;
+            width: 1005px;
+            /*border:1px solid #000;*/
+            /*margin-right: -1px;*/
+        }
+        .outer{
+            width: 1004px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

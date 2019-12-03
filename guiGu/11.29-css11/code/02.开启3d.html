@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开启3d</title>
+
+</head>
+<body>
+<!--
+    开启3d：
+        transform-style：preserve-3d;
+            设置元素的子元素是位于3d空间中还是平面中
+            一般设置给3d变换元素的父级
+                flat：元素在平面 （overflow：hidden也会迫使元素的值是flat）
+                preserve-3d:子元素位于父元素的  3d空间中
+
+        如果没有开启3d效果，元素就没有3d的遮挡效果s
+        属性不继承
+-->
+<div class="box">
+    <div class="con">好</div>
+</div>
+</body>
+</html>

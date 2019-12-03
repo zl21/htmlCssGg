@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow属性</title>
+    <style>
+        div p:nth-child(1){
+            width: 100px;
+            height: 100px;
+            background: red;
+            overflow: visible;
+            overflow: hidden;
+            overflow-y: scroll;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<!--
+    overflow属性:
+        1.元素的内容超出父级以后，不会对其他元素产生影响，不占用额外的空间
+        2.overflow定义一个内容太大无法适应容器的时候，应该怎么做
+        3.值：
+            visible：超出内容不会被修剪 显示在元素外  默认
+            hidden:超出的内容不过裁剪掉  看不见 并且不会生成滚动条
+            scroll：超出内容被修剪，但是生成滚动条
+                overflow-x：scroll
+                overflow-y：scroll
+            auto：浏览器定夺，如果内容超出就生成滚动条，否则不生成
+
+        overflow:auto和scroll的区别
+            auto：内容超出生成滚动条
+            scroll：无论内容是否超出 都生成滚动条
+
+-->
+    <div>
+        <p>我是一个p11111我是一个p11111我是一个p11111我是一个p11111我是一个p11111我是一个p11111我是一个p11111</p>
+        <p>我是一个p22222我是一个p2222我是一个p11111我是一个p11111我是一个p11111我是一个p11111我是一个p11111</p>
+    </div>
+</body>
+</html>

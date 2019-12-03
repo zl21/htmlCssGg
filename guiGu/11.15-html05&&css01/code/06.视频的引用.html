@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频的引用</title>
+</head>
+<body>
+<!--
+    视频的引用
+        使用video标签
+
+        src引入视频
+
+        width和height可以设置视频的宽高
+            标签所占用的宽高符合我们的设置
+            但是都不能改变视频的比例
+            视频等比缩放结束（有任意一边达到边缘）  在其容器中居中
+
+
+    ！！ source标签（专门在音视频中引入资源的）
+    因为没有任何一个音视频格式 都支持所有浏览器，所以我们需要引入至少 mp4 ogg webM 这3中，让浏览器选择
+    但是只能只用1个video标签
+    所以我们可以只在video中书写source标签来引入资源
+    浏览器会依次解析source标签的资源，直到解析成功为止，剩余的就不再解析
+
+    在video的source最后书写 文字，当都不支持的时候，文字会提示给用户
+
+-->
+    <video width="300" height="300">
+        <source src="../images/source/test.mp4">
+        <source src="../images/source/test.webm">
+        <source src="../images/source/test.ogv">
+        垃圾！！！！<a href="####" download="../images/source/test.webm">点击下载看 或者下载最新浏览器</a>
+    </video>
+</body>
+</html>

@@ -1,0 +1,37 @@
+//定义变量使用@符号 书写格式是 @main:num;  使用变量的时候加上@
+
+//变量的第一种用法：当做一个普通的值来使用
+@mainColor:red;
+@length:1366px;
+@border:1px solid #ccc;
+.box{
+  color:@mainColor;
+  width: @length;
+  border: @border;
+}
+
+//变量的第二种用法：可以当做一个选择器使用
+//当变量作为选择器的时候，使用花括号把变量名包起来，即可使用
+@selector:.box;
+@selector2:outer;
+@{selector}{
+  width: 300px;
+}
+#@{selector2}{
+  height: 400px;
+}
+
+//变量的第三种用法：当做属性名来使用
+@bg:background;
+.box{
+  @{bg}:red;
+}
+
+//变量的第四种用法：作为一个url地址使用
+@pic1url:"https://pics5.baidu.com/feed/a9d3fd1f4134970a2bfa2389574503cda6865d1b.png?token=0be5d1558b52dbfb3a2f3d690d6c2c2d&s=45D23CC55DEA0F2C3209A09B0300C093";
+@pic2url:url("https://pics5.baidu.com/feed/a9d3fd1f4134970a2bfa2389574503cda6865d1b.png?token=0be5d1558b52dbfb3a2f3d690d6c2c2d&s=45D23CC55DEA0F2C3209A09B0300C093");
+.box{
+  @{bg}:url(@pic1url);
+  @{bg}:@pic2url 0 0 no-repeat;
+}
+

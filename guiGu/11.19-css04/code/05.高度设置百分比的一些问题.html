@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置高度百分比问题</title>
+    <style>
+        .box{
+            height: 100px;
+            background-color: red;
+        }
+        .con{
+            height: 40%;
+        }
+        h1{
+            height: 100%;
+            /*当一个元素的高度设置的是百分比的时候，要求父级必须设置一个非auto值的height属性，
+            否则height属性百分比值不生效*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con">
+            我是一个con
+            <h1>我是h1</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡动画</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: grey;
+            border: 1px solid red;
+            /*transition-property: width,height;*/
+            /*transition-property: width;*/
+            /*transition-property: all;*/
+
+            /*transition-duration: 1s,2s;*/
+            /*transition-duration: 1s;*/
+
+            /*transition-timing-function: cubic-bezier(.32,-0.68,.93,.18) ;*/
+
+            /*transition-delay: .5s;*/
+
+            /*合写*/
+            /*transition: all 1s  linear .5s;
+            transition: all 1s;
+            transition: 1s;
+            transition: 1s .5s;*/
+
+        }
+        .box:hover{
+            width: 300px;
+            height: 400px;
+            background: #009ff2;
+            border: 10px solid yellow;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+<!--
+    过渡动画:
+        无论是添加删除类名 id  还是hover  还是js改变样式，只要元素的样式发生变化，并且改变是拥有值的范围过渡，那么就会进行过渡动画。
+
+        transition-property:参加过渡动画的属性，全部是all   多个属性使用逗号间隔开
+
+         transition-timing-function: 控制动画类型
+            linear
+            可以书写贝塞尔曲线
+            https://cubic-bezier.com/#.17,.67,.83,.67
+-->
+    <div class="box"></div>
+</body>
+</html>

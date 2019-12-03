@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font-style</title>
+    <style>
+        div{
+            font-style: normal;
+        }
+        em,i,var{
+            font-style: normal;
+        }
+        span{
+            font-style: italic;
+            font-style: oblique 0deg;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        font-style：（继承）
+            字体风格，控制文字的倾斜样式
+            1.normal：正常  em  var  i标签都有默认倾斜的样式，所以可以通过mormal去掉默认的倾斜样式
+
+            2.italic  让文字呈现出斜体的样式
+
+            3.oblique  让文字倾斜
+                在文字设计的时候，会有正常体  斜体 粗体等多个字，italic是拿出了斜体，而oblique是让正常体变倾斜
+
+                oblique还有一个功能，控制文字倾斜多少度  度的单位是deg
+    -->
+    <div>
+        <span>span</span>
+        <em>em</em>
+        <i>iiiii</i>
+        <var>var</var>
+    </div>
+</body>
+</html>

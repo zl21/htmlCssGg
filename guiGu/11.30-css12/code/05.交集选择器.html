@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交集选择器</title>
+    <style>
+        .box>li{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box>.show{
+            /*background-color: red;*/
+        }
+        .box>li.show{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li></li>
+        <li></li>
+        <li class="show"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.三列布局-全浮动方法</title>
+    <style>
+        .outer{
+
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+        .center{
+            width: calc(100% - 200px);
+            height: 200px;
+            background-color: #009ff2;
+            float: left;
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+    方法一：全浮动，使用calc设置宽度
+        不推荐使用calc   兼容不好
+        并且center不是优先加载
+-->
+    <div class="outer">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

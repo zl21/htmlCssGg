@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>富余空间分配给项目</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+            flex-direction: column;
+
+        }
+        .box div:nth-child(1){
+            width: 100px;
+            /*width: 50%;*/
+            background-color: red;
+            flex-grow: 1;
+        }
+        .box div:nth-child(2){
+            /*width: 40%;*/
+            width: 120px;
+            background-color: green;
+
+            flex-grow: 1;
+        }
+        .box div:nth-child(3){
+            /*width: 60%;*/
+            width: 140px;
+            background-color: yellow;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+<!--
+   flex-grow：
+    富余空间分配给项目
+    设置给项目
+
+    综合所有项目的flex-grow的值，然后把富裕空间平分，按需分配
+
+    无论主轴在哪个位置，都是把主轴的富裕空间给分配了
+
+
+
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+</div>
+</body>
+</html>

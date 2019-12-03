@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光斑移动动画</title>
+    <style>
+        body{
+            background: #000;
+        }
+        .con{
+            margin-top: 200px;
+            text-align: center;
+            color: rgba(255,255,255,.5);
+            font-size: 100px;
+            font-weight: bold;
+            background: linear-gradient(135deg,#000 180px,#fff 220px,#000 250px) 0px 0px no-repeat;
+            -webkit-background-clip: text;
+
+            animation: move 1s linear infinite;
+        }
+
+        @keyframes move {
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">atguigu 尚硅谷</div>
+</body>
+</html>

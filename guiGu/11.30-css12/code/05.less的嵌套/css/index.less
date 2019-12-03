@@ -1,0 +1,44 @@
+//在less中可以使用@import引入其他的css文件
+@import "reset.css";
+@import "index2";
+
+//嵌套默认是后代选择器，可以在前边加上大于号，就可以变为子代选择器
+//父级引用 使用&符号，在父级中，代替父级
+html{
+  height: 100%;
+  body{
+    height: 100%;
+    .box{
+      border: 1px solid #000;
+      >.inner{
+        background-color: green;
+        >li{
+          height: 30px;
+          margin-bottom: 10px;
+          background-color: red;
+          &.show{
+            background-color: yellow;
+          }
+          &:nth-child(2){
+            background-color: #000;
+          }
+        }
+      }
+      .con{
+
+      }
+    }
+  }
+}
+
+
+//清浮动的代码
+.clearFix{
+  *zoom:1;
+  &:after{
+    height: 0;
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

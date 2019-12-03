@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-flow</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+
+           /* flex-wrap: wrap;
+            flex-direction: row-reverse;*/
+            flex-flow: wrap row-reverse;
+
+
+
+        }
+        .box div:nth-child(1){
+            width: 50%;
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            width: 40%;
+            background-color: green;
+            align-self: flex-end;
+        }
+        .box div:nth-child(3) {
+            width: 60%;
+            background-color: yellow;
+            align-self: center;
+        }
+        .box div:nth-child(4){
+            width: 20%;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    flex-flow：
+        是flex-wrap和flex-direction的简写
+-->
+<div class="box">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+</div>
+</body>
+</html>

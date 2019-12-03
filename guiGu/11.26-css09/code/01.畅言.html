@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>畅言</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .outer{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #009ff2;
+            border-radius: 20px;
+            margin: 100px auto;
+            background: url("../images/cy-logo.png") center center no-repeat;
+            position: relative;
+        }
+
+        .login{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            left: 30px;
+            top: -57px;
+            border: 1px solid #009ff2;
+
+        }
+        .login_in{
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #009ff2;
+            border: 1px solid #009ff2;
+            position: relative;
+            z-index: 2;
+        }
+        .mask{
+            width: 82px;
+            height: 57px;
+            background-color: #fff;
+            position: absolute;
+            left: 30px;
+            top: -58px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+
+        <div class="login">
+            <div class="login_in">登录</div>
+        </div>
+        <div class="mask"></div>
+
+    </div>
+</body>
+</html>

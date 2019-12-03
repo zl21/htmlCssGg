@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC识别浮动元素</title>
+    <style>
+        .con1{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        .con2{
+            height: 250px;
+            background-color: #0ee69c;
+
+            /*构成BFC以后，放置其他浮动元素覆盖BFC元素*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="con1"></div>
+        <div class="con2"></div>
+    </div>
+</body>
+</html>

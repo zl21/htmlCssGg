@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.三列布局-双飞翼方法</title>
+    <style>
+        .outer{
+            overflow: hidden;
+        }
+        .main{
+            float: left;
+            width: 100%;
+        }
+        .center{
+            margin: 0 100px;
+            /*height: 100px;*/
+            background-color: red;
+
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            /*height: 100px;*/
+            background-color: pink;
+            margin-left: -100%;
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+        .right{
+            float: left;
+            width: 100px;
+            /*height: 100px;*/
+            background-color: #009ff2;
+            margin-left: -100px;
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    1.给center添加一个父级main（main全屏，center添加两边的margin），让main和left right进行排列
+    2.给left margin-left -100%  直接到位  ，  right margin-left:-100px  也直接到位
+-->
+
+    <div class="outer">
+        <div class="main">
+            <div class="center">
+                <br> center
+                <br> center
+                <br> center
+                <br> center
+                <br> center
+                <br> center
+            </div>
+        </div>
+        <div class="left">
+            <br> center
+            <br> center
+        </div>
+        <div class="right">
+            <br> center
+            <br> center
+        </div>
+    </div>
+
+
+</body>
+</html>

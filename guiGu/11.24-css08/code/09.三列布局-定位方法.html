@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.三列布局-全浮动方法</title>
+    <style>
+        .outer{
+            position: relative;
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .center{
+            height: 200px;
+            background-color: #009ff2;
+            margin: 0 100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    方法三： center位置随便写，左右margin100px，不要设置宽度
+        left和right分别定位在两边
+
+        缺点：
+            无法进行等高布局
+-->
+    <div class="outer">
+        <div class="center"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+
+    </div>
+</body>
+</html>

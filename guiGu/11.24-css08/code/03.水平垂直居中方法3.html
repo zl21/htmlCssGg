@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中方法3</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 500px;
+            background-color: pink;
+            margin: 40px auto;
+            position: relative;
+        }
+        .con{
+            width: 300px;
+            height: 200px;
+            background-color: #009ff2;
+            position: absolute;
+            /*left: 50%;*/
+            /*在不知道被居中元素的宽高的时候：
+                在定位的时候，定位设置50%   里边元素的左上角在容器的正中心，需要将元素向左和上 移动自身的一半 达到居中
+               使用变形transform属性里的位移值 translate  translate的百分比是参考自身宽高的，所有不需要知道元素宽高即可
+            */
+            left:50%;
+            top:50%;
+            /*transform是变形的属性，里边包含一个位移的值， 百分比是相对自身宽度的*/
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+        .con{
+            height: 4000px;
+            background-color: grey;
+        }
+
+        .ad_left{
+            width: 180px;
+            height: 220px;
+            background-color: red;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            margin-top: -110px;
+
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            animation: ex1 .3s linear infinite;
+        }
+        .ad_right{
+            width: 180px;
+            height: 220px;
+            background-color: red;
+            position: fixed;
+            right: 0px;
+            top: 50%;
+            margin-top: -110px;
+
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            animation: ex1 .3s linear infinite;
+        }
+
+        @keyframes ex1 {
+            0%{
+                background-color: red;
+            }
+            20%{
+                background-color: green;
+            }
+            40%{
+                background-color: yellow;
+            }
+            60%{
+                background-color: blue;
+            }
+            80%{
+                background-color: pink;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+    固定定位：
+        1.相对浏览器窗口定位
+        2.脱离页面流
+
+-->
+    <div class="outer">
+        <div class="con"></div>
+        <div class="ad">
+            <div class="ad_left">
+                我是砸砸辉
+                <br>
+                是兄弟就来
+                <br>
+                砍我吧
+            </div>
+            <div class="ad_right">
+                开局一条狗
+                <br>
+                装备全靠爆
+            </div>
+        </div>
+    </div>
+</body>
+</html>

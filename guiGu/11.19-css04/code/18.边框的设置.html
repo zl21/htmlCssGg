@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框的设置</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            /*border: 1px solid #000;*/
+
+            /*border-top: 1px solid #000;
+            border-right: 1px solid #000;*/
+
+
+            border: 1px solid #000;
+            border-left:none;
+        }
+    </style>
+</head>
+<body>
+<!--
+    边框的设置：
+        border属性，可以设置四个方向的边框
+            border-right  border-bottom  。。。。。
+
+        边框有3个值：、
+            border-width：边框宽度
+            border-style：边框 样式   dashed  dotted  solid
+            border-color：边框颜色
+
+            单独设置某个方向的时候也可以书写：
+                border-left-style：
+        边框的合写是：
+            border:width   style   color
+            某个方向也可以进行合写：
+                border-left：width  style  color
+
+        border设置为none 代表没有边框
+
+    border：none和border：0px solid #000;区别：
+        border：none是完全没有渲染边框这个样式
+        border：0  是进行渲染边框，但是边框宽度是0
+-->
+<div class="box"></div>
+</body>
+</html>

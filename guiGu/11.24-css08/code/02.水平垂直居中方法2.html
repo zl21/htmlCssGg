@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01.水平垂直居中方法1</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 500px;
+            background-color: pink;
+            margin: 40px auto;
+            position: relative;
+        }
+        .con{
+            width: 300px;
+            height: 200px;
+            background-color: #009ff2;
+            position: absolute;
+            /*left: 50%;*/
+            /*在已知被居中元素的宽高的时候：
+                在定位的时候，定位设置50%   里边元素的左上角在容器的正中心，需要将元素向左和上 移动自身的一半 达到居中
+                使用margin负值 将元素移动（需要自己算出来一半是多少）
+            */
+            left:50%;
+            top:50%;
+            margin-left: -150px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con"></div>
+    </div>
+</body>
+</html>

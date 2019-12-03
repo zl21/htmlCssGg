@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位练习</title>
+    <style>
+        .outer{
+            width: 660px;
+            margin: 0 auto;
+        }
+        .outer>div{
+            float: left;
+            width: 200px;
+            position: relative;
+            margin: 10px;
+        }
+        .outer>div>.con{
+            height: 300px;
+
+            background-color: #009ff2;
+            z-index: 4;
+        }
+        .outer div .ding{
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            background-color: pink;
+            left: 20px;
+            bottom: -20px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div>
+            <div class="con"></div>
+            <div class="ding"></div>
+        </div>
+        <div>
+            <div class="con"></div>
+            <div class="ding"></div>
+        </div>
+        <div>
+            <div class="con"></div>
+            <div class="ding"></div>
+        </div>
+    </div>
+</body>
+</html>

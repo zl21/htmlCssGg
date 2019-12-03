@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div、section、article的区别</title>
+</head>
+<body>
+<!--
+    div、section、article的区别：
+
+
+        section、article：
+            1、article可以看做是一个特殊的section，但是强调的独立性更强
+            2、section主要强调分段分块，article主要强调独立性
+            3、原则上使用article的时候，也可以使用section，但是article更合适的使用，请使用article
+
+        div、section、article：
+            1、div、section、article 语义是依次递增的
+            2、div没有任何的语义，仅仅是用作写样式，可以用在任何的场景，但是我们可能会看不清上下文关系
+            3、对于主题性的区域，建议使用section
+            4、假如这个区域脱离了上下文，可以作为完整的存在，那么请使用article
+
+-->
+    <div>
+        <!--网页的头部-->
+        <header>
+            <h1>你看我像不像logo</h1>
+            <!--导航的用法一-->
+            <nav>
+                <a href="###">新闻</a>
+                <a href="###">娱乐</a>
+                <a href="###">体育</a>
+                <a href="###">竞技</a>
+            </nav>
+            <!--导航的用法二-->
+            <!--<nav>
+                <ul>
+                    <li><a href="###">新闻</a></li>
+                    <li><a href="###">娱乐</a></li>
+                    <li><a href="###">体育</a></li>
+                    <li><a href="###">新闻</a></li>
+                    <li><a href="###">娱乐</a></li>
+                    <li><a href="###">体育</a></li>
+                    <li><a href="###">新闻</a></li>
+                    <li><a href="###">娱乐</a></li>
+                    <li><a href="###">体育</a></li>
+                    <li><a href="###">新闻</a></li>
+                    <li><a href="###">娱乐</a></li>
+                    <li><a href="###">体育</a></li>
+                </ul>
+            </nav>-->
+        </header>
+
+        <!--内容区域-->
+        <section>
+            <h2>我这个是评论区域</h2>
+            <article>
+                <h3>评论人：张三</h3>
+                <p>内容：哈哈我是张三，你也叫张三码？</p>
+            </article>
+            <article>
+                <h3>评论人：李四</h3>
+                <p>内容：今天的天气好吗？</p>
+            </article>
+            <article>
+                <h3>评论人：王五</h3>
+                <p>内容：明天的天气真好</p>
+            </article>
+        </section>
+
+        <aside>
+            我是孤独的侧边栏
+        </aside>
+
+        <!--网页的底部-->
+        <footer>
+            <h3>友情链接</h3>
+            <div>
+                <a href="###">阿里巴巴</a>
+                <a href="###">阿里妈妈</a>
+                <a href="###">阿里爷爷</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

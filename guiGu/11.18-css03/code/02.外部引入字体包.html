@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外部引入字体包</title>
+    <style>
+        @font-face{
+            font-family: "love";
+            src:url("../images/love.ttf");
+        }
+        div{
+            font-family: "love";
+        }
+    </style>
+</head>
+<body>
+<!--
+    外部引入字体包：
+        1.外部引入字体包和某一个元素没有任何关系，而是整个页面都可以使用这个字体
+        2.在css中使用@font-face引入外部字体包
+        3.我们每个字体都有自己的名字，当字体包引进来的时候，首先要起一个名字
+        4.通过src引入字体包
+-->
+    <div>
+        左右毛之窈窕淑女君子好球
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图设置</title>
+    <style>
+        .box{
+            width: 900px;
+            height: 600px;
+            padding: 30px;
+            border:10px dashed #000;
+            /*background-color: red;*/
+            background: url(../images/01.jpg) 0 0 no-repeat;
+
+
+            background-origin: border-box;
+            background-origin: padding-box;
+            /*background-origin: content-box;*/
+
+            background-clip: content-box;
+            background-clip: padding-box;
+            background-clip: border-box;
+
+
+            background-size: 300px;
+            background-size: 100% 100%;
+            background-size: cover;
+            background-size: contain;
+
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    背景设置：
+        background-color
+        background-image
+        background-position
+        backgorund-repeat
+
+     css3背景设置（低版本ie不兼容）
+
+        盒子模型分为多个盒子嵌套而成：
+            content-box、padding-box、border-box、margin-box
+
+        以下背景图的设置 请书写在背景图引入之后，否则可能失效！！！！！！！！！！1
+        background-origin：背景图原点
+            content-box   padding-box border-box
+
+        background-clip:背景图裁剪
+            content-box   padding-box border-box
+
+        background-size:背景图大小
+            单位  后边跟1个值 代表x轴，y轴比例缩放   跟两个值空格隔开代表x和y
+
+            百分比 百分比相对容器（取决于背景图原点） 两个值都是100% 充满容器，但是比例可能失真
+
+            cover:等比缩放图片 缩放到全部充满容器为止  图片可能会超出容器
+            contain:等比缩放图片，缩放到任意一边充满容器位置  容器可能会有空白
+-->
+    <div class="box"></div>
+</body>
+</html>

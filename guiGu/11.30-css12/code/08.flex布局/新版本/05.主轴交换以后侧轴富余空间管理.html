@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义容器</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+
+            /*开启弹性盒子*/
+            display: flex;
+            flex-direction: column-reverse;
+
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            /*align-items: center;*/
+            align-items: stretch;
+            align-items: baseline;
+
+
+
+
+
+
+        }
+        .box div:nth-child(1){
+            /*width: 100px;*/
+            /*width: 50%;*/
+            line-height: 60px;
+            background-color: red;
+        }
+        .box div:nth-child(2){
+            /*width: 40%;*/
+            /*width: 120px;*/
+            background-color: green;
+        }
+        .box div:nth-child(3){
+            /*width: 60%;*/
+            /*width: 140px;*/
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        align-items:侧轴富余空间管理
+            flex-strat：
+                项目在侧轴的起点位置（高度可以设置 也可以内容撑开 ）
+            flex-end：
+                项目在侧轴的结束位置（高度可以设置 也可以内容撑开 ）
+            center：
+                项目在侧轴的中间位置（高度可以设置 也可以内容撑开 ）
+            baseline：
+                项目在侧轴的基线对齐（高度可以设置 也可以内容撑开 ）
+            stretch：
+                项目在侧轴充满（默认）
+
+    -->
+    <div class="box">
+        <div>11</div>
+        <div>22</div>
+        <div>33</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 500px;
+            background-color: #ccc;
+            border: 1px solid #000;
+        }
+        .inner{
+            width: 600px;
+            height: 400px;
+            background-color: red;
+            margin: 30px;
+            border: 1px solid #000;
+
+            position: relative;
+            /*position: absolute;*/
+
+            /*transform: rotate(0deg);*/
+            /*filter: opacity(1);*/
+        }
+        .con{
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+            margin: 70px;
+            border: 1px solid #000;
+            /*position: relative;*/
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            opacity: .5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+    绝对定位:
+        让元素相对于其包含块进行定位
+        使用left right top bottom 来控制定位的位置
+
+        1.绝对定位的元素 完全脱离页面流
+        2.定位值百分比是相对于其包含块的
+        3.绝对定位的元素浮动失效
+        4.对行标签影响：完美支持margin、padding，可以设置宽高，display属性变成block
+-->
+<div class="outer">
+    <div class="inner">
+        <div class="con">
+            <span class="box"></span>
+<!--            <div>today天气真好</div>-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

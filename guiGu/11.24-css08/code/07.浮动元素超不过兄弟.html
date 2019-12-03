@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动元素超不过兄弟</title>
+    <style>
+        .con1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .con2{
+            width: 110px;
+            height: 110px;
+            background-color: pink;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--    浮动元素超不过前边的兄弟元素-->
+    <div class="box">
+        <div class="con1"></div>
+        <div class="con2"></div>
+    </div>
+</body>
+</html>

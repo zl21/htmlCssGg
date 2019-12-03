@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibility属性</title>
+    <style>
+        .box p{
+            width: 100px;
+            height: 100px;
+        }
+        .box p:nth-child(1){
+            background: red;
+            visibility: hidden;
+        }
+        .box p:nth-child(1) span{
+            visibility: visible;
+        }
+        .box p:nth-child(2){
+            background: grey;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<!--
+    visibility属性：
+        控制元素的显示或隐藏
+        两个值：
+            visible：元素显示
+            hidden:1.元素隐藏  保留原来位置  2.里边的元素隐藏是因为继承了隐藏的属性，如果覆盖，就可以显示出来
+
+-->
+    <div class="box">
+        <p>
+            ppppp
+            <span>span</span>
+        </p>
+        <p></p>
+    </div>
+</body>
+</html>

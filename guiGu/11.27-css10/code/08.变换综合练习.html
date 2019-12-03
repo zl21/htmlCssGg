@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变换综合练习</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .outer{
+            width: 1003px;
+            overflow: hidden;
+            margin: 100px auto;
+            border: 1px solid #666;
+        }
+        .inner{
+            width: 1004px;
+            overflow: hidden;
+        }
+        .inner>li{
+            width: 250px;
+            height: 200px;
+            float: left;
+            border-right: 1px solid #666;
+        }
+        .inner>li>img{
+            width: 94px;
+            height: 180px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            transform-origin: left bottom;
+            transition: all .3s linear;
+        }
+        .inner>li>.right{
+            width: 140px;
+            float: right;
+            margin-top: 70px;
+        }
+        .inner>li>.right>h3{
+            font-size: 18px;
+            margin-bottom: 5px;
+
+        }
+        .inner>li>.right>p{
+            font-size: 14px;
+            transition: all .3s linear 0s;
+        }
+
+        .inner>li:hover>img{
+            transform: rotate(-7deg);
+        }
+        .inner>li:hover>.right>h3{
+            color: orangered;
+            transform: translateX(10px);
+            transition: all .3s linear .3s;
+        }
+        .inner>li:hover>.right>p{
+            color: orangered;
+            transform: translateY(10px);
+            transition: all .3s linear .6s;
+
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="inner">
+        <li>
+            <img src="../images/01.png" alt="">
+            <div class="right">
+                <h3>手机维修</h3>
+                <p>品质保障 值得信赖</p>
+            </div>
+        </li>
+        <li>
+            <img src="../images/02.png" alt="">
+            <div class="right">
+                <h3>手机维修</h3>
+                <p>品质保障 值得信赖</p>
+            </div>
+        </li>
+        <li>
+            <img src="../images/03.png" alt="">
+            <div class="right">
+                <h3>手机维修</h3>
+                <p>品质保障 值得信赖</p>
+            </div>
+        </li>
+        <li>
+            <img src="../images/04.png" alt="">
+            <div class="right">
+                <h3>手机维修</h3>
+                <p>品质保障 值得信赖</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

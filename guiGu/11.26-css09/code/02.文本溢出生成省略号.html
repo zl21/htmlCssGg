@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本溢出生成省略号</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .outer{
+            width: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            /*overflow: hidden;*/
+        }
+        .outer>li{
+            height: 30px;
+            border-top: 1px solid red;
+            background-color: #ccc;
+            line-height: 30px;
+            margin-top: -1px;
+
+            /*不能换行显示*/
+            white-space: nowrap;
+            /*超出隐藏*/
+            overflow: hidden;
+            /*如果文本溢出被隐藏，增加省略号*/
+            text-overflow: ellipsis;
+            /*块级标签才能生效*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--
+    文本溢出生成省略号：
+            /*不能换行显示*/
+            white-space: nowrap;
+            /*超出隐藏*/
+            overflow: hidden;
+            /*如果文本溢出被隐藏，增加省略号*/
+            text-overflow: ellipsis;
+            /*块级标签才能生效*/
+            display: block;
+
+-->
+<ul class="outer">
+    <li>那一夜，两个男的在教室干什么被监控老钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控小钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控老钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控小钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控老钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控小钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控老钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控小钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控老钱抓住了，原来是没带工牌</li>
+    <li>那一夜，两个男的在教室干什么被监控小钱抓住了，原来是没带工牌</li>
+</ul>
+</body>
+</html>

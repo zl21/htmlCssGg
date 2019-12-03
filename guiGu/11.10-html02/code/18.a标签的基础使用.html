@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的基础使用</title>
+</head>
+<body>
+    <!--
+        a标签基础使用：
+            1、a标签主要用来做跳转
+            2、a标签就是超链接，可以创建通向其他文件 或者是 位置地址 ，还可以创建邮件、电话、短信等等
+
+            属性：
+                href属性，用来书写链接地址。
+                    如果是本地地址，直接书写相对路径即可
+                    如果是网络地址 必须书写网络协议 http:// 或者是 https://
+
+                title属性：
+                    当鼠标悬停在a标签上的时候，对当前链接信息的一个提示，是一个弹窗显示
+
+                target属性：
+                    控制当前窗口跳转还是新标签页打开
+                    值是_blank：在标签页打开
+                    值是_self: 在当前窗口跳转(默认的)
+
+    -->
+    
+    <div>
+        <a href="http://www.baidu.com">百度十下 你也不知道</a>
+
+        <a href="http://www.baidu.com" title="谋深夜，他俩在操场上一起打王者荣耀">谋深夜，他俩在操场上.....</a>
+
+        <a href="http://www.baidu.com"  target="_blank">看我怎么打开</a>
+    </div>
+
+</body>
+</html>

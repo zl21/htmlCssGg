@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本阴影</title>
+    <style>
+        div>p{
+            width: 400px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border:1px solid #000;
+            font-size: 40px;
+        }
+        p:nth-child(1){
+            /*文本阴影使用 text-shadow属性
+                后边跟4个值
+                分别是 x偏移值  y偏移值  阴影模糊值  阴影颜色
+
+                多个阴影使用逗号  把多个值隔开
+
+            */
+            /*text-shadow: 0px 0px 0px red;*/
+            text-shadow: 3px 5px 0px red, 12px 14px 0px blue,19px 22px 0px green;
+        }
+        
+        p:nth-child(2){
+            background-color: #444;
+            color: #222;
+            font-weight: bold;
+            text-shadow: -1px -1px 0 #ccc;
+        }
+        p:nth-child(3){
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0px 0px 1px greenyellow,
+                        0px 0px 2px greenyellow,
+                        0px 0px 3px greenyellow,
+                        0px 0px 8px greenyellow,
+                        0px 0px 12px greenyellow,
+                        0px 0px 15px greenyellow,
+                        0px 0px 18px greenyellow,
+                        0px 0px 20px greenyellow,
+                        0px 0px 22px greenyellow;
+        }
+        p:nth-child(4){
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0px 0px 1px greenyellow,
+            0px -1px 2px greenyellow,
+            0px -2px 3px greenyellow,
+            0px -3px 8px greenyellow,
+            0px -4px 12px greenyellow,
+            0px -5px 15px greenyellow,
+            0px -6px 18px greenyellow,
+            0px -7px 20px greenyellow,
+            0px -8px 22px greenyellow;
+        }
+        p:nth-child(5){
+            background-color: #aaa;
+            color: #ddd;
+            font-weight: bold;
+            text-shadow: 0px 1px 0px rgba(230,230,230,1),
+                            0px 2px 0px rgba(230,230,230,.8),
+                            0px 3px 0px rgba(230,230,230,.5),
+                            0px 4px 0px rgba(230,230,230,.3);
+        }
+        p:nth-child(6){
+            background-color: #aaa;
+            color: transparent;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px rgb(230, 69, 83);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+        <p>today is a fun day</p>
+    </div>
+</body>
+</html>

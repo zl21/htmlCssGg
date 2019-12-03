@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datalist标签</title>
+</head>
+<body>
+    <!--
+        datalist标签：
+            1.包含了一组option标签 代表列表的可选值
+            2.和input相关联，配套使用
+            3.input标签的list属性 和datalist标签的id属性 相等  就达到了关联
+    -->
+    <input type="text" list="city">
+    <datalist id="city">
+        <option value="河南">河南</option>
+        <option value="河北">河北</option>
+        <option value="湖南">湖南</option>
+        <option value="湖北">湖北</option>
+        <option value="郑州">郑州</option>
+        <option value="泸州">泸州</option>
+        <option value="广州">广州</option>
+    </datalist>
+</body>
+</html>

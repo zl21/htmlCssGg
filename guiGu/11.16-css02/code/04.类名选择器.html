@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类名选择器</title>
+    <style>
+        #hover{
+            background-color: blue;
+        }
+
+        li{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .show{
+            background-color: pink;
+        }
+        .active{
+            background-color: greenyellow;
+        }
+
+        .has{
+            margin: 10px;
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--
+        类名选择器：
+            1.可以给多个元素进行分组，所有类名相同的元素是一组，可以进行样式控制
+            2.给被分组的元素设置class属性（每个元素只能有一个class属性，但是可以拥有多个类名）
+            3.选择器通过 .+类名的方法来进行选择
+            4.一个class属性想要书写多个类名，要使用空格隔开
+    -->
+    <ul>
+        <li class="show has" id="hover"></li>
+        <li class="active"></li>
+        <li class="show"></li>
+        <li></li>
+        <li class="show"></li>
+        <li></li>
+    </ul>
+    <div>div</div>
+    <h1 class="active">h111</h1>
+</body>
+</html>

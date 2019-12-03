@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分栏布局（多列）</title>
+    <style>
+        .outer{
+            /*column-count: 8;*/
+            /*column-width: 300px;*/
+            columns:2 200px;
+            column-gap: 30px;
+            column-rule: 2px solid red;
+        }
+        .outer>h2{
+            column-span: all;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--
+    css column 定义了多栏布局的模块
+        表现出列之间怎么流动，及多列之间的间隙和分割线
+        并且使用了列高平衡，除了最后一列，其他列高度一样
+
+        column-count和column-width用来控制列的宽度和数量：
+            column-count是控制列数
+            column-width是控制每一列的最小宽度
+
+            column-count和column-width冲突的时候,分为栏数少的优先
+
+        column-gap 控制栏之间的间隙
+
+        column-rule 规定分割线  和border设置基本一样
+
+        column-span:跨栏显示  all
+
+        columns是简写，后边跟  count和width  也可以随意跟count和width其中的一个值
+
+
+-->
+
+    <div class="outer">
+        <h2>Facebook和Twitter出现bug</h2>
+        <p>
+            PingWest品玩11约26日讯，据The Verge消息，Facebook和Twitter周一宣布，“数百名用户”的数据可能在账户在登录Android设备上的Google Play Store后被不当访问。到目前为止，还没有迹象表明iOS用户受到影响。
+
+            研究人员发现，一个名为One Audience的开发工具包让外部开发人员可以访问个人信息，包括用户名和电子邮件地址。如果有人使用他们的Twitter帐户登录这些应用程序，也一个访问最近的tweets也问。CNBC表示，Giant Square和Photofy等图片编辑应用的用户可能会受到影响。
+
+            在被问及披露的具体数据时，Facebook表示，与该应用共享的任何数据都可能被泄露，但具体信息“取决于该应用和用户允许的权限”
+
+            PingWest品玩11约26日讯，据The Verge消息，Facebook和Twitter周一宣布，“数百名用户”的数据可能在账户在登录Android设备上的Google Play Store后被不当访问。到目前为止，还没有迹象表明iOS用户受到影响。
+
+            研究人员发现，一个名为One Audience的开发工具包让外部开发人员可以访问个人信息，包括用户名和电子邮件地址。如果有人使用他们的Twitter帐户登录这些应用程序，也一个访问最近的tweets也问。CNBC表示，Giant Square和Photofy等图片编辑应用的用户可能会受到影响。
+
+            在被问及披露的具体数据时，Facebook表示，与该应用共享的任何数据都可能被泄露，但具体信息“取决于该应用和用户允许的权限”
+        </p>
+    </div>
+</body>
+</html>

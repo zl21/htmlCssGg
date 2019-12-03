@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input提供的新属性</title>
+</head>
+<body>
+<!--
+    input提供的新属性：
+        place holder：占位符
+
+        auto complete：是否提示用户曾经输入过的值 默认on  关闭是off
+
+        auto focus：
+            1.唯一一个值是autofocus，规定可以直接书写属性名即可
+            2.自动获取焦点
+            3.在js中，控制开启关闭 使用布尔值（true false）的写法
+            4.同一个页面中，如果书写多个，仅第一个有效
+
+        required：
+            表单必填项，
+            必填项的表单没有书写内容，表单会阻止提交
+
+        disabled:
+            可以禁用所有表单元素，不但能够禁用用户操作，也可以禁用表单提交（禁止任何操作）
+
+        read only:
+            对于可编辑表单来说，可以禁用用户的修改操作，但是不能禁用提交（禁止修改，可以提交）
+
+        checked:
+            让单选框 多选框 被选中
+            在同一组单选框中（name相同） 只能选择最后一个书写checked的表单元素
+
+        selected:
+            默认选择下拉列表项(放在select标签中表可多选，放在子标签option中表默认选中某个)
+-->
+<form action="###">
+    <label>
+        <span>用户名：</span>
+        <input type="text" name="user" value="lipeihua" placeholder="请在这里输入用户名" autocomplete="off" readonly>
+    </label>
+
+    <br>
+
+    <label>
+        <span>密码：</span>
+        <input type="password" name="pass"  required>
+    </label>
+
+    <label>
+        <span>再次密码：</span>
+        <input type="password" name="pass2" value="12345"  disabled>
+    </label>
+
+    <div>
+        请选择性别
+        <label>
+            <span>男</span>
+            <input type="radio" name="sex" checked>
+        </label>
+
+        <label>
+            <span>女</span>
+            <input type="radio" name="sex" checked >
+        </label>
+    </div>
+
+    <div>
+        请选择城市
+        <label>
+            <span>草围</span>
+            <input type="checkbox" name="city" checked>
+        </label>
+
+        <label>
+            <span>后瑞</span>
+            <input type="checkbox" name="city" checked >
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <span>中午吃啥</span>
+            <select name="eat" multiple>
+                <option value="红烧肉">红烧肉</option>
+                <option value="卤煮" selected>卤煮</option>
+                <option value="豆汁">豆汁</option>
+            </select>
+        </label>
+    </div>
+
+    <button>提交</button>
+</form>
+</body>
+</html>

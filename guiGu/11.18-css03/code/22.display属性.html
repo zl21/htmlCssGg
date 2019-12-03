@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <style>
+        .box p{
+            width: 100px;
+            height: 100px;
+        }
+        .box p:nth-child(1){
+            background: red;
+            display: none;
+        }
+        .box p:nth-child(1) span{
+        }
+        .box p:nth-child(2){
+            background: grey;
+        }
+
+        .box>span{
+            display: block;
+            height: 100px;
+            background: red;
+        }
+        .box>h2{
+            display: inline;
+            width: 1000px;
+            height: 100px;
+            background: red;
+        }
+        .box>h3{
+            width: 300px;
+            height: 50px;
+            background: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        display属性：
+            控制元素的显示方式
+
+            none：元素隐藏 并且不再占用空间  只把把自身和里边所有内容全部隐藏掉，去除掉DOM树了
+
+            block：让display：none的元素显示/ 让元素以块元素属性显示,虽然显示方式变了，但是嵌套规则不能改变
+
+            inline：让元素以行元素形式显示
+
+            inline-block:让元素以行内块的形式显示
+    -->
+    <div class="box">
+        <p>
+            ppppp
+            <span>span</span>
+        </p>
+        <p></p>
+        <span>快  我要变成一个块元素 </span>
+        <h2>我是一个二级标题</h2>
+        <h3>我是一个二级标题</h3>
+        <em>我和h3在一行，但是h3可以设置宽高</em>
+    </div>
+
+</body>
+</html>

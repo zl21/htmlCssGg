@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc方法</title>
+    <style>
+        .box{
+            width: calc(100% / 2);
+            /*width: 50%;*/
+            height: calc(2rem + 18px);
+            background-color: red;
+        }
+
+        .box2{
+            height: 100px;
+            width: calc(100% - 200px);
+            margin: 0 auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--
+    calc方法：
+        我们把它当做一个函数，calc是calculate（计算）缩写
+        它是css3提供的新功能，主要用来计算长度
+        可以给  width  height padding  margin font-size
+        值是一个动态的值
+
+        使用 +  -  *  /  运算
+        可以使用百分比 rem  em
+        可以混合单位计算在
+        在使用的时候，运算符号前后加空格
+-->
+
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

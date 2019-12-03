@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css阻塞渲染</title>
+</head>
+<body>
+    <!--
+        css阻塞渲染：
+            1.根据浏览器的流程，只要CSSOM树没有构建完成，那就不会生成渲染树，页面也就不会渲染到浏览器中
+            2.所以css加载过慢的时候，浏览器会出现白屏的现象
+            3.css被看做成阻塞渲染的资源，也就是说DOM树一直在等待CSSOM构建完毕，所以就形成了css阻塞。
+            4.所以我们要精简css
+    -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单伪类选择器</title>
+    <style>
+        form>input:read-only{
+            background-color: red;
+        }
+        form>input:read-write{
+            background-color: green;
+        }
+        form>input:disabled{
+            background-color: pink;
+        }
+        form>input:enabled{
+            color: #fff;
+        }
+        form>input:checked{
+            width: 100px;
+            height: 100px;
+        }
+
+        form>input:focus{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    伪类选择器：
+        伪类选择器存在的意义是：为了通过选择器，格式化DOM树以外的信息，或者是选择不能被常规选择器选中的元素
+            1.比如a标签的四种状态不存在DOM树中（有链接时、被访问时、被访问后、鼠标悬浮上边的时候）
+            2.想要回去某些元素中的第二个，那么常规选择器不容易回去到
+
+        伪类选择器：
+            1.表单伪类选择器
+            2.结构伪类选择器
+
+    表单伪类选择器：
+        :read-only 选取不能被用户编辑 可提交 的表单（拥有readonly属性）
+        :read-write 选取可以被用户编辑可输入的表单元素
+        :checked  选取被选中的 单选框或多选框(元素随时被选中，随时更新样式)
+        :disabled 选取被禁用的表单
+        :enabled 选取没有被禁用的表单
+        :focus 选取获取交单的表单
+
+-->
+<form action="###">
+    用户名：<input type="text" name="user" readonly value="我不能编辑但是能提交啊"> <br>
+    密码：<input type="text" name="pass"> <br>
+    电话：<input type="tel" name="tel" value="15701665563" disabled> <br>
+    性别：<input type="radio" name="sex" checked>男
+    <input type="radio" name="sex">女 <br>
+
+</form>
+</body>
+</html>

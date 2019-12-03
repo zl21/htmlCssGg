@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遛弯</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head_outer{
+            border-bottom: 4px solid #176fbb;
+        }
+        .head{
+            width: 1000px;
+            /*background-color: rosybrown;*/
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .head>.head_top{
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        .head_top a{
+            text-decoration: none;
+        }
+        .head>.head_top>.head_top_search{
+            float: right;
+            width: 26px;
+            height: 26px;
+            border: 1px solid #3c3c3c;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            background: url("./img/btn_ss.png") center center no-repeat;
+        }
+        .head>.head_top>.head_top_ipt{
+            float: right;
+            width: 132px;
+            height: 26px;
+            border: 1px solid #3c3c3c;
+            padding: 0 10px;
+        }
+        .head>.head_top>.head_top_boot{
+            float: right;
+            color: #3c3c3c;
+            font-size: 14px;
+            margin: 5px 15px 0 7px;
+        }
+        .head>.head_top>.head_top_bootnum{
+            float: right;
+            color: #fff;
+            font-size: 12px;
+            width: 25px;
+            height: 19px;
+            text-align: center;
+            line-height: 19px;
+            padding-top: 5px;
+            background: url("./img/boot.png") center center no-repeat;
+            margin: 1px 0 0 15px;
+        }
+        .head>.head_top>.head_top_register{
+            width: 60px;
+            height: 19px;
+            text-align: center;
+            line-height: 19px;
+            font-size: 14px;
+            color: #3c3c3c;
+            float: right;
+            border-left: 1px solid #3c3c3c;
+            border-right: 1px solid #3c3c3c;
+            margin-top: 5px;
+        }
+        .head>.head_top>.head_top_login{
+            width: 60px;
+            height: 19px;
+            text-align: center;
+            line-height: 19px;
+            font-size: 14px;
+            color: #3c3c3c;
+            float: right;
+            border-left: 1px solid #3c3c3c;
+            margin-top: 5px;
+        }
+        .head>.head_top>.head_top_tel{
+            float: right;
+            width: 140px;
+            height: 20px;
+            background: url("./img/tel.png") center center no-repeat;
+            margin: 4px 15px 0 0;
+        }
+        .head>.head_bottom{
+            margin-top: -26px;
+        }
+        .head>.head_bottom>h1{
+            display: inline-block;
+        }
+        .head>.head_bottom>h1>img{
+            width: 132px;
+            height: 90px;
+        }
+        .head>.head_bottom>a{
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #3c3c3c;
+            margin-right: 40px;
+        }
+        .head>.head_bottom>a:nth-of-type(1){
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background: url("./img/index.png") center center no-repeat;
+            margin-left: 56px;
+        }
+
+        .nav{
+            width: 1000px;
+            margin: 0 auto;
+            height: 53px;
+            line-height: 53px;
+        }
+        .nav>a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        .bigimg{
+            width: 100%;
+            height: 350px;
+            background: url("./img/01.jpg") center center no-repeat;
+        }
+        .con{
+            width: 1000px;
+            margin: 0 auto;
+            /*height: 300px;*/
+            /*background-color: #0ee69c;*/
+        }
+        .con .con_tit{
+            text-align: center;
+            line-height: 98px;
+        }
+        .con>.con_tit>span{
+            font-size: 30px;
+            color:#cc0000;
+            background: url("./img/li.jpg") 0 center no-repeat;
+            padding-left: 43px;
+        }
+        .con>.con_con{
+            width: 1032px;
+            overflow: hidden;
+            margin-top: -32px;
+
+        }
+        .con>.con_con>img{
+            float: left;
+            width: 312px;
+            height: 222px;
+            margin-right: 32px;
+            margin-top: 32px;
+        }
+        .con>.con_page{
+            height: 79px;
+            line-height: 79px;
+            text-align: center;
+        }
+        .con>.con_page>a{
+            color: #3c3c3c;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .con>.con_page>.con_page_num{
+            background-color: #fff;
+            color: #3c3c3c;
+            width: 30px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .con>.con_page>.con_page_show{
+            background-color: #3c3c3c;
+            color: #fff;
+        }
+        .foot_out{
+            width: 100%;
+            background-color: #023c4d;
+        }
+        .foot_top_out{
+            width: 100%;
+            border-bottom: 1px solid #fff;
+        }
+        .foot_top{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 10px 0;
+            /*background-color: pink;*/
+            overflow: hidden;
+            list-style: none;
+            /*height: 150px;*/
+        }
+        .foot_top li{
+            float: left;
+            margin-left: 90px;
+        }
+        .foot_top li>a{
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .foot_top>li>a:nth-child(1){
+            font-size: 18px;
+        }
+        .foot_top>li:last-child>a:nth-child(1){
+            font-size: 28px;
+        }
+
+        .foot_bottom{
+            height: 57px;
+            text-align: center;
+            line-height: 57px;
+            color: #fff;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!--头部的最外层-->
+    <header class="head_outer">
+        <!--头部的居中区域-->
+        <div class="head">
+            <div class="head_top">
+                <a href="###" class="head_top_search"></a>
+                <input type="text" class="head_top_ipt">
+                <a href="###" class="head_top_boot">行李箱</a>
+                <a href="###" class="head_top_bootnum">12</a>
+                <a href="###" class="head_top_register">注册</a>
+                <a href="###" class="head_top_login">登录</a>
+                <a href="###" class="head_top_tel"></a>
+            </div>
+            <nav class="head_bottom">
+                <h1><img src="./img/logo.png" alt=""></h1>
+                <a href="###"></a>
+                <a href="###">第一次</a>
+                <a href="###">目的地</a>
+                <a href="###">自定行程</a>
+                <a href="###">游记</a>
+                <a href="###">特产</a>
+                <a href="###">优惠</a>
+                <a href="###">环岛巴士</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--页面导航区域-->
+    <nav class="nav">
+        <a href="###">首页</a>
+        &gt;
+        <span>伴手礼</span>
+    </nav>
+
+    <!--大图区域-->
+    <div class="bigimg">
+
+    </div>
+
+    <!--主要内容区域-->
+    <section class="con">
+        <h2 class="con_tit"><span>伴手礼</span></h2>
+        <article class="con_con">
+            <img src="./img/img1.jpg" alt="">
+            <img src="./img/img2.jpg" alt="">
+            <img src="./img/img3.jpg" alt="">
+            <img src="./img/img4.jpg" alt="">
+            <img src="./img/img5.jpg" alt="">
+            <img src="./img/img6.jpg" alt="">
+        </article>
+        <div class="con_page">
+            <a href="###">上一页</a>
+            <a href="###" class="con_page_num">1</a>
+            <a href="###">......</a>
+            <a href="###" class="con_page_num">12</a>
+            <a href="###" class="con_page_num con_page_show">13</a>
+            <a href="###" class="con_page_num">14</a>
+            <a href="###">......</a>
+            <a href="###" class="con_page_num">40</a>
+            <a href="###">下一页</a>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer class="foot_out">
+        <div class="foot_top_out">
+            <ul class="foot_top">
+                <li>
+                    <a href="###">关于遛弯</a>
+                    <a href="###">公司简介</a>
+                    <a href="###">联系我们</a>
+                    <a href="###">诚聘英才</a>
+                    <a href="###">网站地图</a>
+                </li>
+                <li>
+                    <a href="###">帮助中心</a>
+                    <a href="###">赴台手续</a>
+                    <a href="###">遛弯玩法</a>
+                    <a href="###">常见问题</a>
+                </li>
+                <li>
+                    <a href="###">网站条款</a>
+                    <a href="###">服务条款</a>
+                    <a href="###">免责声明</a>
+                </li>
+                <li>
+                    <a href="###">关注我们</a>
+                    <a href="###"></a>
+                </li>
+                <li>
+                    <a href="###">400 800 8820</a>
+                    <a href="###">周一至周日</a>
+                    <a href="###">9:00~20:00</a>
+                    <a href="###"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="foot_bottom">
+            Copyright &copy; 2013-2014 www.6waner.cn All Right Reserved. 京ICP备11015236号
+        </div>
+    </footer>
+</div>
+</body>
+</html>

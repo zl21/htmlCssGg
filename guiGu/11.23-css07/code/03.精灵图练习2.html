@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .inner{
+            overflow: hidden;
+            float: right;
+        }
+        .inner>li{
+            width: 84px;
+            height: 84px;
+            background-color: #898989;
+            overflow: hidden;
+            float: left;
+            margin-left: 5px;
+        }
+        .inner>li>i{
+            width: 52px;
+            height: 34px;
+            display: block;
+            margin: 15px auto 0;
+        }
+        .inner>li>p{
+            font-size: 12px;
+            color: #ddd;
+            text-align: center;
+        }
+        .inner>li:nth-child(1)>i{
+            background: url("../images/i-nav.png") 7px 0px no-repeat;
+        }
+        .inner>li:nth-child(2)>i{
+            background: url("../images/i-nav.png") -56px 0px no-repeat;
+        }
+
+        .inner>li:hover i{
+            background-position-y: -54px;
+        }
+        .inner>li:hover{
+            background-color: #c2191f;
+        }
+        .inner>li:hover p{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="inner">
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+        <li>
+            <i></i>
+            <p>官网首页</p>
+        </li>
+    </ul>
+</body>
+</html>

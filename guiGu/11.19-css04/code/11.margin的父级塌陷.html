@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父级塌陷</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 500px;
+            background-color: mediumvioletred;
+            /*border: 1px solid #000;*/
+            /*overflow: hidden;*/
+        }
+        .con{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        父级塌陷：
+            父级中第一个子元素的margin-top会塌陷到父元素上
+            父级中最后一个子元素的margin-bottom会塌陷到父元素下边
+
+            父级塌陷的愿意也是要避免两个元素之间的间隙过大。
+
+        解决父级塌陷：
+            1.给父级一个border  边框的宽度不能为0
+            2.开启BFC
+                开启BFC有很多种方法，比如 浮动  定位 overflow  display
+                
+    -->
+    <div class="box">
+        <div class="con"></div>
+    </div>
+</body>
+</html>

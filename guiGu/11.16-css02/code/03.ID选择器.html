@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ID选择器</title>
+    <style>
+        li{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+        #three{
+            background-color: #0ee69c;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        选择器：
+            css对html标签进行 1对1 1对多  多对1 的精确控制，就要使用选择器选择元素
+
+        ID选择器：
+            我们给元素设置ID属性   在css中 通过#+ID属性值 的方式来选择元素
+
+            选择器的命名规范：
+                1.ID不允许重复
+                2.每一个元素只能有一个ID属性
+                3.ID命名规范（类名类似）
+                    id和class比如以字母开头，不能是数字和下划线开头
+                    名字不能是汉字，最好都是小写
+                    尽量不要使用广告的英文单词出现（ad，adv，adver，advertising）
+                    除了开头，后边可以书写字母 数字 连接符（- _）
+                    一定不要出现空格
+                    一定要有自己的含义
+    -->
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li id="three"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

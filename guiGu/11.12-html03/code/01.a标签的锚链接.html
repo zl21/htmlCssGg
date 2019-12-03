@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的锚链接</title>
+</head>
+<body>
+<div>
+    <!--
+        a标签的锚链接：
+            在当前页面中跳转滚动条位置：
+                通过给a标签的href属性  #+（对应跳转元素的id属性的值）
+                给相应的跳转元素  一个id属性，然后对id属性的值进行自命名（字母开头 后边是数字字母下划线）
+    -->
+    <!--固定在右边的导航-->
+    <div style="position: fixed;top: 100px;right: 0;">
+        <p><a href="#news">新闻</a></p>
+        <p><a href="#yule">娱乐</a></p>
+        <p><a href="#tiyu">体育</a></p>
+        <p><a href="#study">学习</a></p>
+        <p><a href="#wenhua">文化</a></p>
+    </div>
+
+    <!--主体内容部分-->
+    <ul>
+        <li id="news" style="height: 600px;background-color: deeppink;">新闻</li>
+        <li id="yule" style="height: 600px;background-color: orangered;">娱乐</li>
+        <li id="tiyu" style="height: 600px;background-color: blue;">体育</li>
+        <li id="study" style="height: 600px;background-color: greenyellow;">学习</li>
+        <li id="wenhua" style="height: 600px;background-color: yellowgreen;">文化</li>
+    </ul>
+
+</div>
+</body>
+</html>
