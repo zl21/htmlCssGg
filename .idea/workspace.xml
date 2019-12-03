@@ -16,15 +16,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+            <state relative-caret-position="57">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/09.header标签.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/09.ffmpeg的安装.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -139,7 +143,7 @@
     <option name="x" value="150" />
     <option name="y" value="25" />
     <option name="width" value="1635" />
-    <option name="height" value="949" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -147,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -172,40 +177,10 @@
               <item name="11.15-html05&amp;&amp;css01" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="HtmlCss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="HtmlCss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="day00" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="HtmlCss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="day04" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="HtmlCss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="day05" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="HtmlCss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="day06" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,16 +216,18 @@
       <workItem from="1575262846073" duration="8922000" />
       <workItem from="1575273807961" duration="16074000" />
       <workItem from="1575299115247" duration="630000" />
+      <workItem from="1575333130076" duration="502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31159000" />
+    <option name="totallyTimeSpent" value="31661000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20277411" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.169749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -273,20 +250,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/05.hr标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/06.一条横线的写法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/07.气象新闻联系.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45" />
@@ -541,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/09.header标签.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -599,6 +555,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1786">
           <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HBuilder自述.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/09.ffmpeg的安装.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
