@@ -13,87 +13,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/14.文本修饰.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/15.首行文本缩进.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/16.水平居中.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/17.text-align的justify.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/18.字符间距和字词间距.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/19.背景类设置.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/20.overflow属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/21.visibility属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/22.display属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html">
+        <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/23.display和visibility隐藏的区别.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/09.ffmpeg的安装.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/16.figure标签.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/17.mark标签.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/18.time标签.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/19.datalist标签.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/20.progress标签.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/21.ruby标签.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/晨测.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="38">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1786">
-              <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+            <state relative-caret-position="228">
+              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -136,14 +127,29 @@
         <option value="$PROJECT_DIR$/guiGu/11.13-html04/code/08.html语义化.html" />
         <option value="$PROJECT_DIR$/guiGu/11.13-html04/code/test.html" />
         <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/03.input标签的新type类型.html" />
+        <option value="$PROJECT_DIR$/guiGu/myTest/select标签.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/05.select标签的新属性.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/14.外部式引入.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/15.浏览器渲染的主要流程.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/16.css阻塞渲染.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/晨测.md" />
+        <option value="$PROJECT_DIR$/guiGu/11.16-css02/code/01.@import引入.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.16-css02/code/02.link和@import引入的对比.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.16-css02/code/15.结构伪类选择器.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.18-css03/code/07、四线格、基线、x-height.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.18-css03/code/10.line-height继承.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.18-css03/code/12.去除图片默认间隙.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.18-css03/code/11.verticle-align.html" />
+        <option value="$PROJECT_DIR$/guiGu/11.18-css03/code/13.图片的水平垂直居中.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="150" />
-    <option name="y" value="25" />
-    <option name="width" value="1635" />
-    <option name="height" value="950" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="337" />
+    <option name="y" value="56" />
+    <option name="width" value="1369" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,13 +174,78 @@
               <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="11.15-html05&amp;&amp;css01" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.16-css02" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="11.15-html05&amp;&amp;css01" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.16-css02" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.18-css03" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.18-css03" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.19-css04" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.19-css04" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.20-css05" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.20-css05" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.22-css06" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.22-css06" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.23-css07" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="htmlCss_h5Css3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="H:\htmlCss_h5Css3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="guiGu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="11.23-css07" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -221,13 +292,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31661000" />
+    <option name="totallyTimeSpent" value="63525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="271" y="46" width="1094" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.169749" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22778828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,333 +321,324 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/07.气象新闻联系.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/12.css的引入方式.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45" />
+        <state relative-caret-position="-47" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/08.有序列表和无序列表.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/13.css引入方式-嵌入式引用(头部引入).html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601" />
+        <state relative-caret-position="-342" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/10.自定义列表.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/14.外部式引入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/15.浏览器渲染的主要流程.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/16.css阻塞渲染.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/11.自定义列表的用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/09.ul ol的日常用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/13.span标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/15.em、strong、var标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/16.路径的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/18.a标签的基础使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/02.回到顶部.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/03.a标签的其他功能.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/07.表单的提交.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day07/demo06_表单.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/06.form元素.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/09.其他的表单元素.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/11.获取和失去焦点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/01.a标签的锚链接.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/05.img标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/08.input标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/10.button和input按钮的区别.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/12.块元素的属性.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day01/demo01_常用标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/晨测.md">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/晨测.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="418">
-            <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <first_editor relative-caret-position="266">
+            <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/04.行标签的属性.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/17.style和link标签的书写位置.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.10-html02/code/14.b、i、u标签.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/01.@import引入.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        <state relative-caret-position="176">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.12-html03/code/12.label标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/01.table标签及基础用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/02.table标签跨行练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/03.table标签跨列练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/04.表格的优化.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/index1.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day05/demo04_避免坍塌方法2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day05/demo03_父元素的高度坍塌.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/index2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day05/demo02_浮动2.0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-430" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day05/demo01_浮动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HtmlCss/day04/demo05_overflow.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/05.iframe标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/06.html的代码书写规范.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/03.ID选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/05.标签名选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/06.基础选择器的样式优先级.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/07.后代选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-228" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/07.代码的特殊符号的实体.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/08.html语义化.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/08.子代选择器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="304">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/09.header标签.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/12.选择器优先级的计算.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/04.类名选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/09.相邻兄弟选择器.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/16.figure标签.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/10.通用兄弟选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/11.群组选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/13.属性选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/14.表单伪类选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/15.结构伪类选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HtmlCss/day03/demo03_单位.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/16.字体类-color设置.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/17.mark标签.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/17.关于a标签颜色的继承.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="323">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/18.time标签.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/02.link和@import引入的对比.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="279">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/19.datalist标签.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/20.progress标签.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/21.ruby标签.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/晨测.md">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.16-css02/code/晨测.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.13-html04/code/test.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/01.font-famliy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1786">
-          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="399">
+          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HBuilder自述.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/02.外部引入字体包.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/09.ffmpeg的安装.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/03.font-size.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="-253" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/04.font-style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiGu/11.15-html05&amp;&amp;css01/code/01.input提供的新属性.html">
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/05.font-weight.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="-342">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/06.font合写.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/07、四线格、基线、x-height.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/08.line-height.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/12.去除图片默认间隙.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/10.line-height继承.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="30" column="91" selection-start-line="30" selection-start-column="91" selection-end-line="30" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/11.verticle-align.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/09.line-height控制单行文本垂直居中.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/13.图片的水平垂直居中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/14.文本修饰.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/15.首行文本缩进.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/16.水平居中.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/17.text-align的justify.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/18.字符间距和字词间距.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/19.背景类设置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/20.overflow属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/21.visibility属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/22.display属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiGu/11.18-css03/code/23.display和visibility隐藏的区别.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
         </state>
       </provider>
     </entry>
