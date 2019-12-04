@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>triangle练习</title>
+    <style>
+        .triangle1{
+            width: 50px;
+            height: 50px;
+            border-top: 100px solid red;
+            border-right: 100px solid green;
+            border-left: 100px solid blue;
+            border-bottom: 100px solid navy;
+        }
+        .triangle{
+            width: 0px;
+            height: 0px;
+            border-top: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid red;
+        }
+        em{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        strong{
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="triangle1"></div>
+    <em>测试内联元素的垂直外边距padding能不能撑开与其它元素的距离。（不行）</em>
+    <strong>测试内联元素的水平外边距padding能不能撑开与其它元素的距离。（可以）</strong>
+    <div class="triangle"></div>
+</body>
+</html>
