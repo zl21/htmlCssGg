@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            height:400px;
+            padding-top: 100px;
+            position: relative;
+            background: #fff;
+            filter: contrast(10);
+        }
+        .inner1{
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 150px;
+            z-index: 2;
+            animation: move 2s alternate infinite;
+            filter: blur(10px);
+        }
+        .inner2{
+            width:300px;
+            height:300px;
+            border-radius: 50%;
+            margin:auto;
+            background-color: black;
+            transform:translateX(50px);
+            z-index:1;
+            filter: blur(10px);
+        }
+
+        @keyframes move{
+            to{
+                left:300px;
+            }
+            from{
+                left:1000px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+            <div class="inner1">
+            </div>
+            
+            <div class="inner2">
+        
+                </div>
+    </div>
+</body>
+
+</html>

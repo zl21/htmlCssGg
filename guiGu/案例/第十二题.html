@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width:400px;
+            height: 400px;
+            background-color: blue;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            animation: move 1s paused;
+        }
+        #box:hover{
+            animation-play-state: running;
+        }
+        #inner{
+            width:100px;
+            height:50px;
+            background-color: red;
+        }
+        @keyframes move{
+            to{
+                transform:translateX(0px);
+            }
+            from{
+                transform:translateX(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <span id="inner"></span>
+    </div>
+</body>
+
+</html>

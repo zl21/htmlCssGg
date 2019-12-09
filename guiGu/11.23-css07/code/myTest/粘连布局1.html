@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘连布局1</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body,html{
+            /*仿未知宽高的手机屏*/
+            height: 100%
+        }
+        .outer{
+            height: 100%;
+        }
+        section{
+            background-color: rgba(120,60,250,.7);
+            min-height: 100%;
+            font-size: 30px;
+            padding-bottom: 80px;
+            box-sizing: border-box;/*相当于把80规到100%里面，这样就不会多出80，从而就不会出现滚动条*/
+        }
+        footer{
+            height: 80px;
+            border: 1px solid green;
+            background-color: rgba(200,40,250,1);
+            margin-top: -82px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="outer">
+    <section>
+        <h4 id="hhead">方法一</h4>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <p class="p1">1).方法一：footer设置margin-top为负。</p>
+        <a href="#hhead">回头</a>
+    </section>
+
+    <footer>我footer盖住什么内容了吗？</footer>
+</div>
+
+</body>
+</html>
