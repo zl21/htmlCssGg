@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .outer{
+            margin: 0 100px;
+        }
+        .center{
+            width: 100%;
+            height: 200px;
+            background: #f88;
+            /*margin: 0 100px 0 100px;*/
+            float: left;/*center浮动为了让left上来。*/
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background: #bfa;
+            float: left;
+            margin-left: -100%; /*left移到center的最左边（在center上）*/
+            position: relative;
+            left: -100px;/*使用相对定位left为负来将left移出center（定位在outer居中后空出来的左边的那块空白处）*/
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background: #b99;
+            float: left;
+            margin-left: -100px;
+            position: relative;
+            right: -100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    center要优先加载。
+    要等高（那就不能用绝对定位，因为设置absolute会脱离文档流，而相对定位不会）
+    先给center两边空白还是给outer两边空白呢？答案是outer
+    圣杯布局在缩小到一定程度时会混乱。
+
+    1、三个都浮动（为了三个可以在一行）。
+    2、left移到center的最左边（在center上），然后使用相对定位left为负来将left移出center（定位在outer居中后空出来的左边的那块空白处）。
+    3、right移到center的最右边（在center上），然后使用相对定位right为负来将right移出center（定位在outer居中后空出来的右边的那块空白处）。
+    ！注意：（不可以使用center来空出两边的空白）
+
+-->
+<div class="outer">
+    <div class="center"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            float: left;
+            width: 100%;
+        }
+        .main .center{
+            height: 200px;
+            margin: 0 100px;
+            background: red;
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background: pink;
+            float: left;
+            margin-left: -100%;
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background: pink;
+            float: left;
+            margin-left: -100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    双飞翼布局：不用设置相对定位。
+        1、浮动；center不浮动；
+        2、给center套一个父标签，父标签浮动且宽度为100%；通过给center设置margin左右100px来撑开空白块；
+        3、通过margin来调整left和right的位置到两边的空白块处。
+
+-->
+<div class="outer">
+    <div class="main">
+        <div class="center"></div>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>
