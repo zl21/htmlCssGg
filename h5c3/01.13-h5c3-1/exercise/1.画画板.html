@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画画板</title>
+    <style>
+        #myCanvas {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    画笔的默认颜色是红色，默认宽度是2
+    <button id="btn1">蓝色</button>
+    <button id="btn2">4px</button>
+    <br>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+    <script>
+        const oBtn1 = document.getElementById("btn1");
+        const oBtn2 = document.getElementById("btn2");
+        const oMyCanvas = document.getElementById('myCanvas');
+        //设定默认画笔的颜色和宽度
+        let col = 'red';
+        let wid = 2;
+        //设置画笔的款式，目前只能是2d
+        const CTX = oMyCanvas.getContext('2d');
+        //点击事件用于改变画笔的款式
+        oBtn1.onclick = function () {
+            col = "blue";
+        }
+        oBtn2.onclick = function () {
+            wid = 10;
+        }
+
+        // 鼠标在画板上按下
+        //每次按下都要重新开启路径,设置新的起点
+        oMyCanvas.onmousedown = function (e) {
+            CTX.beginPath();
+            //以鼠标距离当前元素左上角的坐标作为起点坐标
+            CTX.moveTo(e.offsetX, e.offsetY);
+            //鼠标移动并一直在绘制路径
+            oMyCanvas.onmousemove = function (e) {
+                CTX.lineTo(e.offsetX, e.offsetY);
+                CTX.strokeStyle = col;
+                CTX.lineWidth = wid;
+                CTX.stroke();
+            }
+            oMyCanvas.onmouseup = function () {
+                //抬起鼠标后回收掉move及mouseup事件
+                oMyCanvas.onmousemove = oMyCanvas.onmouseup = null;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
