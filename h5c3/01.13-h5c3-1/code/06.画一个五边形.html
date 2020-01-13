@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画一个五边形</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    // 五边形的外切圆半径是100
+    const R = 100;
+
+    //在绘制之前可以移动画布的坐标轴
+    CTX.translate(200,200);
+
+    CTX.beginPath();
+
+    CTX.moveTo(R * Math.cos(18 * Math.PI / 180),- R * Math.sin(18 * Math.PI / 180));
+
+    for (let i = 0; i < 5; i++) {
+        CTX.lineTo(R * Math.cos((18 + 72 * i) * Math.PI / 180),- R * Math.sin((18 + 72 * i) * Math.PI / 180));
+    }
+
+    CTX.closePath();
+
+    CTX.strokeStyle = "red";
+    CTX.lineWidth = 4;
+    CTX.stroke();
+
+
+</script>
+</body>
+</html>

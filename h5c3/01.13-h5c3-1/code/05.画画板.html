@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画画板</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+画笔的默认颜色是红色，默认宽度是4
+<button id="btn1">蓝色</button>
+<button id="btn2">10px</button>
+<br>
+<canvas id="myCanvas" width="500" height="400"></canvas>
+<script>
+    const oBtn1 = document.getElementById("btn1");
+    const oBtn2 = document.getElementById("btn2");
+
+    //设定默认画笔的颜色和宽度
+    let col = "red";
+    let wi = 4;
+
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    oBtn1.onclick = function(){
+        col = "blue";
+    }
+    oBtn2.onclick = function(){
+        wi = 10;
+    }
+    
+    // 鼠标在画板上按下
+    //每次按下都要重新开启路径  并且设置起点
+    oMyCanvas.onmousedown = function (e) {
+        CTX.beginPath();
+        CTX.moveTo(e.offsetX,e.offsetY);
+
+        //鼠标移动并一直在绘制路径
+        oMyCanvas.onmousemove = function (e) {
+            CTX.lineTo(e.offsetX,e.offsetY);
+            CTX.strokeStyle = col;
+            CTX.lineWidth = wi;
+            CTX.stroke();
+        }
+        oMyCanvas.onmouseup = function () {
+            oMyCanvas.onmousemove = oMyCanvas.onmouseup = null;
+        }
+    }
+
+</script>
+</body>
+</html>

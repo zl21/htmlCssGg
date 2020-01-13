@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置线段的末端和线段的连接处</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    CTX.moveTo(100,100);
+    CTX.lineTo(300,300);
+    CTX.lineTo(400,200);
+    CTX.strokeStyle = "red";
+    CTX.lineWidth = 10;
+    //在描边方法执行之前 设置线段末端
+    CTX.lineCap = 'butt';//默认值 以矩形形态结束
+    CTX.lineCap = 'round';//以线段的边缘中心点为圆心,一半的宽度为半径  绘制一个圆  添加在首位
+    // CTX.lineCap = 'square';//以线段的边缘宽度为宽,一半的宽度高  绘制一个矩形 添加在首位
+
+
+    //线段连接处也在stroke方法调用之前设置
+    CTX.lineJoin = 'miter';//默认值 尖角
+    CTX.lineJoin = 'round';//圆角
+    CTX.lineJoin = 'bevel';//平角
+    CTX.stroke();
+</script>
+</body>
+</html>

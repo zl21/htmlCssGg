@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制圆形</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    //arc()方法用来绘制一个圆形  6个参数
+    // 圆心的x   圆心的y   圆的半径  圆的起始角度(写成弧度)  圆的结束角度  顺时针还是逆时针（true代表逆时针  false代表顺时针）
+    // CTX.arc(250,250,100,0,2*Math.PI,true);
+    CTX.arc(250,250,100,35*Math.PI/180,250*Math.PI/180,true);
+
+
+    CTX.fillStyle = "red";
+    CTX.fill();
+</script>
+</body>
+</html>

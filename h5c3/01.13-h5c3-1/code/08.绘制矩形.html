@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制矩形</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    //第一种方法
+    /*CTX.moveTo(100,100);
+    CTX.lineTo(300,100);
+    CTX.lineTo(300,300);
+    CTX.lineTo(100,300);
+
+    CTX.closePath();
+    CTX.fill();*/
+
+    //第二种方法
+    /*// 使用rect()方法来绘制矩形，4个参数，分别是 左上角的x位置  左上角的y的位置  宽度 高度
+    CTX.rect(100,100,200,200);
+    //绘制好以后，可以选择描边或者填充
+    CTX.lineWidth = 10;
+    CTX.strokeStyle = "red";
+    CTX.stroke();*/
+
+
+    //第三种方法  strokeRect()，参数和rect方法一致
+    //直接描边一个矩形，所以在描边之前需要提前设置好 描边的样式
+    CTX.strokeStyle = "purple";
+    CTX.lineWidth = 4;
+    CTX.strokeRect(100,100,200,200);
+
+
+    //第四种方法  fillRect()，参数和rect方法一致
+    //直接填充一个矩形，所以在填充之前需要提前设置好 填充的样式
+    CTX.fillStyle = "red";
+    CTX.fillRect(100,100,200,200);
+</script>
+</body>
+</html>

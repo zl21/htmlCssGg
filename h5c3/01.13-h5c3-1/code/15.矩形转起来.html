@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>矩形转起来</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<button id="clear">画布的变形</button>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+    let deg = 0;
+
+    //书写计时器，让deg每次都++
+
+    //我们可以在某个位置使用save()方法存档（画布的坐标，画笔的形态）,然后可以使用restore()来回恢复存档
+    //存档和读取 都对画布已经绘画图形没有任何影响
+
+    const timer = setInterval(function () {
+        //做动画，每次重新绘制之前，需要清空画布
+        CTX.clearRect(0,0,oMyCanvas.width,oMyCanvas.height);
+        CTX.save();
+        deg ++;
+        CTX.beginPath();
+        CTX.translate(oMyCanvas.width/2,oMyCanvas.height/2);
+        CTX.rotate(deg * Math.PI/180);
+        CTX.translate(-50,-50);
+        CTX.fillRect(0,0,100,100);
+        CTX.restore();
+    },100)
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转元素水平垂直居中</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<button id="clear">画布的变形</button>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    // 先移动坐标到画布中间
+    CTX.translate(oMyCanvas.width/2,oMyCanvas.height/2);
+
+    //再次旋转画布的坐标
+    CTX.rotate(30 * Math.PI/180);
+
+    //再次反方向移动坐标轴，移动要绘制矩形自身一半的宽度
+    CTX.translate(-50,-50);
+
+    //绘制矩形
+    CTX.fillRect(0,0,100,100);
+
+
+</script>
+</body>
+</html>

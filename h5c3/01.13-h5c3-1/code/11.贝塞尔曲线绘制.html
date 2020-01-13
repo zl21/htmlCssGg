@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贝塞尔曲线绘制</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    /*二次贝塞尔曲线最大可以又一个弧度，有一个控制点，一个起始点，一个结束点
+    先把笔移动到起始点，然后再使用使用quadraticCurveTo
+    quadraticCurveTo（） 4个参数，分别是 控制点的 x  y   和 结束点的x  y*/
+    // CTX.moveTo(120,29);
+    // CTX.quadraticCurveTo(183,116,265,47);
+
+
+
+    CTX.moveTo(137,35);
+    // bezierCurveTo是三次贝塞尔曲线，6个参数  控制点1 的 x和y   控制点2的x和y    结束点的x和y
+    CTX.bezierCurveTo(240,125,222,17,323,40);
+
+
+    CTX.lineWidth = 5;
+    CTX.stroke();
+    CTX.fill();
+</script>
+</body>
+</html>
+

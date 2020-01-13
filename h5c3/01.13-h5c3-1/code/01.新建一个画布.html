@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建一个画布</title>
+</head>
+<body>
+    <!--
+        在HTML5中 提供了canvasAPI 允许JS在canvas画布上绘制图形
+        默认的canvas大小是  300*150  默认颜色是透明的
+
+        canvas的宽高 必须通过标签的width和height属性来设置，不能够使用css 来设置宽高
+        使用css设置canvas的宽高，是把默认的300*150的画布 拉伸到了你设置的宽度
+        除了宽高以外，其他的css属性都可以通过css设置
+
+
+        画布的兼容性：ie678不兼容
+        如果浏览器不支持画布，则以canvas内部的内容替代canvas显示
+
+    -->
+    <canvas id="myCanvas" width="400" height="300">
+        你的浏览器真垃圾
+    </canvas>
+</body>
+</html>

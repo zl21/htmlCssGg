@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一次画画</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <script>
+        //获取画布
+        const oMyCanvas = document.getElementById("myCanvas");
+
+        //获取画笔
+        // 为了在canvas上进行绘制操作，我们必须得到一个画布上下文对象的引用，这个对象的参数是2d，如果不传或者是传入其他的参数，则返回null
+        const CTX = oMyCanvas.getContext("2d");
+
+        //告诉别人我开始画画了
+        //开启路径，笔落下，如果再次绘制其他图形，需要把笔抬起来移动到相应的位置，则需要重新开启路径
+        CTX.beginPath();
+
+
+        //确定一个起点坐标
+        // 默认以画布的左上角为坐标轴原点，向右向下是正方向
+        CTX.moveTo(100,100);
+
+        //lineTo  是绘画直线，两个点之间的连线
+        CTX.lineTo(300,100);
+        CTX.lineTo(300,300);
+        CTX.lineTo(100,300);
+        // CTX.lineTo(100,100);
+
+        //关闭路径  用来闭合路径
+        //不要试图通过closePath来开始新的绘制，唯一的作用  闭合路径。
+        CTX.closePath();
+
+        //填充
+        //填充默认闭合路径
+        CTX.fillStyle  = "pink";
+        CTX.fill();//如果不设置颜色，默认黑色
+
+        //描边
+        CTX.strokeStyle = "green";
+        CTX.lineWidth = "4";
+        CTX.stroke();
+
+
+
+        //当重新开启路径的时候，笔就会重新落笔
+        CTX.beginPath();
+        CTX.lineTo(500,100);
+        CTX.lineTo(700,100);
+        CTX.lineTo(700,300);
+        CTX.lineTo(500,300);
+
+        CTX.strokeStyle = "blue";
+        CTX.lineWidth = "4";
+        CTX.stroke();
+    </script>
+</body>
+</html>

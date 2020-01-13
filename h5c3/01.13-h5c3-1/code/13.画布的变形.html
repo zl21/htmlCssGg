@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贝塞尔曲线绘制</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<button id="clear">画布的变形</button>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+
+    // 画布的变形不会控制canvas标签DOM节点的改变，而是对画布的坐标轴进行改变
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    //移动
+    /*CTX.fillStyle = "red";
+    CTX.fillRect(0,0,200,100);
+
+    //改变坐标轴的位置，移动到原来画布的250,250的位置变成原点
+    //改变坐标轴不会对原有以画的内容造成影响，而是对后来再次绘画的元素改变
+    //只要以后不会坐标轴位置再次改变，那么后边的绘画都将按照当前的移动后的位置执行
+    CTX.translate(250,250);
+
+    CTX.fillStyle = "green";
+    CTX.fillRect(0,0,200,100);
+
+    CTX.fillStyle = "yellow";
+    CTX.fillRect(40,80,100,80);*/
+
+
+    //旋转
+    /*CTX.fillStyle = "red";
+    CTX.fillRect(0,0,200,100);
+
+    // rotate旋转  参数是一个弧度，而不是角度
+    CTX.rotate(30 * Math.PI/180);
+
+    CTX.fillStyle = "green";
+    CTX.fillRect(0,0,200,100);
+
+    CTX.fillStyle = "green";
+    CTX.fillRect(200,200,80,100);*/
+
+
+
+    //缩放
+    CTX.fillStyle = "red";
+    CTX.fillRect(0,0,200,100);
+
+    // x和y分别设置
+    CTX.scale(0.5,0.5);
+
+    CTX.fillStyle = "green";
+    CTX.fillRect(200,200,200,100);
+
+
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于描边的问题</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <script>
+        //获取画布
+        const oMyCanvas = document.getElementById("myCanvas");
+
+        const CTX = oMyCanvas.getContext("2d");
+
+        CTX.beginPath();
+
+
+       CTX.moveTo(100,100);
+        CTX.lineTo(300,100);
+        CTX.lineTo(300,300);
+        CTX.lineTo(100,300);
+        CTX.closePath();
+
+        CTX.fillStyle  = "pink";
+        CTX.fill();//如果不设置颜色，默认黑色
+
+        //描边  描边是以路径为描边线的中间位置为基准开始绘制的  比如4px的宽度，那么路径左右两侧各2px
+        CTX.strokeStyle = "green";
+        CTX.lineWidth = "40";
+        CTX.stroke();
+
+    </script>
+</body>
+</html>
