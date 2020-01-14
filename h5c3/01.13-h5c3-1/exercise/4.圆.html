@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const CTX = oMyCanvas.getContext("2d");
+        // CTX.beginPath();
+        for (let i = 1; i < 5; i++) {
+            CTX.beginPath();
+            //arc(圆点x,圆点y,半径r,起始角度,结束角度,顺/逆时针)
+            CTX.arc(200 + 20 * i, 200, 20 * i, 0, 2 * Math.PI, true);
+            CTX.strokeStyle = 'purple';
+            CTX.stroke();
+            // CTX.closePath();
+        }
+        // CTX.closePath();
+    </script>
+</body>
+
+</html>
