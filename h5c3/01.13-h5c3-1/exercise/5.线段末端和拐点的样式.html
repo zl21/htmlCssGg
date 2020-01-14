@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5.线段末端和拐点的样式.html</title>
+    <style>
+        #myCan{
+            background-color: #ccC;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCan" width="500" height="400"></canvas>
+    <script>
+        const oMyCan = document.getElementById('myCan');
+        const CTX = oMyCan.getContext('2d');
+        CTX.beginPath();
+        //先画一条拐弯的线
+        CTX.moveTo(100,100);
+        CTX.lineTo(300,300);
+        CTX.lineTo(400,200);
+        CTX.stokeStyle = 'red';
+        CTX.lineWidth = 10;
+        //在启动画笔之前设置好线段末端的样式
+        // CTX.lineCap = 'butt';//默认值，呈现矩形样式
+        CTX.lineCap = 'round';//呈现以线段的边缘中心点为圆心，线段的一半为半径的的半圆
+        // CTX.lineCap = 'square';//以线段的边缘的宽为宽，线段边缘的1/2为高，绘制一个矩形放在端点
+
+        //在启动画笔之前设置好拐点的样式
+        // CTX.lineJoin = 'miter';//默认值，尖角
+        CTX.lineJoin = 'round';//圆角
+        // CTX.lineJoin = 'bevel';//平角
+
+        //启动画笔
+        CTX.stroke();
+    </script>
+</body>
+</html>
