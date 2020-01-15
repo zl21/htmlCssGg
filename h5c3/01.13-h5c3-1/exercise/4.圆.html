@@ -14,6 +14,7 @@
         const oMyCanvas = document.getElementById("myCanvas");
         const CTX = oMyCanvas.getContext("2d");
         // CTX.beginPath();
+        //一种内接圆
         for (let i = 1; i < 5; i++) {
             CTX.beginPath();
             //arc(圆点x,圆点y,半径r,起始角度,结束角度,顺/逆时针)
@@ -23,6 +24,15 @@
             // CTX.closePath();
         }
         // CTX.closePath();
+
+        //填充圆
+        CTX.beginPath();
+        //arc()方法用来绘制一个圆形，6个参数
+        // 圆心x,圆心y,圆的半径r,圆的起始角度(写成弧度),圆的结束角度,顺时针还是逆时针（true代表逆时针  false代表顺时针）
+        // CTX.arc(250,250,100,0,2*Math.PI,true);
+        CTX.arc(250, 250, 100, 35 * Math.PI / 180, 250 * Math.PI / 180, true);
+        CTX.fillStyle = "red";
+        CTX.fill();
     </script>
 </body>
 
