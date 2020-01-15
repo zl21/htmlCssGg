@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>清画布</title>
+    <style>
+        #myCanvas {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <button id="clear">清除画布</button>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const oClear = document.getElementById("clear");
+
+        const CTX = oMyCanvas.getContext("2d");
+
+        CTX.beginPath();
+
+        CTX.fillRect(100, 100, 300, 300);
+
+        oClear.onclick = function () {
+            // 方法1：清除画布使用clearRect的方法，每次清除都是一个矩形区域，参数和rect方法参数一致
+            // CTX.clearRect(60,60,100,100);
+
+            // 方法2：在使用中我们会经常直接清除整个画布，然后重新画
+            // CTX.clearRect(0,0,oMyCanvas.width,oMyCanvas.height);
+
+            // 方法3：如果重新设置画布的宽高(设置的是属性width和height的宽高，而不是css的)，则会清画布
+            oMyCanvas.width = 500;
+        }
+    </script>
+</body>
+
+</html>
