@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Toy(width,height){
+            this.width = width;
+            this.height = height;
+        }
+        Toy.prototype.say = function(){
+            console.log('玩具会叫。');
+        }
+        Toy.prototype.fly = function(){
+            console.log('玩具会飞');
+        }
+        function Dog(name,toy){
+            this.name = name;
+            this.toy = toy;
+        }
+        function Person(name,dog){
+            this.name = name;
+            this.dog = dog;
+        }
+        var toy = new Toy(20,20);
+        var dog = new Dog('bai',toy);
+        var per = new Person('yang',dog);
+        per.dog.toy.say();
+        per.dog.toy.fly();
+    </script>
+</body>
+</html>
