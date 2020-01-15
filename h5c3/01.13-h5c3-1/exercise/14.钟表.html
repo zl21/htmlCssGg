@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画一个表</title>
+    <style>
+        #myCanvas {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const CTX = oMyCanvas.getContext("2d");
+        clock();
+        setInterval(clock, 1000);
+        function clock() {
+            //获取当前的时间，计算出时针 分针 秒针的位置
+            var now = new Date();
+            var s = now.getSeconds();
+            var m = now.getMinutes();
+            m = m + s / 60;
+            var h = now.getHours();
+            h = h + m / 60;
+
+            CTX.clearRect(0, 0, oMyCanvas.width, oMyCanvas.height)
+
+            //先保存最原始状态
+            CTX.save();
+
+            //1.为了绘画方便，先把画布移动中心点
+            CTX.translate(250, 250);
+
+            //2.画圆盘
+            CTX.beginPath();
+            CTX.arc(0, 0, 140, 0, 2 * Math.PI, true);
+            CTX.strokeStyle = "black";
+            CTX.lineWidth = 4;
+            CTX.stroke();
+
+            //3.绘制一个分刻度
+            for (let i = 0; i < 60; i++) {
+                CTX.save();
+                CTX.beginPath();
+                CTX.rotate(6 * i * Math.PI / 180);
+                CTX.moveTo(0, -130);
+                CTX.lineTo(0, -140);
+                CTX.strokeStyle = "#3ac17d";
+                CTX.lineWidth = 3;
+                CTX.stroke();
+                CTX.restore();
+            }
+
+            //4.绘制一个时刻度
+            for (let i = 0; i < 12; i++) {
+                CTX.save();
+                CTX.beginPath();
+                CTX.rotate(30 * i * Math.PI / 180);
+                CTX.moveTo(0, -120);
+                CTX.lineTo(0, -140);
+                CTX.strokeStyle = "#51e3f1";
+                CTX.lineWidth = 5;
+                CTX.stroke();
+                CTX.restore();
+            }
+
+            //5.绘制秒针
+            CTX.save();
+            CTX.rotate(s * 6 * Math.PI / 180);
+            CTX.beginPath();
+            CTX.moveTo(0, 20);
+            CTX.lineTo(0, -100);
+            CTX.lineWidth = 3;
+            CTX.strokeStyle = "yellow";
+            CTX.stroke();
+            CTX.restore();
+
+            //6.绘制分针
+            CTX.save();
+            CTX.rotate(m * 6 * Math.PI / 180);
+            CTX.beginPath();
+            CTX.moveTo(0, 15);
+            CTX.lineTo(0, -80);
+            CTX.lineWidth = 6;
+            CTX.strokeStyle = "blue";
+            CTX.stroke();
+            CTX.restore();
+
+            //7.绘制时针
+            CTX.save();
+            CTX.rotate(h * 30 * Math.PI / 180);
+            CTX.beginPath();
+            CTX.moveTo(0, 10);
+            CTX.lineTo(0, -50);
+            CTX.lineWidth = 8;
+            CTX.strokeStyle = "red";
+            CTX.stroke();
+            CTX.restore();
+
+            // 8.在表盘中心绘制一个圆形
+            CTX.beginPath();
+            CTX.arc(0, 0, 10, 0, 2 * Math.PI, true);
+            CTX.fillStyle = "pink";
+            CTX.fill();
+
+            //最后恢复最原始状态
+            CTX.restore();
+        }
+
+    </script>
+</body>
+
+</html>
