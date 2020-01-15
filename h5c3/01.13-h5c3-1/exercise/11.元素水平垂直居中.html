@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>旋转元素水平垂直居中</title>
+    <style>
+        #myCanvas {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <button id="clear">清画布</button>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const pen = oMyCanvas.getContext("2d");
+
+        pen.beginPath();
+
+        // 先移动坐标到画布中间
+        pen.translate(oMyCanvas.width / 2, oMyCanvas.height / 2);
+        pen.strokeStyle = 'purple';
+        pen.strokeRect(0, 0, 100, 100);
+
+        // 其次旋转画布的坐标
+        pen.rotate(30 * Math.PI / 180);
+
+        // 然后反方向移动坐标轴，移动要绘制矩形自身一半的宽度
+        // pen.translate(-50, -50);
+
+        //绘制矩形
+        pen.fillRect(-40, -40, 80, 80);
+        pen.strokeStyle = 'red';
+        pen.strokeRect(-50, -50, 100, 100);
+
+    </script>
+</body>
+
+</html>
