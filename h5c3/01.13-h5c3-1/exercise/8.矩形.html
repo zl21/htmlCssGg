@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>矩形</title>
+</head>
+
+<body>
+    <canvas id="myCan" width="500px" height="400px"></canvas>
+    <script>
+        var oMyCan = document.getElementById('myCan');
+        var pen = oMyCan.getContext('2d');
+        pen.beginPath();
+        //方法1：
+        /* pen.moveTo(100,100);
+        pen.lineTo(300,100);
+        pen.lineTo(300,300);
+        pen.lineTo(100,300);
+        pen.closePath();
+        pen.fill(); */
+
+        //方法2：
+        //rect(左上角的x,左上角的y,宽,高)
+        /* pen.rect(100,100,200,200);
+        pen.lineWith = 4;
+        pen.strokeStyle = 'red';
+        pen.stroke(); */
+
+        //方法3：
+        //用strokeRext(左上角的x,左上角的y,宽,高)方法直接画
+        /* pen.strokeStyle = 'purple';
+        pen.lineWidth = 4;
+        pen.strokeRect(100,100,200,200); */
+
+        //方法4：
+        //直接用fillRect(左上角的x,左上角的y,宽,高)方法直接填充一个
+        pen.fillStyle = 'pink';
+        pen.fillRect(100,100,200,200);
+
+    </script>
+</body>
+
+</html>
