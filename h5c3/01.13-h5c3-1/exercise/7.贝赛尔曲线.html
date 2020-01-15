@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7.贝赛尔曲线.html</title>
+    <style>
+        #myCanvas {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+
+        const CTX = oMyCanvas.getContext("2d");
+
+        CTX.beginPath();
+
+        /*
+        二次贝塞尔曲线：最大可以有一个弧度，有一个控制点，一个起始点，一个结束点
+        先把笔移动到起始点，然后再使用quadraticCurveTo（quadratic二次型）
+        quadraticCurveTo（控制点的x，控制点的y，结束点的x，结束点的y） 4个参数
+            CTX.moveTo(120,29);
+            CTX.quadraticCurveTo(183,116,265,47);
+        */
+
+
+        /* 
+        三次贝塞尔曲线：有俩道弯弧
+        bezierCurveTo（控制点1的x，控制点1的y，控制点2的x，控制点2的y，结束点的x，结束点的y） 6个参数
+         */
+        CTX.moveTo(137, 35);
+        CTX.bezierCurveTo(240, 125, 222, 17, 323, 40);
+
+
+        CTX.lineWidth = 5;
+        CTX.stroke();
+        CTX.fill();
+    </script>
+</body>
+
+</html>
