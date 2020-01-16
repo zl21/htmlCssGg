@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outer{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+        .home{
+            width: 50px;
+            height: 50px;
+            background: url(../images/home.png) 0 0 no-repeat;
+            background-size: 50px 50px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+            transition: 1s;
+        }
+        .list{
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            left: 4px;
+            top: 4px;
+        }
+        .list li{
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+        }
+        .list li:nth-child(1){
+            background: url("../images/full.png") 0 0 no-repeat;
+            background-size: 42px 42px;
+        }
+        .list li:nth-child(2){
+            background: url("../images/open.png") 0 0 no-repeat;
+            background-size: 42px 42px;
+        }
+        .list li:nth-child(3){
+            background: url("../images/prev.png") 0 0 no-repeat;
+            background-size: 42px 42px;
+        }
+        .list li:nth-child(4){
+            background: url("../images/refresh.png") 0 0 no-repeat;
+            background-size: 42px 42px;
+        }
+        .list li:nth-child(5){
+            background: url("../images/clos.png") 0 0 no-repeat;
+            background-size: 42px 42px;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="home"></div>
+    <ul class="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    var oHome = document.querySelector(".home");
+    var oLis = document.querySelectorAll(".list li");
+    var flag = true;//默认收起状态
+    // 扇形导航半径：
+    let r = 200;
+
+    /*[].forEach.call(oLis,function () {
+
+    })*/
+
+    //点击home键
+    oHome.onclick = function () {
+        if(flag){
+            this.style.transform = "rotate(360deg)";
+            oLis.forEach(function (item,index) {
+                item.style.left = - Math.sin(90 / (oLis.length - 1) * index * Math.PI / 180) * r + "px";
+                item.style.top = - Math.cos(90 / (oLis.length - 1) * index * Math.PI / 180) * r + "px";
+                
+                item.style.transform = "rotate(360deg)";
+
+                item.style.transition = "all .5s linear " + 0.1 * index +"s";
+
+            })
+        }else{
+            this.style.transform = "rotate(0deg)";
+            oLis.forEach(function (item,index) {
+                item.style.left = 0 + "px";
+                item.style.top =0 + "px";
+
+                item.style.transform = "rotate(0deg)";
+                item.style.transition = "all .5s linear " + 0.1 * (oLis.length - 1 - index) +"s";
+
+            })
+        }
+
+        flag = !flag;
+    }
+    
+    //对所有的li绑定点击事件
+    oLis.forEach(function (item,index) {
+        item.onclick = function () {
+            item.style.transform = "rotate(360deg) scale(1.2)";
+            item.style.transition = "all .5s linear";
+            //transitionend事件  当过渡动画执行完毕后触发
+            function fn() {
+                item.style.transform = "rotate(360deg) scale(1)";
+                this.removeEventListener("transitionend",fn);
+            }
+            this.addEventListener("transitionend",fn)
+        }
+    })
+</script>
+</body>
+</html>

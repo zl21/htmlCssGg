@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">点击我 获取经纬度</button>
+<p id="con"></p>
+<script>
+    let oBtn = document.getElementById("btn");
+    let oCon = document.getElementById("con");
+    oBtn.onclick = function () {
+        // 获取经纬度使用navigator.geolocation
+        // 首先判断是否支持
+        if(navigator.geolocation){
+            // console.log(navigator.geolocation);
+            // getCurrentPosition是一次性获取当前的坐标信息，两个参数都是函数，一个是成功函数一个是失败函数
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+
+        }else{
+            oCon.innerHTML = "不支持";
+        }
+    }
+
+    //回调函数的参数就是获取的信息
+    function showPosition(position) {
+        oCon.innerHTML = "latitude:" + position.coords.latitude;
+        oCon.innerHTML += "longitude:" + position.coords.longitude;
+    }
+    function showError(error) {
+        console.log(error);
+    }
+</script>
+</body>
+</html>

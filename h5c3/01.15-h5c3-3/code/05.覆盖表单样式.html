@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>覆盖表单样式</title>
+    <style>
+        select{
+            display: none;
+           /* width: 0;
+            height: 0;
+            opacity: 0;*/
+        }
+        .userSelect{
+
+        }
+        .userSelect h2{
+
+        }
+        .userSelect .cityList{
+            border: 1px solid #000;
+        }
+        .userSelect .cityList li{
+            font-size: 22px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+<form id="form" action="http://www.baidu.com" method="get">
+    <select name="city" id="">
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="广州">广州</option>
+        <option value="深圳">深圳</option>
+        <option value="后瑞">后瑞</option>
+    </select>
+    <!--选择某个城市以后，这个城市就变红，然后点击提交就可以直接提交，只能单选-->
+    <div class="userSelect">
+        <h2>请选择你要就业的城市</h2>
+        <ul class="cityList">
+            <li style = "background-color: red;">北京</li>
+            <li>上海</li>
+            <li>广州</li>
+            <li>深圳</li>
+            <li>后瑞</li>
+        </ul>
+        <p id="btn">点击我提交</p>
+    </div>
+</form>
+<script>
+    let oCitys = document.querySelectorAll(".cityList li");
+    let oOptions = document.querySelectorAll("select option");
+    let oBtn = document.getElementById("btn");
+    let oForm = document.getElementById("form");
+    oCitys.forEach(function (item,index) {
+        item.onclick = function () {
+            let _this = this;
+            oCitys.forEach(function (item,index) {
+                if (item == _this){
+                    item.style.backgroundColor = "red";
+                    oOptions[index].selected = true;
+                }else{
+                    item.style.backgroundColor = "";
+                }
+            })
+        }
+    })
+    oBtn.onclick = function () {
+        oForm.submit();
+    }
+</script>
+</body>
+</html>

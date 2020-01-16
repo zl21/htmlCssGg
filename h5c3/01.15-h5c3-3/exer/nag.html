@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1613279_grpz3f07ohs.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .outer {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        .home {
+            width: 50px;
+            height: 50px;
+            /* background: url('icon-icon-test'); */
+            background-size: 50px 50px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            /* background-color: rgb(243, 45, 243); */
+            transition: 1s;
+        }
+
+        .list {
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            left: 50-42/2;
+            top: 4;
+        }
+
+        li {
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            /* background-color: rgb(219, 151, 219); */
+        }
+
+        .list li:nth-child(1) {
+            /* background: url('icon-icon-test'); */
+            /* background-color: rgb(219, 151, 219); */
+            background-size: 42px 42px;
+        }
+
+        .list li:nth-child(2) {
+            background: url();
+            background-size: 42px 42px;
+        }
+
+        .list li:nth-child(3) {
+            background: url();
+            background-size: 42px 42px;
+        }
+
+        .list li:nth-child(4) {
+            background: url();
+            background-size: 42px 42px;
+        }
+
+        .list li:nth-child(5) {
+            background: url();
+            background-size: 42px 42px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="home iconfont icon-icon-test"></div>
+        <ul class="list">
+            <li class="iconfont icon-icon-test"></li>
+            <li class="iconfont icon-icon-test"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var oHome = document.querySelector('.home');
+        var oLis = document.querySelectorAll('li');
+        var flag = false;//默认状态为收起
+        let r = 200;//扇形导航的半径
+        //点击home
+        oHome.onclick = function () {
+            if (flag) {
+                //变形360度
+                this.style.transform = 'rotate(360deg)';
+                oLis.forEach(function (item, index) {
+                    item.style.left = -r * (Math.sin(90 / 4 * index * Math.PI / 180));
+                    item.style.top = -r * (Math.cos(90 / 4 * index * Math.PI / 180));
+                    item.style.transform = 'rotate(360deg)';
+                    item.style.transition = 'all .5s linear ' + 0.1 * index + 's';
+                })
+            } else {
+                this.style.transform = 'rotate(0deg)';
+                oLis.forEach(function (item, index) {
+                    item.style.left = 0;
+                    item.style.top = 0;
+                    item.style.transform = 'rotate(0deg)';
+                    item.style.transition = 'all .5s linear ' + 0.1 * (oLis.length - 1 - index) + 's';
+                })
+            }
+            flag = !flag;
+
+        }
+
+    </script>
+</body>
+
+</html>

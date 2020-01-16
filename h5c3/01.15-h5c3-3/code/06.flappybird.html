@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flappybird</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width: 800px;
+            height: 600px;
+            background: url("../images/sky.png");
+            position: relative;
+
+            overflow: hidden;
+        }
+        #bird{
+            width: 34px;
+            height: 25px;
+            background: url(../images/birds.png) -6px -11px no-repeat;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="bird"></div>
+    </div>
+    <script>
+        let oOuter = document.getElementById("outer");
+        let oBird = document.getElementById("bird");
+
+        //天空初始化
+        let sky = 0;//默认设定天空起始是0
+        //鸟儿初始化
+        let bird = {
+            speedY:0,//控制鸟的速度
+            y: oBird.offsetTop,//随时可以获取鸟距离顶部的长度
+            x: oBird.offsetLeft
+        }
+
+        let run = true;//设定游戏状态默认开始
+
+
+        //计时器实现动画
+        setInterval(function () {
+            //每次执行计时器的时候，判断当前游戏是否继续
+            if (run){
+                //先让天空动起来
+                sky -= 5;
+                oOuter.style.backgroundPositionX = sky +"px";
+
+                //控制鸟向下落
+                bird.speedY += 1;//每次执行一次计时器，速度都会加1
+
+                //让当前的保存的top值 每次加上 鸟下落的值
+                bird.y += bird.speedY;
+
+                if (bird.y + oBird.offsetHeight >= oOuter.clientHeight) {
+                    bird.y = oOuter.clientHeight - oBird.offsetHeight;
+                    run = false;
+                }else if(bird.y <= 0){
+                    bird.y = 0;
+                    run = false;
+                }
+
+                //把每次计算好的top值 赋值给bird的top属性
+                oBird.style.top = bird.y + "px";
+            }
+        },40)
+
+        //点击屏幕，让鸟飞起来
+        oOuter.onclick = function () {
+            bird.speedY = -10;
+        }
+        
+        //生成管道函数  唯一一个参数，管道生成的x轴位置
+        function createPipe(position) {
+            //定义一个对象  保存管道的信息
+            let pipe = {};
+            //管道的left定位值
+            pipe.x = position;
+            //上管道的高度  （因为整个画面是600  上下管道之间的缝隙是200，每个管道最少是100  所以生成一个100-300之间的随机数）
+            pipe.upHeight = parseInt(Math.random() * 200 + 100);
+            //下管道的高度 是 画面总高度 减去 间隙的200  减去 上管道的高度
+            pipe.downHeight = oOuter.clientHeight - 200 - pipe.upHeight;
+            //求出下管道的top值
+            pipe.downTop = pipe.upHeight + 200;
+
+            //生成上管道 并插入游戏中
+            let newUpPipe = document.createElement("div");
+            newUpPipe.style.width = "52px";
+            newUpPipe.style.height = pipe.upHeight + "px";
+            newUpPipe.style.position = "absolute";
+            newUpPipe.style.left = pipe.x + "px";
+            newUpPipe.style.top = 0;
+            newUpPipe.style.background = "url(../images/pipe2.png) 0 0 no-repeat";
+            newUpPipe.style.backgroundSize = "100% 100%"
+            oOuter.appendChild(newUpPipe);
+
+
+            //生成下管道 并插入游戏中
+            let newDownPipe = document.createElement("div");
+            newDownPipe.style.width = "52px";
+            newDownPipe.style.height = pipe.downHeight + "px";
+            newDownPipe.style.position = "absolute";
+            newDownPipe.style.left = pipe.x + "px";
+            newDownPipe.style.top = pipe.downTop + "px";
+            newDownPipe.style.background = "url(../images/pipe1.png) 0 0 no-repeat";
+            newDownPipe.style.backgroundSize = "100% 100%"
+            oOuter.appendChild(newDownPipe);
+
+
+            //让管道移动
+            setInterval(function () {
+                if (run){
+                    // 每次管道移动 让x值减等于2
+                    pipe.x -= 2;
+
+                    //当管道走出去以后，就在后边接着显示
+                    if (pipe.x <= -52){
+                        pipe.x = 800;
+                    }
+
+                    newUpPipe.style.left = pipe.x + "px";
+                    newDownPipe.style.left = pipe.x + "px";
+
+
+                    //判断鸟和管道的碰撞
+                    let boo1 = bird.x + 34 > pipe.x && bird.x < pipe.x + 52 && bird.y < pipe.upHeight;
+                    let boo2 = bird.x + 34 > pipe.x && bird.x < pipe.x + 52 && bird.y + 34 > pipe.upHeight + 200;
+
+                    //如果有一个碰撞实现 则停止游戏
+                    if (boo1 || boo2){
+                        run = false;
+                    }
+                }
+            },40)
+
+
+        }
+        createPipe(400);
+        createPipe(600);
+        createPipe(800);
+        createPipe(1000);
+
+    </script>
+</body>
+</html>
