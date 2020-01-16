@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>online事件</title>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    let oBox = document.querySelector(".box");
+    console.log(window.navigator.onLine);
+    if (window.navigator.onLine){
+        oBox.innerHTML = "网络正常";
+    }
+    window.addEventListener("online",function () {
+        oBox.innerHTML = "网络已连接";
+    })
+    window.addEventListener("offline",function () {
+        oBox.innerHTML = "奥利给 网络断开了";
+    })
+</script>
+</body>
+</html>

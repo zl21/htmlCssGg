@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    html5提供了两种客户端储存数据的方法：localStorage  和 sessionStorage
+
+    localStorage:用在持久化的本地数据，除非主动删除，否则数据永远不会过期
+    sessionStorage:用于储存本地会话数据（临时数据），只要会话完毕（网页关闭），数据会立马自动删除
+
+    储存方式：
+        localStorage：跨页面的同域名同浏览器下都可以访问
+        sessionStorage：只有当前页面可以访问  关闭就消失
+
+
+
+-->
+
+<script>
+    //设置localStorage
+    localStorage.setItem("name","lily");
+    localStorage.setItem("sex","nan");
+    localStorage.setItem("age","18");
+
+    //获取localStorage
+    console.log(localStorage.getItem("name"));
+
+    //删除localStorage
+    localStorage.removeItem("name")
+
+    //清空localStorage
+    // localStorage.clear();
+
+    //遍历    key()传入下标获取   和 length属性
+    /*console.log(localStorage.key(1));
+    console.log(localStorage.length);*/
+    for (let i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.key(i));
+    }
+
+
+</script>
+</body>
+</html>

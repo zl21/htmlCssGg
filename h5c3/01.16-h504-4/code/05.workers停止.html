@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>workers停止</title>
+</head>
+<body>
+<p id="isWorker">您的浏览器不支持webWorker</p>
+<button id="send">发送消息</button>
+<button id="stop">停止任务</button>
+<script>
+    let oIsWorker = document.getElementById("isWorker");
+    let oSend = document.getElementById("send");
+    let oStop = document.getElementById("stop");
+    
+    function loadDemo(){
+        if (typeof Worker !== "undefined"){
+            oIsWorker.innerHTML = "您的浏览器支持webWorker";
+            let worker = new Worker("worker1.js");
+            worker.addEventListener("message",function (d) {
+                console.log(d.data);
+            })
+            //错误监听
+            worker.addEventListener("error",function (e) {
+                console.log(e.data);
+            })
+            
+            // 给按钮绑定发送 消息
+            oSend.onclick = function () {
+                worker.postMessage("hello")
+            }
+            //当线程的生命结束  就要关闭这个线程
+            oStop.onclick = function () {
+                worker.terminate();
+            }
+        }
+    }
+    window.addEventListener("load",loadDemo,false);
+</script>
+</body>
+</html>

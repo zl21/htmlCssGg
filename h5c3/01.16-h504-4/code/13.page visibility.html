@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page visibility</title>
+</head>
+<body>
+<!--    之前当页面失去焦点的时候，停止页面的某些内容执行  可以使用 blur和focus事件-->
+<script>
+    let timer = null;
+    let i = 0;
+    /*window.onfocus = function () {
+        timer = setInterval(function () {
+            i ++;
+            console.log(i)
+        },100)
+    }
+    window.onblur = function () {
+        clearInterval(timer);
+    }*/
+
+    //事件visibilitychange事件可以实时的监听当前页面是否可见
+    // document的hidden属性可以判断当前是否可见 true代表看不见  false代表看的见
+    document.addEventListener('visibilitychange',function () {
+        console.log(document.hidden);
+        if (document.hidden) {
+            clearInterval(timer);
+        }else{
+            timer = setInterval(function () {
+                i ++;
+                console.log(i)
+            },100)
+        }
+    })
+</script>
+</body>
+</html>

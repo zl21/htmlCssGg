@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web Workers</title>
+</head>
+<body>
+    <!--
+    web Workers 能够创建一个并行处理的后台线程，并且在这个后台线程中可以基础创建多个子线程（兼容性不好）
+    web Workers可以把复杂的运算交给后台线程去解决，从而解决了js单线程运算能力比较差的问题
+
+    正常情况下，所有的处理都在单线程中运行，如果遇到运算量比较大的情况，那么页面就可能会处在假死的状态，甚至会出现泵崩溃的现象
+
+    为了解决这个问题，h5发布了web Workers  ，创建一个后台线程，这个后台线程可以被称作为worker
+
+    web Workers可以处理的事情：
+        加载一个JS然后大量计算
+        可以书写计时器
+        可以进行异步请求
+        可以访问navigator的部分属性
+        可以使用JS的核心对象
+
+    web Workers具有如下的限制：
+        不能跨域
+        不能访问DOM
+
+
+
+
+
+    -->
+    <script>
+        //使用web Workers
+        // 1.如果要创建一个新的后台线程  请把 Worker对象实例化
+        //因为需要把计算放在新的线程中，所以需要新建一个js文件，然后把js文件当做 Worker实例化时候的参数，这个JS就是后台线程运行的文件
+        let worker = new Worker("worker1.js");
+
+        // 因为子线程要处理数据之类的，所以我们可以向子线程传递数据
+        worker.postMessage("hello world");
+
+        //当后台线程执行完毕以后 会向主线程发送计算好的数据，所以主线程要监听子线程是否传递数据过来
+        //监听函数的第一个参数 就是返回值的对象  里边的data就是返回的值
+        worker.onmessage = function (d) {
+            console.log(d);
+            console.log(d.data);
+        }
+    </script>
+</body>
+</html>

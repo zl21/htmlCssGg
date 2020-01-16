@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取文件</title>
+</head>
+<body>
+    <input type="file" id="file">
+    <div id="con"></div>
+    <script>
+        let oFile = document.getElementById("file");
+        let oCon = document.getElementById("con");
+
+        oFile.onchange = function () {
+            console.log(this.files);
+
+            // 读取图片依然使用 FileReader对象
+            let reader = new FileReader();
+            console.log(reader);
+
+            //reader中的readAsDataURL来读取图片的数据
+            reader.readAsDataURL(this.files[0]);
+
+            // 当读取完毕以后，可以出发load事件
+            reader.onload = function () {
+                let newImg = new Image();
+                newImg.src = this.result;
+                oCon.appendChild(newImg);
+            }
+        }
+    </script>
+</body>
+</html>

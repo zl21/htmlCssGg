@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多张图片</title>
+</head>
+<body>
+    <input type="file" id="file" multiple>
+    <div id="con"></div>
+    <script>
+        let oFile = document.getElementById("file");
+        let oCon = document.getElementById("con");
+
+        oFile.onchange = function () {
+            console.log(this.files);
+
+            // 读取图片依然使用 FileReader对象
+
+
+            for(let i in this.files){
+                let reader = new FileReader();
+                reader.readAsDataURL(this.files[i]);
+                // 当读取完毕以后，可以出发load事件
+                reader.onload = function () {
+                    let newImg = new Image();
+                    newImg.src = this.result;
+                    oCon.appendChild(newImg);
+                }
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

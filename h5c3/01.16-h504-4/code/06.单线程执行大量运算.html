@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>workers停止</title>
+</head>
+<body>
+<button id="send">计算</button>
+<p id="isWorker"></p>
+<script>
+    let oIsWorker = document.getElementById("isWorker");
+    let oSend = document.getElementById("send");
+    let oStop = document.getElementById("stop");
+    
+    function loadDemo(){
+        oSend.onclick = function(){
+            // 计算i的某某某平方根和
+            let num = 0;
+            for (let i = 1; i < 1000000000; i++) {
+                num += Math.sqrt(i);
+            }
+
+            oIsWorker.innerHTML = num;
+        }
+    }
+    window.addEventListener("load",loadDemo,false);
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 30px;
+            background: #ccc;
+        }
+        .con{
+            width: 0px;
+            height: 30px;
+            background-color: deeppink;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="con">0%</div>
+</div>
+<!--
+    帧动画：
+        h5专门提供了动画的调用方法  window.requestAnimationFrame().
+       用于以一种更好的性能来实现帧动画
+
+
+   回忆一下动画的方法：
+       1.css3 的animation + keyframes
+       2.css3的transition
+       3.html5 的 canvas
+       4.jQuery的动画实现
+       5.使用JS原生的 setTimeout和setInterval来实现，不断更新元素的位置，实现帧动画，只有更新频率要达到每秒60次的时候，肉眼才能看见清晰流畅的动画
+
+    现在h5新增的window.requestAnimationFrame()可以在页面重绘之前，通知浏览器调用一个指定的函数，以满足开发人员动画的需求
+
+    window.requestAnimationFrame()优势：
+        1.浏览器对动画进行优化，动画会更流畅
+        2.更省电，尤其是移动端设置
+        3.当窗口不再激活状态的时候，动画时停止工作的
+
+
+    window.requestAnimationFrame()每次调用都会返回一个句柄  然后可以通过cancelAnimationFrame（句柄）取消当前的操作
+
+-->
+
+<script>
+
+    let oCon = document.querySelector(".con");
+    let pro = 0;//进度条默认的宽度
+    // requstAnimationFrame对象是window的对象，但是是存在各个浏览器兼容性的，所以第一步需要先解决兼容
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+    window.requestAnimationFrame(step);
+    function step() {
+        pro ++;
+        oCon.style.width = pro + "px";
+        oCon.innerHTML = parseInt(pro/500 * 100) + "%";
+        if (pro < 500){
+            window.requestAnimationFrame(step);
+        }
+    }
+</script>
+</body>
+</html>

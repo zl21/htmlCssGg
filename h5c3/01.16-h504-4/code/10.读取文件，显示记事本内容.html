@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取文件</title>
+</head>
+<body>
+    <input type="file" id="file">
+    <div id="con"></div>
+    <script>
+        let oFile = document.getElementById("file");
+        let oCon = document.getElementById("con");
+
+        //文件上传后 会触发file的change事件
+        oFile.onchange = function () {
+            console.log(file);//在file被改变时  file代表当前的节点
+            console.log(this.files);//file中的 files代表刚刚上传的内容
+            // 在this.files中是一个对象，里边包含上传的文件列表
+            // 在文件列表中 包含 文档的名称类型等
+
+            // 但是不能直接读取文件中的内容
+            // 想要读取文件中的文本内容 需要使用FileReader对象，所以首先实例化一个FileReader对象
+            let reader = new FileReader();
+
+            // reader就可以读取文件中的文本内容，需要使用readAsTest方法来读取
+            reader.readAsText(this.files[0]);
+
+            //reader去读取文本的时候需要一定的时间，所以大概读取完成后会通知我们，则需要一个监听事件，
+            //当reader读取完毕，则取执行相关代码，  直接使用load事件即可
+            reader.onload = function () {
+                //当reader读取完文本的内容，则会进入事件
+                // 当reader读取完成以后，会把读取的内容存放在reader对象的 result属性 中
+                oCon.innerHTML = reader.result;
+            }
+        }
+    </script>
+</body>
+</html>

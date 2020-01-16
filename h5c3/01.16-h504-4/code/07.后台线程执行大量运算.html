@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>workers停止</title>
+</head>
+<body>
+<button id="send">计算</button>
+<p id="isWorker"></p>
+<script>
+    let oIsWorker = document.getElementById("isWorker");
+    let oSend = document.getElementById("send");
+    let oStop = document.getElementById("stop");
+    
+    function loadDemo(){
+        let worker = new Worker("worker2.js");
+        oSend.onclick = function(){
+            worker.postMessage("");
+        }
+
+        worker.onmessage = function (d) {
+            oIsWorker.innerHTML = d.data;
+        }
+    }
+    window.addEventListener("load",loadDemo,false);
+</script>
+</body>
+</html>
