@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建新的像素点并插入</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    // createImageData两个参数，分别是宽度和高度
+    let imgData = CTX.createImageData(100,100);
+    console.log(imgData);
+    //遍历赋值
+    imgData.data.forEach(function (item,index) {
+        imgData.data[index * 4 + 0] = 135;
+        imgData.data[index * 4 + 1] = 24;
+        imgData.data[index * 4 + 2] = 235;
+        imgData.data[index * 4 + 3] = 255;
+    })
+    console.log(imgData);
+
+    CTX.putImageData(imgData,100,100);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线性渐变</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="500"></canvas>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const CTX = oMyCanvas.getContext("2d");
+
+        CTX.beginPath();
+
+        // createLinearGradient()4个参数，分别是两个连线点的坐标，在两个连线之间进行渐变
+        //返回当前渐变，通过返回值可以添加渐变节点
+        const LinearG = CTX.createLinearGradient(100,100,300,300);
+        console.log(LinearG);
+
+        // addColorStop()添加渐变节点 第一个参数是1-0  渐变的位置  第二个参数是颜色
+        LinearG.addColorStop(0,"red");
+        LinearG.addColorStop(0.25,"green");
+        LinearG.addColorStop(0.5,"yellow");
+        LinearG.addColorStop(1,"pink");
+
+        //得到渐变节点后，需要填充才能放入画布中
+        CTX.fillStyle = LinearG;
+        CTX.fillRect(0,0,600,500);
+
+        CTX.strokeRect(100,100,200,200)
+    </script>
+</body>
+</html>

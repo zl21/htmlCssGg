@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1612094_25il3ejvhfi.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap{
+            height: 100%;
+            background-color: #333;
+        }
+        #myVideo{
+            width: 100%;
+            height: calc(100% - 25px);
+        }
+        #footer{
+            display: flex;
+            height: 25px;
+            background-color: #fff;
+        }
+        #footer .btns{
+            width: 55px;
+            height: 25px;
+            /*background-color: red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #footer .btns .start{
+            width: 18px;
+            height: 18px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 18px;
+        }
+        #footer .btns .stop{
+            width: 18px;
+            height: 18px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 18px;
+        }
+        #footer .progress{
+            flex: 1;
+            height: 25px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        #footer .smallGrey{
+            width: 100%;
+            height: 3px;
+            background-color: #ccc;
+            position: relative;
+        }
+        #footer .smallWhite{
+            width: 9px;
+            height: 7px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: -2px;
+            z-index: 2;
+        }
+        #footer .smallPink{
+            position: absolute;
+            height: 3px;
+            width: 0px;
+            left: 0;
+            top: 11px;
+            background-color: deeppink;
+        }
+        #footer .others{
+            width: 230px;
+            height: 25px;
+            /*background-color: red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #footer .time{
+            width: 120px;
+            height: 25px;
+            line-height: 25px;
+            display: flex;
+            font-size: 12px;
+        }
+        #footer .volumeWrap{
+            display: flex;
+            align-items: center;
+        }
+        #footer .volumeWrap .progress{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <video id="myVideo" src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4"></video>
+        <footer id="footer">
+            <div class="btns">
+                <div class="start iconfont icon-bofang"></div>
+                <div class="stop iconfont icon-zanting1"></div>
+            </div>
+            <div class="progress">
+                <div class="smallGrey">
+                    <div class="smallWhite"></div>
+                </div>
+                <div class="smallPink"></div>
+            </div>
+            <div class="others">
+                <div class="time">
+                    <div class="nowTime">00:00:00</div>
+                    /
+                    <div class="allTime">00:00:00</div>
+                </div>
+                <div class="volumeWrap">
+                    <div class="isMuted iconfont icon-yinliang"></div>
+                    <div class="progress">
+                        <div class="smallGrey">
+                            <div class="smallWhite"></div>
+                        </div>
+                        <div class="smallPink"></div>
+                    </div>
+                </div>
+                <div class="isFullScreen iconfont icon-quanping"></div>
+            </div>
+        </footer>
+    </section>
+    <script>
+
+    </script>
+</body>
+</html>

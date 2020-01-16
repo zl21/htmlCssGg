@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制文字</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    CTX.fillStyle = "red";
+    CTX.strokeStyle = "red";
+    // font是设置画笔的文字样式
+    CTX.font = "bold 60px SimSun";
+
+    //设置文字的水平对齐方式  以绘制文字时 设置的x坐标为参考点
+    CTX.textAlign = "start";//默认
+    CTX.textAlign = "end";//
+    CTX.textAlign = "center";//
+
+    //设置文字的垂直对齐方式
+    CTX.textBaseline = 'top';
+    CTX.textBaseline = 'hanging';
+    CTX.textBaseline = 'middle';
+    CTX.textBaseline = 'bottom';
+    CTX.textBaseline = 'alphabetic';
+
+    // fillText()填充字体，第一个参数是文字，后边的两个参数默认是基线左边的坐标点
+    // CTX.fillText("尚硅谷",100,100);
+
+    CTX.strokeText("尚硅谷",100,100);
+
+    //绘制一条辅助线
+    CTX.beginPath();
+    CTX.moveTo(0,100);
+    CTX.lineTo(500,100);
+    CTX.stroke();
+
+</script>
+</body>
+</html>

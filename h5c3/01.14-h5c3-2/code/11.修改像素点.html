@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改像素点</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    const oImg = new Image();
+    oImg.src = "../images/img21.jpg";
+    oImg.onload = function () {
+        CTX.drawImage(oImg,0,0,800,400)
+
+        //获取像素点 通过getImageData的方法获取  4个参数  和rect方法的参数一致
+        // 代表获取这个矩形区域的所有像素点
+        let imgData = CTX.getImageData(300,50,100,100);
+        //把每一个像素点的r值 都变成255
+        imgData.data.forEach(function (item,index) {
+            if (index % 4 == 0){
+                imgData.data[index] = 255;
+            }
+        })
+        console.log(imgData);
+
+        // imgData又是一个新的像素点，你可以选择放在任意的位置，
+        // 通过putImageData的方法 放置  3个参数，分别是：img数据   放置的x 和y位置
+        CTX.putImageData(imgData,600,250);
+    }
+
+
+</script>
+</body>
+</html>

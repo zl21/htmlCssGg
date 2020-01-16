@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制图片</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #myCanvas{
+            /*background: #ccc;*/
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    oMyCanvas.width = document.documentElement.clientWidth;
+    oMyCanvas.height = document.documentElement.clientHeight;
+    //保存图片的名称
+    let q = 0;
+    //保存鸟的坐标位置
+    let speed = -132;
+
+    //创建一个img节点
+    const oImg = new Image();
+
+
+    CTX.beginPath();
+
+    setInterval(function () {
+        CTX.clearRect(0,0,oMyCanvas.width,oMyCanvas.height)
+
+        q ++;
+        if (q > 8){
+            q = 1;
+        } 
+        
+        speed +=5;
+        if (speed >= oMyCanvas.width){
+            speed = -132;
+        }
+
+        oImg.src = `../images/q_r${q}.jpg`;
+        oImg.onload = function () {
+            CTX.drawImage(oImg,speed,200,132,82);
+        }
+    },40)
+
+
+</script>
+</body>
+</html>

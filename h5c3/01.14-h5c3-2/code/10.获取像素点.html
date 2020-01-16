@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取像素点</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    const oImg = new Image();
+    oImg.src = "../images/img21.jpg";
+    oImg.onload = function () {
+        CTX.drawImage(oImg,100,100,300,300)
+
+        //无论画布背景是什么东西，直接获取画布的像素点，都是透明 000000（除非是画进去的东西才能获取到像素点）
+        //获取像素点 通过getImageData的方法获取  4个参数  和rect方法的参数一致
+        // 代表获取这个矩形区域的所有像素点  每一个像素点4个值  分别对应r  g  b  a
+        let imgData = CTX.getImageData(150,150,100,100);
+        console.log(imgData);
+    }
+
+
+</script>
+</body>
+</html>

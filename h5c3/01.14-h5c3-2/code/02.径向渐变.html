@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>径向渐变</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="500"></canvas>
+    <script>
+        const oMyCanvas = document.getElementById("myCanvas");
+        const CTX = oMyCanvas.getContext("2d");
+
+        CTX.beginPath();
+
+        // createRadialGradient()6个参数，分别代表两个圆，渐变就在第一个圆的左边到第二个圆的左边进行径向渐变
+        const radialG = CTX.createRadialGradient(150,250,100,400,250,100);
+        radialG.addColorStop(0,"red");
+        radialG.addColorStop(0.25,"green");
+        radialG.addColorStop(0.5,"yellow");
+        radialG.addColorStop(1,"pink");
+
+        CTX.fillStyle = radialG;
+        CTX.fillRect(0,0,600,500);
+
+
+
+        //绘制辅助线
+        CTX.arc(150,250,100,0,2*Math.PI,true);
+        CTX.stroke();
+        CTX.beginPath()
+        CTX.arc(400,250,100,0,2*Math.PI,true);
+        CTX.stroke();
+    </script>
+</body>
+</html>

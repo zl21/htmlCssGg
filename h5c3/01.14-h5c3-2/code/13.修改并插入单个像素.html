@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改并插入单个像素</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    // createImageData两个参数，分别是宽度和高度
+    let imgData = CTX.createImageData(100,100);
+    console.log(imgData);
+    // 把 这个创建的像素点中 的 30*40的这个点 变成红色，其他不变
+
+    imgData.data[(40-1)*4*imgData.width + (30-1)*4 + 0] = 255;
+    imgData.data[(40-1)*4*imgData.width + (30-1)*4 + 1] = 0;
+    imgData.data[(40-1)*4*imgData.width + (30-1)*4 + 2] = 0;
+    imgData.data[(40-1)*4*imgData.width + (30-1)*4 + 3] = 255;
+
+    CTX.putImageData(imgData,0,0);
+
+
+</script>
+</body>
+</html>

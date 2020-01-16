@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制图片</title>
+    <style>
+        #myCanvas{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    //绘制图片需要一个img的节点 所以需要创建一个img节点
+    const oImg = new Image();
+    oImg.src = "../images/img21.jpg";
+
+    //必须等待图片加载完成才能绘制
+    oImg.onload = function () {
+        // drawImage方法 常用5个参数  ：img节点 图片的x 位置   图片的y位置  图片的宽和图片的高
+        CTX.drawImage(oImg,100,100,200,200);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刮刮乐的基础版本</title>
+    <style>
+        #myCanvas{
+            background: url("../images/img21.jpg") 0 0 no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    //绘制一个旧图
+    CTX.beginPath();
+    CTX.fillStyle = "#ccc";
+    CTX.fillRect(0,0,oMyCanvas.width,oMyCanvas.height);
+
+    //设置新图和旧图的组合方式
+    CTX.globalCompositeOperation = "destination-out";
+
+    // 绘制一个新图
+    CTX.beginPath();
+    CTX.fillStyle  = "red";
+    CTX.fillRect(200,100,50,50);
+
+</script>
+</body>
+</html>

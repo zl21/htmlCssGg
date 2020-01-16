@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音视频的事件</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <video id="vid" controls src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4"></video>
+    <script>
+        const oVid = document.getElementById("vid");
+        const oBtn = document.getElementById("btn");
+
+        oVid.onplay = function () {
+            console.log("播放啦");
+        }
+        oVid.onpause = function () {
+            console.log("停啦");
+        }
+        oVid.ontimeupdate = function () {
+            console.log("视频一直在播放呢");
+        }
+        oVid.onended = function () {
+            console.log("播放完了 看广告把");
+        }
+        oVid.onvolumechange = function () {
+            console.log("声音变化啦");
+        }
+        oVid.onloadedmetadata = function () {
+            console.log("可以看到总时间了");
+        }
+    </script>
+</body>
+</html>

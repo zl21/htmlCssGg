@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条时间</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1612094_25il3ejvhfi.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap{
+            height: 100%;
+            background-color: #333;
+        }
+        #myVideo{
+            width: 100%;
+            height: calc(100% - 25px);
+        }
+        #footer{
+            display: flex;
+            height: 25px;
+            background-color: #fff;
+        }
+        #footer .btns{
+            width: 55px;
+            height: 25px;
+            /*background-color: red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #footer .btns .start{
+            width: 18px;
+            height: 18px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 18px;
+        }
+        #footer .btns .stop{
+            width: 18px;
+            height: 18px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 18px;
+        }
+        #footer .progress{
+            flex: 1;
+            height: 25px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        #footer .smallGrey{
+            width: 100%;
+            height: 3px;
+            background-color: #ccc;
+            position: relative;
+        }
+        #footer .smallWhite{
+            width: 9px;
+            height: 7px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: -2px;
+            z-index: 2;
+        }
+        #footer .smallPink{
+            position: absolute;
+            height: 3px;
+            width: 0px;
+            left: 0;
+            top: 11px;
+            background-color: deeppink;
+        }
+        #footer .others{
+            width: 230px;
+            height: 25px;
+            /*background-color: red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #footer .time{
+            width: 120px;
+            height: 25px;
+            line-height: 25px;
+            display: flex;
+            font-size: 12px;
+        }
+        #footer .volumeWrap{
+            display: flex;
+            align-items: center;
+        }
+        #footer .volumeWrap .progress{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <video id="myVideo" src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4"></video>
+        <footer id="footer">
+            <div class="btns">
+                <div class="start iconfont icon-bofang"></div>
+                <div class="stop iconfont icon-zanting1"></div>
+            </div>
+            <div class="progress">
+                <div class="smallGrey">
+                    <div class="smallWhite"></div>
+                </div>
+                <div class="smallPink"></div>
+            </div>
+            <div class="others">
+                <div class="time">
+                    <div class="nowTime">00:00:00</div>
+                    /
+                    <div class="allTime">00:00:00</div>
+                </div>
+                <div class="volumeWrap">
+                    <div class="isMuted iconfont icon-yinliang"></div>
+                    <div class="progress">
+                        <div class="smallGrey">
+                            <div class="smallWhite"></div>
+                        </div>
+                        <div class="smallPink"></div>
+                    </div>
+                </div>
+                <div class="isFullScreen iconfont icon-quanping"></div>
+            </div>
+        </footer>
+    </section>
+    <script>
+        const oStart = document.querySelector(".start");
+        const oStop = document.querySelector(".stop");
+        const oMyVideo = document.querySelector("#myVideo");
+        const oSmallGrey = document.querySelectorAll(".progress .smallGrey");
+        const oSmallPink = document.querySelectorAll(".progress .smallPink");
+        const oSmallWhite = document.querySelectorAll(".progress .smallWhite");
+        const oProgress = document.querySelectorAll(".progress");
+        const oAllTime = document.querySelector(".allTime");
+        const oNowTime = document.querySelector(".nowTime");
+
+        // 当视频的元数据加载完毕以后就要显示总时间
+        oMyVideo.onloadedmetadata = function(){
+            oAllTime.innerHTML = changeTime(oMyVideo.duration);
+        }
+
+        //1.按钮排逻辑
+        // 点击start按钮
+        oStart.onclick = function () {
+            if (oMyVideo.paused){
+                //当前是暂停的时候的逻辑代码
+                oMyVideo.play();
+                oStart.classList.add("icon-zanting");
+                //当播放是，时间在改变的时候，随时调用 白块走动代码
+                oMyVideo.ontimeupdate = function () {
+                    whiteMove();
+                }
+            }else{
+                oMyVideo.pause();
+                oStart.classList.remove("icon-zanting");
+            }
+        }
+
+        //点击停止
+        oStop.onclick = function () {
+            oMyVideo.pause();
+            oStart.classList.remove("icon-zanting");
+            oMyVideo.currentTime = 0;
+
+            oNowTime.innerHTML = changeTime(oMyVideo.currentTime);
+        }
+
+        //封装函数，视频进度条的小白块走动代码
+        function whiteMove() {
+            //计算当前播放时间和总时间的比例
+            let scale = oMyVideo.currentTime / oMyVideo.duration;
+            //小白块可以走动的宽度和小粉块的宽度  是 进度条的总长度 - 小百块的宽度
+            //小白块的left值 就是小粉块的宽度
+
+            //计算能走动的宽度
+            let disW = oSmallGrey[0].clientWidth - oSmallWhite[0].offsetWidth;
+
+            oSmallPink[0].style.width = oSmallWhite[0].style.left = disW * scale + "px";
+
+            oNowTime.innerHTML = changeTime(oMyVideo.currentTime);
+        }
+        
+        //进度条拖拽逻辑
+        drag(oSmallWhite[0],move1);
+        drag(oSmallWhite[1],move2);
+        
+        //进度条点击逻辑
+        oProgress[0].onclick = function (e) {
+            oSmallPink[0].style.width = oSmallWhite[0].style.left = e.offsetX + "px";
+            // 计算元素走动的比例
+            let scale = oSmallWhite[0].offsetLeft/(oSmallGrey[0].clientWidth - oSmallWhite[0].offsetWidth);
+
+            //根据比例画面更新
+            oMyVideo.currentTime = scale * oMyVideo.duration;
+            oNowTime.innerHTML = changeTime(oMyVideo.currentTime);
+        }
+        
+        
+        function drag(ele,callback) {
+            // 元素初始位置
+            let elementPoint = {
+                x:0,
+                y:0
+            }
+            //鼠标初始位置
+            let startPoint = {
+                x:0,
+                y:0
+            }
+            ele.onclick = function (e){
+                e.stopPropagation();
+            }
+            ele.onmousedown = function (e) {
+                //参照定位父级  小灰条
+                elementPoint.x = ele.offsetLeft;
+                elementPoint.y = ele.offsetTop;
+
+                //参照视口
+                startPoint.x = e.clientX;
+                startPoint.y = e.clientY;
+
+                // 拖拽
+                document.onmousemove = function (e) {
+                    //保存最终的位置信息
+                    let nowPoint = {
+                        x:0,
+                        y:0
+                    }
+                    nowPoint.x = e.clientX - startPoint.x + elementPoint.x;
+                    if (nowPoint.x >= ele.parentNode.clientWidth - ele.offsetWidth){
+                        nowPoint.x = ele.parentNode.clientWidth - ele.offsetWidth
+                    } else if(nowPoint.x <=0){
+                        nowPoint.x = 0;
+                    }
+                    //赋值小滑块操作
+                    ele.style.left = nowPoint.x + "px";
+                    callback();
+                }
+                document.onmouseup = function () {
+                    document.onmousemove = document.onmouseup = null;
+                }
+            }
+        }
+        function move1() {
+            oSmallPink[0].style.width = oSmallWhite[0].offsetLeft + "px";
+
+            // 计算元素走动的比例
+            let scale = oSmallWhite[0].offsetLeft/(oSmallGrey[0].clientWidth - oSmallWhite[0].offsetWidth);
+
+            //根据比例画面更新
+            oMyVideo.currentTime = scale * oMyVideo.duration;
+
+            oNowTime.innerHTML = changeTime(oMyVideo.currentTime);
+
+        }
+        function move2() {
+            oSmallPink[1].style.width = oSmallWhite[1].offsetLeft + "px";
+        }
+
+        //封装一个转换时间的函数
+        function changeTime(time) {
+            time = parseInt(time);
+            let h = addZero(Math.floor(time/(60*60)));
+            let m = addZero(Math.floor(time%(60*60)/60));
+            let s = addZero(Math.floor(time%60));
+            return h + ":" + m + ":" + s;
+        }
+        function addZero(time) {
+            if (time < 10){
+                time = "0" + time;
+            }
+            return time;
+        }
+    </script>
+</body>
+</html>

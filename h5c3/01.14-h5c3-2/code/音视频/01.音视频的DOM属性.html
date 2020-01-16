@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <video id="vid" controls src="http://img.ksbbs.com/asset/Mon_1703/eb048d7839442d0.mp4"></video>
+    <script>
+        const oVid = document.getElementById("vid");
+        const oBtn = document.getElementById("btn");
+
+        oBtn.onclick = function () {
+            //获取当前的播放时间
+            // console.log(oVid.currentTime);
+
+            //设置当前的播放时间
+            // oVid.currentTime = 100;
+
+            //获取总时长
+            // console.log(oVid.duration);
+
+            //设置或者返回是否静音
+            // console.log(oVid.muted);
+            // oVid.muted = true;
+
+            //返回是否被暂停
+            // console.log(oVid.paused);
+
+            //设置或返回播放速度
+            // console.log(oVid.playbackRate);
+            // oVid.playbackRate = 0.6;
+
+            //设置或返回音量
+            // console.log(oVid.volume);
+            // oVid.volume = 0.5;
+
+            //返回是否播放结束
+            console.log(oVid.ended);
+
+
+        }
+    </script>
+</body>
+</html>

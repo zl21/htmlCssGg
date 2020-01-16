@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制阴影</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    CTX.fillStyle = "red";
+    CTX.fillRect(100,100,200,100);
+
+    //给画笔设置阴影值
+    CTX.save();
+        CTX.shadowColor = "#000";
+        CTX.shadowBlur = 6;
+        CTX.shadowOffsetX = 10;
+        CTX.shadowOffsetY = 10;
+        CTX.fillStyle = "red";
+        CTX.fillRect(400,300,200,100);
+    CTX.restore();
+
+
+    CTX.beginPath();
+    CTX.font = "bold 60px SimSun";
+    CTX.fillText("尚硅谷",100,400);
+
+
+
+
+</script>
+</body>
+</html>

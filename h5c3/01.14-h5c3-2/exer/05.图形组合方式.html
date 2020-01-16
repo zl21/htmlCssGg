@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形组合方式</title>
+    <style>
+        #myCanvas{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+    const oMyCanvas = document.getElementById("myCanvas");
+    const CTX = oMyCanvas.getContext("2d");
+
+    CTX.beginPath();
+
+    //绘制一个旧图,destination目标图
+    CTX.arc(200,250,130,0,2*Math.PI,true);
+    CTX.fillStyle = "red";
+    CTX.fill();
+
+    //在新图和旧图绘制中间，可以控制图形组合方法 globalCompositeOperation 是CTX的属性
+    // CTX.globalCompositeOperation = "source-over";//在目标图上显示源图
+    CTX.globalCompositeOperation = "destination-over"//表示旧图覆盖在新图之上
+    // CTX.globalCompositeOperation = "lighter"//
+    // CTX.globalCompositeOperation = "xor"//  透明
+
+
+    //绘制一个新图,source源图
+    CTX.beginPath();
+    CTX.arc(300,250,130,0,2*Math.PI,true);
+    CTX.fillStyle = "green";
+    CTX.fill();
+
+</script>
+</body>
+</html>
