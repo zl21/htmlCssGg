@@ -28,6 +28,7 @@
             position: relative;
         }
         .outer>li:nth-child(10n):after{
+            /* 仅显示10n的倍数所对应的刻度下的数字。所以不会显示1。 */
             content: counter(num);
             position: absolute;
             left: -1px;
