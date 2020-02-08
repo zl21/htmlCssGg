@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>文字颜色渐变</title>
+    <title>文字裁剪及颜色渐变</title>
     <style>
         .box{
             width: 400px;
@@ -10,7 +10,12 @@
             border: 1px solid #000;
 
             background: linear-gradient(to right,red,green,blue,yellow,pink);
-            -webkit-background-clip: text;
+            
+            /* 沿着文字裁剪 */
+            background-clip: text;
+            -webkit-background-clip: text;/* 前缀表兼容，非W3C */
+
+            /* 内容颜色为透明，由此仅显示背景颜色 */
             color: transparent;
         }
     </style>
