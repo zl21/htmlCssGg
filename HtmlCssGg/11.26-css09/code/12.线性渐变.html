@@ -20,19 +20,16 @@
 
             /*可以以 to  left  right  top  bottom等确定方向*/
             /*top right 不一定是45deg*/
-            background: linear-gradient(to top,red,pink,deeppink);
-            background: linear-gradient(to top right,red,pink,deeppink);
-            background: linear-gradient(45deg,red,pink,deeppink);
-            /*background: -webkit-linear-gradient(top,red,pink,deeppink);*/
+            background: linear-gradient(to top,red,pink,deeppink);/* 由下至上 */
+            background: linear-gradient(to top right,red,pink,deeppink);/* 由下左至上右，左下角至右上角 */
+            background: linear-gradient(45deg,red,pink,deeppink); 
+            background: -webkit-linear-gradient(top,red,pink,deeppink);/* 由上至下 */
 
             /*在每一个颜色值的后边都可以添加百分比百分百就是元素的宽度，或者是你限制的background-size*/
             background: linear-gradient(90deg,red 40%,pink 50%,deeppink 60%) 0 0 no-repeat;
             background: linear-gradient(90deg,red 10px,pink 20px,deeppink 30px) 0 0 no-repeat;
 
             background-size: 100px 100px;
-
-
-
         }
     </style>
 </head>
