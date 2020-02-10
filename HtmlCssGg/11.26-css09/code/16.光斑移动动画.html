@@ -13,12 +13,18 @@
             color: rgba(255,255,255,.5);
             font-size: 100px;
             font-weight: bold;
+            /* 135deg由左上至右下,由黑至白在转为黑 */
             background: linear-gradient(135deg,#000 180px,#fff 220px,#000 250px) 0px 0px no-repeat;
-            -webkit-background-clip: text;
+            -webkit-background-clip: text;/* 按文字剪切背景 */
+                    background-clip: text;
 
             animation: move 1s linear infinite;
         }
-
+        /* 关键帧name：move。
+            from = 0%
+            to = 100%
+            实现背景图位置变换的效果。
+        */
         @keyframes move {
             from{
                 background-position-x: 0;
